@@ -1,9 +1,27 @@
 {% extends "base.njk" %}
+{% block head %}
+    <script src="scripts/homeSwiper.js" type="module"></script>
+{% endblock %}
 {% block page %}
-    <div class="maininfo">
-        <h1 class="title">lajbel</h1>
-        <p>
-            I'm Dani, a software developer
-        </p>
+    <div class="home">
+        <div class="maininfo">
+            <h1>lajbel</h1>
+            <p>
+                I'm Dani, a software developer, big appasionated about videogames.
+            </p>
+        </div>
+        <div class="project-swiper">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    {% for project in projects -%}
+                        <div class="swiper-slide">
+                            {{ comp.slideProject(project) | safe }}
+                        </div>
+                    {%- endfor %}
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
     </div>
 {% endblock %}

@@ -1,0 +1,16 @@
+<div class="slideProject">
+    <img src="{{ img }}"/>
+    <div class="data">
+        <section>
+            <h2>{{ title }}</h2>
+            <p>{{ description }}</p>
+        </section>
+        <div class="icons">
+            {% if gh %}
+                <a href="{{ gh }}" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</div>

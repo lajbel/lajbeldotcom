@@ -1,9 +1,7 @@
+@use "v";
 @import url('https://fonts.googleapis.com/css2?family=REM&family=Ubuntu+Mono&display=swap');
-
-$bgColor1: #251D3A;
-$fontColor1: #fffefd;
-$fontFamily1: 'REM', sans-serif;
-$huge: 4em;
+@import "./nav.scss";
+@import "./slideProject.scss";
 
 // Generics
 * {
@@ -12,7 +10,8 @@ $huge: 4em;
     box-sizing: border-box;
     font-size: 16px;
     font-weight: 400;
-    color: $fontColor1;
+    color: v.$fontColor1;
+    font-family: v.$fontFamily1;
 }
 
 body {
@@ -29,18 +28,35 @@ h1 {
 .page {
     width: 100%;
     height: 100%;
-    background-color: $bgColor1;
-    font-family: $fontFamily1;
+    background-color: v.$bgColor1;
+    font-family: v.$fontFamily1;
+}
+
+.home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .maininfo {
-    position: absolute;
-    left: 14%;
-    top: 20%;
+    h1 {
+        margin: 0px;
+        font-size: v.$huge;
+        font-weight: bold;
+        color: #FF7700;
+    }
+
+    p {
+        margin: 4px 0px;
+        font-size: v.$large;
+        max-width: 500px;
+    }
 }
 
-.title {
-    margin: 0px;
-    font-size: $huge;
-    font-weight: bold;
+.swiper {
+    width: 600px;
+    height: 300px;
 }

@@ -1,0 +1,31 @@
+.nav {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 10%;
+    background-color: #251D3A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    z-index: 100;
+    border-bottom: #2A2550 2px solid;
+
+    ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        gap: 40px;
+
+        li {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fffefd;
+        }
+    }
+}
