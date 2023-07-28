@@ -4,5 +4,8 @@
     "deno.enable": true,
     "[njk]": {
         "editor.defaultFormatter": "eseom.nunjucks-template"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
     }
 }

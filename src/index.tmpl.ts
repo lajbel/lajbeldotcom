@@ -16,3 +16,5 @@ export const projects = [
         gh: "https://github.com/lajbel/newgrounds.js",
     },
 ];
+export const name = "lajbel";
+export const description = "I'm Dani, a software developer, big appasionated about videogames."
