@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Mandarina",
+        "description": "A visual novel engine",
+        "image": "https://images.unsplash.com/photo-1529873894600-9e6fbb3c51ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+        "cardlink": "https://lajbel.github.io/mandarina"
+    },
+    {
+        "name": "Newgrounds.js",
+        "description": "Connect with Newgrounds API",
+        "image": "https://images.unsplash.com/photo-1617977249154-bb5dedbc9be8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        "cardlink": "https://lajbel.github.io/newgroundsjs"
+    }
+]

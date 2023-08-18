@@ -2,10 +2,13 @@
     "editor.defaultFormatter": "denoland.vscode-deno",
     "editor.formatOnSave": true,
     "deno.enable": true,
-    "[njk]": {
-        "editor.defaultFormatter": "eseom.nunjucks-template"
-    },
     "[scss]": {
         "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "files.associations": {
+        "*.njk": "html"
     }
 }

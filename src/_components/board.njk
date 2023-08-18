@@ -1,0 +1,13 @@
+<div class="board board--{{ type }}">
+    <h3 class="board__name">{{ name }}</h3>
+
+    <div class="board__cards-list board__cards-list--{{ type }}">
+        {% for card in cards %}
+        {{ comp.card(card) | safe }}
+        {% endfor %}
+
+        {% if not cards.length %}
+        <p class="board__empty">There's nothing yet</p>
+        {% endif %}
+    </div>
+</div>

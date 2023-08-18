@@ -1,82 +1,76 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Home</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"/>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="styles/index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="page">
         
-    <script src="scripts/homeSwiper.js" type="module"></script>
+<div class="presentation">
+    <h1 class="presentation__name">lajbel</h1>
+    <h2 class="presentation__bio">Wasksite</h2>
+    <hr class="presentation__line" />
+</div>
 
-    </head>
-    <body>
-        <nav class="nav">
-    <ul>
-        <li>
-                Home
-            </li>
-    </ul>
-</nav>
-        <div class="page"> 
-    <div class="home">
-        <div class="info slide-tl">
-            <h1>lajbel</h1>
-            <p>I&#39;m Dani, a software developer, big appasionated about videogames.</p>
-        </div>
-        <div class="project-swiper">
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                            <div class="slide-project">
-    <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ffa03fbdb-2d71-4648-976b-a282d4143a38%2FUntitled.png?table=block&amp;id=bc2c633c-7760-4b3c-b483-41990f12e852&amp;spaceId=a594d924-c8f0-43ec-810e-4fc7735c99e0&amp;width=2000&amp;userId=560314d9-e794-4e7a-92fe-b2541b17335c&amp;cache=v2"/>
-    <div class="data">
-        <section>
-            <h2>Mandarina</h2>
-            <p>A visual novel engine for the web</p>
-        </section>
-        <div class="icons">
-            
-                <a href="https://github.com/lajbel/mandarina" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            
-        </div>
+<div class="boards">
+    <div class="board board--projects">
+    <h3 class="board__name">Projects</h3>
+
+    <div class="board__cards-list board__cards-list--projects">
+        
+        <a class="card" href="https://lajbel.github.io/mandarina" target="_blank" style='background-image: url(https://images.unsplash.com/photo-1529873894600-9e6fbb3c51ac?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=764&amp;q=80);'>
+    <div class=" card__info">
+        <h4 class="card__name">Mandarina</h4>
+        <p class="card__description">A visual novel engine</p>
+    </div>
+</a>
+        
+        <a class="card" href="https://lajbel.github.io/newgroundsjs" target="_blank" style='background-image: url(https://images.unsplash.com/photo-1617977249154-bb5dedbc9be8?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80);'>
+    <div class=" card__info">
+        <h4 class="card__name">Newgrounds.js</h4>
+        <p class="card__description">Connect with Newgrounds API</p>
+    </div>
+</a>
+        
+
+        
     </div>
 </div>
-                        </div><div class="swiper-slide">
-                            <div class="slide-project">
-    <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4f8318a3-a906-4181-b971-e76d6fb124bc%2FUntitled.png?table=block&amp;id=dc90f539-182f-4e15-931a-aa72f2e41b4b&amp;spaceId=a594d924-c8f0-43ec-810e-4fc7735c99e0&amp;width=2000&amp;userId=560314d9-e794-4e7a-92fe-b2541b17335c&amp;cache=v2"/>
-    <div class="data">
-        <section>
-            <h2>Newgrounds.js</h2>
-            <p>A JavaScript library for the Newgrounds API</p>
-        </section>
-        <div class="icons">
-            
-                <a href="https://github.com/lajbel/newgrounds.js" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            
-        </div>
+    <div class="board board--games">
+    <h3 class="board__name">Games</h3>
+
+    <div class="board__cards-list board__cards-list--games">
+        
+        <a class="card" href="https://www.newgrounds.com/portal/view/806710a" target="_blank" style='background-image: url(https://images.unsplash.com/photo-1587593810167-a84920ea0781?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Q2hpY2tlbnxlbnwwfHwwfHx8MA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=60);'>
+    <div class=" card__info">
+        <h4 class="card__name">Eggou</h4>
+        <p class="card__description">A flyers chicken egg hell</p>
+    </div>
+</a>
+        
+
+        
     </div>
 </div>
-                        </div>
-                </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-        </div>
-    </div>
+    <div class="board board--blogs">
+    <h3 class="board__name">Blog</h3>
 
-            </div>
-        </body>
-    </html>
+    <div class="board__cards-list board__cards-list--blogs">
+        
+
+        
+        <p class="board__empty">There's nothing yet</p>
+        
+    </div>
+</div>
+</div>
+
+    </div>
+</body>
+
+</html>

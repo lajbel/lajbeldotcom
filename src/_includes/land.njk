@@ -1,0 +1,28 @@
+{% extends "base.njk" %}
+
+{% block page %}
+<div class="presentation">
+    <h1 class="presentation__name">lajbel</h1>
+    <h2 class="presentation__bio">Wasksite</h2>
+    <hr class="presentation__line" />
+</div>
+
+<div class="boards">
+    {{ comp.board({
+    name: "Projects",
+    type: "projects",
+    cards: projects
+    }) | safe }}
+    {{ comp.board({
+    name: "Games",
+    type: "games",
+    cards: games
+    }) | safe }}
+    {{ comp.board({
+    name: "Blog",
+    type: "blogs",
+    cards: blogs
+    }) | safe }}
+</div>
+{% endblock %}
+```
