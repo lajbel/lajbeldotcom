@@ -5,6 +5,9 @@
 
     &__name {
         text-align: center;
+        font-size: $text-size-huge;
+        font-weight: bold;
+        margin: 10px 0px;
     }
 
     &__bio {
@@ -13,7 +16,6 @@
 
     &__line {
         margin: 10px auto;
-        border: 1px solid $accent-color;
-        width: 100%;
+        width: 90%;
     }
 }
