@@ -1,6 +1,9 @@
 {% extends "base.njk" %}
 
 {% block page %}
-{{ content | safe }}
+{{ comp.nav() | safe }}
+
+<section class="blog">
+    {{ content | safe }}
+</section>
 {% endblock %}
-```

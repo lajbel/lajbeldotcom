@@ -2,6 +2,8 @@
 
 .presentation {
     width: 100%;
+    background-color: #ffc561;
+    padding: 10px;
 
     &__name {
         text-align: center;
@@ -14,8 +16,4 @@
         text-align: center;
     }
 
-    &__line {
-        margin: 10px auto;
-        width: 90%;
-    }
 }
