@@ -1,3 +1,55 @@
+@use "variables" as *;
+
 .blog {
-    padding: 20px;
+    &__banner-container {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: rgb(0, 0, 0, 0.5);
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__banner {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+    &__title {
+        color: $background-color;
+        position: absolute;
+        font-size: $text-size-huge;
+        margin-block-start: 0.32em;
+        margin-block-end: 0.32em;
+        z-index: 2;
+        bottom: 50%;
+        padding-left: 10px;
+    }
+
+    &__content {
+        padding: 10px 20px;
+
+        h1 {
+            font-size: $text-size-huge;
+            margin-block-start: 0.32em;
+            margin-block-end: 0.32em;
+        }
+
+        h2 {
+            font-size: $text-size-large;
+        }
+
+        h3 {
+            font-size: $text-size-medium;
+        }
+
+        p {
+            font-size: $text-size-small;
+        }
+    }
 }

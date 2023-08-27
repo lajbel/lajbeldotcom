@@ -6,7 +6,13 @@
         {{ comp.card(card) | safe }}
         {% endfor %}
 
-        {% if not cards.length %}
+        {% if blog %}
+        {% for page in search.pages("type='post'") %}
+        {{ comp.card(page.data) | safe }}
+        {% endfor %}
+        {% endif %}
+
+        {% if not cards.length and not blog %}
         <p class="board__empty">There's nothing yet</p>
         {% endif %}
     </div>

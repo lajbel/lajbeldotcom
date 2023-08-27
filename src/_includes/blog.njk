@@ -1,9 +1,19 @@
 {% extends "base.njk" %}
 
 {% block page %}
-{{ comp.nav() | safe }}
 
 <section class="blog">
-    {{ content | safe }}
+    <div class="blog__banner-container">
+        <img class="blog__banner" src="{{ image }}">
+        </img>
+
+        <h1 class="blog__title">
+            {{ name }}
+        </h1>
+    </div>
+
+    <div class="blog__content">
+        {{ content | safe }}
+    </div>
 </section>
 {% endblock %}

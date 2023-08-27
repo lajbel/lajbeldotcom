@@ -1,21 +1,23 @@
 @use "variables" as *;
 
 .card {
-    border-radius: 3px;
-    background-color: $background-color;
-    border: 4px solid #e4d8c6;
-    min-height: 180px;
-    background-image: url("https://images.unsplash.com/photo-1631148601579-9e20bf28ab59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80");
-    background-size: cover;
-    background-position: center;
-    text-decoration: none;
     transform: translate(0, 0px);
     transition: transform 0.3s ease-in-out;
+    border: 4px solid #e4d8c6;
+    border-radius: 3px;
+    background-image: url("https://images.unsplash.com/photo-1631148601579-9e20bf28ab59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80");
+    background-position: center;
+    background-size: cover;
+    background-color: $background-color;
+    min-height: 192.50px;
+    text-decoration: none;
+    position: relative;
 
     &__info {
         background-color: #2a2727a8;
-        color: $background-color;
         padding: 4px;
+        width: 100%;
+        color: $background-color;
     }
 
     &__name {
@@ -29,9 +31,42 @@
         text-align: left;
     }
 
+    &__number {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-family: 'Fredoka', sans-serif;
+        font-size: $text-size-medium;
+        text-shadow: 1px 1px 10px #000000;
+        font-weight: 600;
+    }
+
     &:hover {
         // scale and move some to up
         transform: translate(0, -10px);
         transition: transform 0.3s ease-in-out;
+    }
+
+    // Modifications
+    &--post {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+
+    &--post & {
+        &__info {
+            box-shadow: 1px -11px 24px -12px rgba(0, 0, 0, 0.75);
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        &__name {
+            text-align: center;
+        }
+
+        &__description {
+            text-align: center;
+            font-weight: 300;
+        }
     }
 }
