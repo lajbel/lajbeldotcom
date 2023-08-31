@@ -3,16 +3,6 @@
 {% block page %}
 {{ comp.nav() | safe }}
 
-<div class="boards">
-    {{ comp.board({
-    name: "Projects",
-    type: "projects",
-    cards: projects
-    }) | safe }}
-    {{ comp.board({
-    name: "Games",
-    type: "games",
-    cards: games
-    }) | safe }}
+<div class="space">
 </div>
 {% endblock %}

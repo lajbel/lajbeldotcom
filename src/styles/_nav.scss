@@ -1,48 +1,22 @@
 @use "variables" as *;
 
-// This is the nav
-
 .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     z-index: 1;
     box-shadow: -1px 6px 27px -10px rgba(0, 0, 0, 0.57);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background-color: #ffc561;
     padding: 10px;
     width: 100%;
+    max-width: 273px;
 
     &__title {
         padding: 10px;
         color: #fff;
         font-weight: 600;
-        font-size: $text-size-huge;
+        font-size: $text-size-large;
         text-align: center;
-    }
-
-    &__sections {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-        padding: 4px;
-    }
-
-    &__section {
-        font-size: $text-size-medium;
-    }
-
-    &__link {
-        text-decoration: none;
-        color: #fff;
-        font-weight: 600;
-        font-size: $text-size-medium;
-        text-align: center;
-        padding: 0 2px;
-        border-radius: 5px;
-        transition: background-color 0.1s ease-in-out;
-
-        &:hover {
-            background-color: #fff;
-            color: #ffc561;
-        }
     }
 }

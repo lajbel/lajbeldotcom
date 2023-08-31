@@ -1,6 +1,5 @@
 ---
-name: "Where’s is my gamedev blog of this year?"
-layout: blog.njk
+title: "Where’s is my gamedev blog of this year?"
 type: post
 description: "I forgot"
 cardlink: blog/welcome

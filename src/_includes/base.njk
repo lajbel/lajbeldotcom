@@ -13,9 +13,14 @@
 </head>
 
 <body>
-    <div class="page">
-        {% block page %}{% endblock %}
-    </div>
+    <main class="page">
+        {% block page %}
+
+        {{ content | safe }}
+        {% endblock %}
+    </main>
+
+    <script src="scripts/displayOnSpace.js"></script>
 </body>
 
 </html>

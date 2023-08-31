@@ -9,8 +9,6 @@
         "react": "https://cdn.skypack.dev/react@17.0.1"
     },
     "compilerOptions": {
-        "jsx": "react-jsx",
-        "jsxImportSource": "npm:react"
     },
     "fmt": {
         "semiColons": true,

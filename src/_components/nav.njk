@@ -1,11 +1,7 @@
 <nav class="nav">
     <h1 class="nav__title">lajbel</h1>
-    <ul class="nav__sections">
-        <li class="nav__section">
-            <a class="nav__link" href="/">home</a>
-        </li>
-        <li class="nav__section">
-            <a class="nav__link" href="https://github.com/lajbel" target="_blank">github</a>
-        </li>
-    </ul>
+
+    {% for post in search.pages("public=true") %}
+    {{ comp.card(post.data) | safe }}
+    {% endfor %}
 </nav>
