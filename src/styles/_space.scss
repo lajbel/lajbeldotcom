@@ -1,7 +1,32 @@
 .space {
+    position: relative;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background: #D9D9D9;
+    padding: 10px;
     width: 100%;
     height: 100%;
-    padding: 10px;
+
+    &__controls {
+        position: absolute;
+
+        z-index: 3;
+    }
+
+    &__btn {
+        background-color: #D2AA65;
+        border: none;
+        border-radius: 2%;
+        width: 40px;
+        height: 40px;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    &__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
 }

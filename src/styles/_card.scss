@@ -1,4 +1,18 @@
 @use "variables" as *;
+@use "keyframes" as *;
+
+.card-container {
+    height: 8rem;
+
+    &--active {
+        height: 0px;
+        transition: .5s ease-in-out;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
 
 .card {
     position: relative;
@@ -10,7 +24,7 @@
     background-position: center;
     background-size: cover;
     background-color: #D2AA65;
-    height: 8rem;
+    height: 100%;
     text-decoration: none;
 
     &__info {
@@ -44,30 +58,24 @@
     &:hover {
         transform: translate(0, -10px);
         transition: transform 0.3s ease-in-out;
-        // scale and move some to up
-        cursor: pointer;
+
     }
 
-    // Modifications
-    &--post {
-        display: flex;
-        justify-content: center;
-        align-items: end;
-    }
+    &--in-space {
+        position: absolute;
+        width: 254px;
+        height: 128px;
+        z-index: 1;
+        animation: move-to-space 0.5s ease-in-out forwards;
 
-    &--post & {
-        &__info {
-            box-shadow: 1px -11px 24px -12px rgba(0, 0, 0, 0.75);
-            font-family: 'Fredoka', sans-serif;
-        }
-
-        &__name {
-            text-align: center;
-        }
-
-        &__description {
-            font-weight: 300;
-            text-align: center;
+        &:hover {
+            transform: translate(0, 0);
         }
     }
 }
+
+// La idea es
+// Primero tener un parente en la card
+// El hijo se saldra del parente pero sin que el parente pierda sus posiciones, entonces el parente se achicara
+// Mediante scripting, el hijo se movera de la posicion del parente al espacio, y luego ocupara el 100% del espacio, y se hara transparente
+// Habría una variable llamada parentToBack que sería el parent a donde volvera el elemento del espacio si la x es precionada.
