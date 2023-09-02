@@ -1,0 +1,3 @@
+var n=document.querySelectorAll(".card"),c=document.querySelector(".space__post"),a=document.querySelector(".space__exit-btn"),s;fetch("/content.json").then(e=>e.json()).then(e=>{s=e});var t=null;n.forEach(e=>{e.addEventListener("click",()=>{e.classList.remove("card--active"),t&&t.classList.add("card--active"),t=e,c&&(c.innerHTML=s[e.id]?.content?.toString()||""),c?.classList.add("space__post--active")})});a?.addEventListener("click",()=>{t?.classList.add("card--active"),t=null,c?.classList.remove("space__post--active")});
+
+//# sourceMappingURL=./card.js.map

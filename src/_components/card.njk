@@ -1,11 +1,6 @@
-<div class="card-container">
-    <div class="card card--{{ type }}" id="{{ title }}" style='background-image: url({{image}});'>
-        <div class="card__info"'>
-            {% if type == "post" %}
-            <p class="card__number">{{ number }}</p>
-            {% endif %}
-            <h4 class="card__name">{{ title }}</h4>
-            <p class="card__description">{{ description }}</p>
-        </div>
+<div id="{{ title }}" class="card" style='background-image: url({{image}});'>
+    <div class="card__info"'>
+        <h4 class="card__name">{{ title }}</h4>
+        <p class="card__description">{{ description }}</p>
     </div>
 </div>

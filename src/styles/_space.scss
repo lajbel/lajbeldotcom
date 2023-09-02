@@ -5,28 +5,38 @@
     padding: 10px;
     width: 100%;
     height: 100%;
+    z-index: 2;
 
     &__controls {
         position: absolute;
-
+        top: -1px;
+        right: -1px;
         z-index: 3;
     }
 
     &__btn {
-        background-color: #D2AA65;
-        border: none;
-        border-radius: 2%;
-        width: 40px;
-        height: 40px;
-        color: #fff;
-        font-size: 1.5rem;
-        font-weight: bold;
         cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        background-color: #D2AA65;
+        width: 32px;
+        height: 32px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1rem;
     }
 
-    &__overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
+    &__post {
+        transition: .5s;
+        overflow-y: auto;
+        height: 0px;
+        background-color: #fff;
+        border-radius: 4px;
+        padding: 0px 10px;
+
+        &--active {
+            height: 100%;
+            padding: 10px;
+        }
     }
 }

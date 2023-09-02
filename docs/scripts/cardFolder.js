@@ -1,0 +1,3 @@
+var o=Object.defineProperty;var r=(e,c)=>o(e,"name",{value:c,configurable:!0});var n=document.querySelectorAll(".card-folder");function t(e,c){e.querySelector(".card-folder__cards-container")?.querySelectorAll(".card")?.forEach(a=>{a.classList.toggle("card--active",c)})}r(t,"changeFolderCardsState");function s(e){e.classList.toggle("card-folder--active"),t(e,e.classList.contains("card-folder--active"))}r(s,"onCardFolderClick");n.forEach(e=>{t(e,e.classList.contains("card-folder--active")),e.querySelector(".card-folder__cover")?.addEventListener("click",()=>{s(e)})});
+
+//# sourceMappingURL=./cardFolder.js.map

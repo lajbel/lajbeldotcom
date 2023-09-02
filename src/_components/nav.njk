@@ -1,7 +1,6 @@
 <nav class="nav">
     <h1 class="nav__title">lajbel</h1>
-
-    {% for post in search.pages("public=true") %}
-    {{ comp.card(post.data) | safe }}
-    {% endfor %}
+    {{ comp.cardFolder({ cardTitle: "Welcome", tag: "about", active: true }) | safe }}
+    {{ comp.cardFolder({ cardTitle: "Projects", tag: "project" }) | safe }}
+    {{ comp.cardFolder({ cardTitle: "Games", tag: "game" }) | safe }}
 </nav>
