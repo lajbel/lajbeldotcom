@@ -1,6 +1,8 @@
 <nav class="nav">
     <h1 class="nav__title">lajbel</h1>
-    {{ comp.cardFolder({ cardTitle: "Welcome", tag: "about", active: true }) | safe }}
-    {{ comp.cardFolder({ cardTitle: "Projects", tag: "project" }) | safe }}
-    {{ comp.cardFolder({ cardTitle: "Games", tag: "game" }) | safe }}
+    <div class="nav__cards-container">
+        {{ comp.cardFolder({ cardTitle: "Welcome", tag: "about", active: true }) | safe }}
+        {{ comp.cardFolder({ cardTitle: "Code Projects", tag: "project" }) | safe }}
+        {{ comp.cardFolder({ cardTitle: "Games", tag: "game" }) | safe }}
+    </div>
 </nav>

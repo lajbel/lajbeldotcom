@@ -7,6 +7,7 @@ function changeFolderCardsState(cardFolder: HTMLDivElement, state?: boolean) {
     const cards = cardsContainer?.querySelectorAll(".card");
 
     cards?.forEach((card) => {
+        if (card.classList.contains('card--in-space')) return;
         card.classList.toggle('card--active', state);
     });
 }

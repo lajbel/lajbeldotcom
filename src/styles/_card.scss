@@ -1,7 +1,5 @@
 @use "variables" as *;
 
-$card-height: 124px;
-
 .card-folder {
     transition: .2s;
     background-color: #D2AA65;
@@ -43,16 +41,17 @@ $card-height: 124px;
 .card {
     top: var(--card-top);
     left: var(--card-left);
+    z-index: 1;
     transition: 0.4s;
     cursor: pointer;
     background-image: url("https://images.unsplash.com/photo-1631148601579-9e20bf28ab59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80");
     background-position: center;
     background-size: cover;
     background-color: #D2AA65;
+    width: $card-width;
     height: 0px;
     min-height: 0px;
     text-decoration: none;
-    z-index: 1;
 
     &__info {
         transition: .4s;
@@ -83,10 +82,5 @@ $card-height: 124px;
         &__info {
             padding: 4px;
         }
-    }
-
-    &--in-space {
-        position: absolute;
-        left: 50%;
     }
 }

@@ -10,8 +10,6 @@
     background-color: #ffc561;
     padding: 10px;
     width: 100%;
-    max-width: 273px;
-    overflow-y: auto;
 
     &__title {
         padding: 10px;
@@ -19,5 +17,22 @@
         font-weight: 600;
         font-size: $text-size-large;
         text-align: center;
+    }
+
+    &__cards-container {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        height: 100%;
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+        max-width: 273px;
+
+        &__cards-container {
+            flex-direction: column;
+        }
     }
 }
