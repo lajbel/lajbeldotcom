@@ -1,5 +1,9 @@
 @use "variables" as *;
 
+:root {
+    --all-background-color: #f0f2fb;
+}
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -13,12 +17,15 @@ body {
 .page {
     display: flex;
     flex-direction: column;
-    background-color: $background-color;
+    gap: 0.625rem;
+    background-color: var(--all-background-color);
+    padding: 10px;
     width: 100%;
+    height: 100vh;
     line-height: 1.8rem;
     font-family: $main-font-family;
 
     @media screen and (min-width: $desktop-width) {
-        height: 100vh;
+        flex-direction: row;
     }
 }

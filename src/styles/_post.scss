@@ -1,0 +1,64 @@
+@use "variables" as *;
+
+@mixin header-text($font-weight, $font-size) {
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: 4.5rem;
+}
+
+.post {
+    font-family: $main-font-family;
+
+    &__title {
+        @include header-text(400, 3rem);
+    }
+
+    &__p {
+        font-weight: 300;
+        font-size: 1.3rem;
+        line-height: 1.3rem;
+    }
+
+    &__h2 {
+        @include header-text(400, 2.4rem);
+    }
+
+    &__h3 {
+        @include header-text(400, 2rem);
+    }
+
+    &__h4 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
+
+    &__h5 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 1.4rem;
+    }
+
+    &__h6 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+
+    &__a {
+        color: $accent-color;
+        text-decoration: none;
+    }
+
+    &__ul {
+        list-style-position: inside;
+    }
+
+    &__img {
+        max-width: 700px;
+        height: auto;
+    }
+}

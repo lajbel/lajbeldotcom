@@ -1,11 +1,8 @@
 <nav class="nav">
     <h1 class="nav__title">lajbel</h1>
-    <ul class="nav__sections">
-        <li class="nav__section">
-            <a class="nav__link" href="/">home</a>
-        </li>
-        <li class="nav__section">
-            <a class="nav__link" href="https://github.com/lajbel" target="_blank">github</a>
-        </li>
-    </ul>
+    <div class="nav__cards-container">
+        {{ comp.cardFolder({ cardTitle: "Home", tag: "about", active: true }) | safe }}
+        {{ comp.cardFolder({ cardTitle: "Code Projects", tag: "project" }) | safe }}
+        {{ comp.cardFolder({ cardTitle: "Games", tag: "game" }) | safe }}
+    </div>
 </nav>

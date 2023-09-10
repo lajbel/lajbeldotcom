@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>{{ title }}</title>
+    <title>Eggou</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="/styles/index.css" rel="stylesheet" />
@@ -19,10 +20,34 @@
 
 <body>
     <main class="page">
-        {% block page %}
+        
+<div class="space">
+    
 
-        {{ content | safe }}
-        {% endblock %}
+    <div class="space__post  space__post--active">
+        
+        <h1 class="post__title">Eggou</h1>
+<p class="post__p">Eggou is a bullet hell game, made for the &quot;Newgrounds July Game Jam 2021&quot;, with
+the theme &quot;Egg&quot;. It was my first game, there's the itch.io embed game if you
+want to try!</p>
+<br>
+<iframe frameborder="" src="https://itch.io/embed-upload/8640582?color=ebb2b2" width="680" height="520"><a href="https://lajbel.itch.io/eggou">Play Eggou on itch.io</a></iframe>
+<p class="post__p">Welcome to Eggou, a boss fight bullet hell style!</p>
+<p class="post__p"><strong>Controls</strong></p>
+<ul class="post__ul">
+<li class="post__li">Move: wasd/arrows</li>
+<li class="post__li">Shoot: space/enter</li>
+<li class="post__li">Back: esc</li>
+</ul>
+
+        
+    </div>
+
+    <div class="space__nothing">
+        <p class="space__nothing-text">A random quote. <br> - A person </p>
+    </div>
+</div>
+
     </main>
 
     <script src="scripts/main.js"></script>

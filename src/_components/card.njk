@@ -1,11 +1,10 @@
-<a class="card card--{{ type }}" href="{{ cardlink }}" target="_blank"
-    style='background-image: url({{image}}); border-color:{{border}};'>
-
-    <div class="card__info" style='background-color: {{theme}};'>
-        {% if type == "post" %}
-        <p class="card__number">{{ number }}</p>
-        {% endif %}
-        <h4 class="card__name">{{ name }}</h4>
+<div id="{{ title }}" class="card" style='
+--card-img: url("{{ image }}");
+--card-color: {{ color }};
+--card-info-opacity: {{ opacity or 0.4 }};
+'>
+    <div class="card__info">
+        <h4 class="card__name">{{ title }}</h4>
         <p class="card__description">{{ description }}</p>
     </div>
-</a>
+</div>

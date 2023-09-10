@@ -1,72 +1,89 @@
 @use "variables" as *;
 
+.card-folder {
+    transition: .2s;
+    background-color: #D2AA65;
+    height: fit-content;
+
+    &__cover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        height: $card-height;
+        color: $background-color;
+        user-select: none;
+    }
+
+    &__cards-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        transition: .2s;
+        border-width: 4px;
+        border-style: solid;
+        border-color: #a68142;
+        background-color: #a68142;
+        height: max-content;
+        max-height: 400px;
+        overflow-x: hidden;
+        overflow-y: auto
+    }
+
+    &--active & {
+        &__cards-container {
+            gap: 4px;
+            border-width: 4px;
+        }
+    }
+}
+
 .card {
-    transform: translate(0, 0px);
-    transition: transform 0.3s ease-in-out;
-    border: 4px solid #e4d8c6;
-    border-radius: 3px;
-    background-image: url("https://images.unsplash.com/photo-1631148601579-9e20bf28ab59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80");
+    --card-img: url();
+    --card-color: #D2AA65;
+    --card-info-opacity: 0.3;
+    z-index: 1;
+    transition: 0.4s;
+    cursor: pointer;
+    background-image: var(--card-img);
     background-position: center;
     background-size: cover;
-    background-color: $background-color;
-    min-height: 192.50px;
+    background-color: var(--card-color);
+    width: $card-width;
+    height: 0px;
+    min-height: 0px;
     text-decoration: none;
-    position: relative;
 
     &__info {
-        background-color: #2a2727a8;
-        padding: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: .4s;
+        background-color: rgb(0, 0, 0, var(--card-info-opacity));
         width: 100%;
+        height: 100%;
+        overflow-y: hidden;
         color: $background-color;
+        user-select: none;
+        text-align: center;
     }
 
     &__name {
         font-weight: bold;
         font-size: $text-size-small;
-        text-align: left;
     }
 
     &__description {
         font-size: $text-size-ssmall;
-        text-align: left;
     }
 
-    &__number {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        font-family: 'Fredoka', sans-serif;
-        font-size: $text-size-medium;
-        text-shadow: 1px 1px 10px #000000;
-        font-weight: 600;
+    &--active {
+        min-height: $card-height;
     }
 
-    &:hover {
-        // scale and move some to up
-        transform: translate(0, -10px);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    // Modifications
-    &--post {
-        display: flex;
-        justify-content: center;
-        align-items: end;
-    }
-
-    &--post & {
+    &--active & {
         &__info {
-            box-shadow: 1px -11px 24px -12px rgba(0, 0, 0, 0.75);
-            font-family: 'Fredoka', sans-serif;
-        }
-
-        &__name {
-            text-align: center;
-        }
-
-        &__description {
-            text-align: center;
-            font-weight: 300;
+            padding: 4px;
         }
     }
 }

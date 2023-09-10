@@ -1,0 +1,17 @@
+<div class="space">
+    {% if not single %}
+    <div class="space__controls">
+        <button class="space__btn space__exit-btn"><i class="space__btn-text fa-solid fa-x"></i></button>
+    </div>
+    {% endif %}
+
+    <div class="space__post {{ " space__post--active" if single else "" }}">
+        {% if single %}
+        {{ content | safe }}
+        {% endif %}
+    </div>
+
+    <div class="space__nothing">
+        <p class="space__nothing-text">A random quote. <br> - A person </p>
+    </div>
+</div>
