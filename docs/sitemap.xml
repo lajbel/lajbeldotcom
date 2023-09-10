@@ -5,19 +5,19 @@
     <lastmod>2023-07-28T00:42:43.281Z</lastmod>
   </url>
   <url>
-    <loc>http://localhost:3000/content/about/about-me/</loc>
+    <loc>http://localhost:3000/content/about-me/</loc>
     <lastmod>2023-09-02T18:28:18.074Z</lastmod>
   </url>
   <url>
-    <loc>http://localhost:3000/content/games/eggou/</loc>
+    <loc>http://localhost:3000/content/eggou/</loc>
     <lastmod>2023-08-30T23:13:58.378Z</lastmod>
   </url>
   <url>
-    <loc>http://localhost:3000/content/projects/mandarina/</loc>
+    <loc>http://localhost:3000/content/mandarina/</loc>
     <lastmod>2023-08-31T23:49:20.409Z</lastmod>
   </url>
   <url>
-    <loc>http://localhost:3000/content/projects/newgrounds-js/</loc>
+    <loc>http://localhost:3000/content/newgrounds-js/</loc>
     <lastmod>2023-09-01T14:34:12.978Z</lastmod>
   </url>
 </urlset>

@@ -1,10 +1,10 @@
+import type { Page } from "lume/core.ts";
 import lume from "lume/mod.ts";
 import sass from "lume/plugins/sass.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import sourceMaps from "lume/plugins/source_maps.ts";
 import markdownItClass from "npm:@toycode/markdown-it-class";
-import { Page } from "lume/core.ts";
 
 // Site
 const site = lume({
@@ -22,7 +22,7 @@ site.use(esbuild({
 site.use(sitemap());
 site.use(sourceMaps());
 
-// Classes for posts
+// Hooks
 site.hooks.addMarkdownItPlugin(markdownItClass, {
     "h1": "post__title",
     "h2": "post__h2",
@@ -32,6 +32,9 @@ site.hooks.addMarkdownItPlugin(markdownItClass, {
     "h6": "post__h6",
     "p": "post__p",
     "a": "post__a",
+    "img": "post__img",
+    "ul": "post__ul",
+    "li": "post__li",
 });
 
 // Filters
@@ -40,7 +43,7 @@ site.filter("check", (value) => {
 });
 
 // Events
-const data: Record<string, unknown> = {};
+const data: Record<string, any> = {};
 
 function createContentJSON(pages: Page[]) {
     const textEncoder = new TextEncoder();
@@ -51,12 +54,12 @@ function createContentJSON(pages: Page[]) {
                 "title": page.data.title?.toString() || "",
                 "url": page.data.url.toString(),
                 "content": page.data.children?.toString() || "",
+                "theme": page.data.theme,
             };
         }
     }
 
     Deno.createSync("./docs/content.json").write(textEncoder.encode(JSON.stringify(data)));
-
 }
 
 site.addEventListener("afterBuild", (event) => {
@@ -66,5 +69,16 @@ site.addEventListener("afterBuild", (event) => {
 site.addEventListener("afterUpdate", (event) => {
     createContentJSON(event.pages);
 });
+
+// site.process([".html"], (page) => {
+//     console.log(page.src.path);
+//     if (page.src.path != "/index") return;
+//     const spacePost = page.document?.querySelector(".space__post");
+//     console.log(spacePost?.id, spacePost?.classList);
+
+//     if (spacePost) {
+//         spacePost.innerHTML = data[spacePost.id]?.content?.toString() || "";
+//     }
+// });
 
 export default site;

@@ -30,6 +30,7 @@ cards.forEach((card) => {
 
         if (spacePost) {
             spacePost.innerHTML = jsonContent[card.id]?.content?.toString() || "";
+            spacePost.id = card.id;
         }
 
         spacePost?.classList.add("space__post--active");
@@ -40,6 +41,10 @@ cards.forEach((card) => {
 exitBtn?.addEventListener('click', () => {
     activeCard?.classList.remove("card--in-space");
     spacePost?.classList.remove("space__post--active");
+
+    if (spacePost) {
+        spacePost.id = "";
+    }
 
     if (activeCardFolder?.classList.contains('card-folder--active')) {
         activeCard?.classList.add("card--active");

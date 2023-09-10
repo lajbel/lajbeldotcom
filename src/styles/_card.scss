@@ -39,39 +39,42 @@
 }
 
 .card {
-    top: var(--card-top);
-    left: var(--card-left);
+    --card-img: url();
+    --card-color: #D2AA65;
+    --card-info-opacity: 0.3;
     z-index: 1;
     transition: 0.4s;
     cursor: pointer;
-    background-image: url("https://images.unsplash.com/photo-1631148601579-9e20bf28ab59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80");
+    background-image: var(--card-img);
     background-position: center;
     background-size: cover;
-    background-color: #D2AA65;
+    background-color: var(--card-color);
     width: $card-width;
     height: 0px;
     min-height: 0px;
     text-decoration: none;
 
     &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         transition: .4s;
-        background-color: #2a2727a8;
+        background-color: rgb(0, 0, 0, var(--card-info-opacity));
         width: 100%;
-        height: 50%;
+        height: 100%;
         overflow-y: hidden;
         color: $background-color;
         user-select: none;
+        text-align: center;
     }
 
     &__name {
         font-weight: bold;
         font-size: $text-size-small;
-        text-align: left;
     }
 
     &__description {
         font-size: $text-size-ssmall;
-        text-align: left;
     }
 
     &--active {
