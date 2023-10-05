@@ -2,6 +2,9 @@
 
 const cards = document.querySelectorAll('.card');
 const spacePost = document.querySelector('.space__post');
+const spacePostContent = document.querySelector('.space__post-content');
+const spacePostTitle = document.querySelector<HTMLHeadingElement>('.space__post-title');
+const spacePostImage = document.querySelector<HTMLImageElement>('.space__post-image');
 const exitBtn = document.querySelector('.space__exit-btn');
 let jsonContent: Record<string, any>;
 
@@ -28,9 +31,11 @@ cards.forEach((card) => {
         activeCard = card as HTMLDivElement;
         activeCardFolder = card.parentElement?.parentElement as HTMLDivElement;
 
-        if (spacePost) {
-            spacePost.innerHTML = jsonContent[card.id]?.content?.toString() || "";
-            spacePost.id = card.id;
+        if (spacePostContent && spacePostImage && spacePostTitle) {
+            spacePostContent.innerHTML = jsonContent[card.id]?.content?.toString() || "";
+            spacePostContent.id = card.id;
+            spacePostTitle.innerHTML = jsonContent[card.id]?.title?.toString() || "";
+            spacePostImage.src = jsonContent[card.id]?.image?.toString() || "";
         }
 
         spacePost?.classList.add("space__post--active");

@@ -55,6 +55,7 @@ function createContentJSON(pages: Page[]) {
                 "url": page.data.url.toString(),
                 "content": page.data.children?.toString() || "",
                 "theme": page.data.theme,
+                "image": page.data.image,
             };
         }
     }

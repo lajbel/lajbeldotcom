@@ -1,5 +1,5 @@
 ---
-title: About
+title: About Me
 layout: single.njk
 description: "About me and this website."
 public: true

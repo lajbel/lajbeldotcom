@@ -5,10 +5,18 @@
     </div>
     {% endif %}
 
+
     <div class="space__post {{ " space__post--active" if single else "" }}">
-        {% if single %}
-        {{ content | safe }}
-        {% endif %}
+        <div class="space__post-header">
+            <h1 class="space__post-title">{{ title }}</h1>
+            <img class="space__post-image" src="{{ img }}" alt="Space image">
+        </div>
+
+        <div class="space__post-content">
+            {% if single %}
+            {{ content | safe }}
+            {% endif %}
+        </div>
     </div>
 
     <div class="space__nothing">
