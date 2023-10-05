@@ -8,7 +8,7 @@ tags:
     - project
 ---
 
-# ![Mandarina](https://i.imgur.com/8eoL7Js.png)
+# ![Mandarina](https://lajbel.github.io/mandarina/images/mandarina_logo_orange.png)
 
 Mandarina is a little visual novel engine, made with the idea of being a simple.
 
