@@ -1,15 +1,16 @@
 <div class="space">
     {% if not single %}
     <div class="space__controls">
+        <button class="space__btn space__btn--active space__en-btn"><span class="space__btn-text">EN</span></button>
+        <button class="space__btn space__es-btn"><span class="space__btn-text">ES</span></button>
         <button class="space__btn space__exit-btn"><i class="space__btn-text fa-solid fa-x"></i></button>
     </div>
     {% endif %}
 
-
     <div class="space__post {{ " space__post--active" if single else "" }}">
         <div class="space__post-header">
             <h1 class="space__post-title">{{ title }}</h1>
-            <img class="space__post-image" src="{{ img }}" alt="Space image">
+            <img class="space__post-image" src="{{ image }}" alt="Space image">
         </div>
 
         <div class="space__post-content">
@@ -20,6 +21,6 @@
     </div>
 
     <div class="space__nothing">
-        <p class="space__nothing-text">A random quote. <br> - A person </p>
+        <p class="space__nothing-text"><i class="fa-solid fa-ghost"></i></p>
     </div>
 </div>

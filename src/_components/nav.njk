@@ -1,8 +1,14 @@
 <nav class="nav">
     <h1 class="nav__title">lajbel</h1>
     <div class="nav__cards-container">
-        {{ comp.cardFolder({ cardTitle: "Home", tag: "about", active: true }) | safe }}
-        {{ comp.cardFolder({ cardTitle: "Code Projects", tag: "project" }) | safe }}
-        {{ comp.cardFolder({ cardTitle: "Games", tag: "game" }) | safe }}
+        {{ comp.cardFolder({ cardTitle: "Home", tag: "about", active: true, id: "home" }) | safe }}
+        {{ comp.cardFolder({ cardTitle: "Code Projects", tag: "project", id: "projects" }) | safe }}
+        {{ comp.cardFolder({ cardTitle: "Games", tag: "game", id: "games" }) | safe }}
+    </div>
+    <p class="nav__footer">
+        Made with <span class="nav__heart">❤</span> and Lume
+    </p>
+    <div class="nav__button">
+        <i class="fa-solid fa-caret-right"></i>
     </div>
 </nav>

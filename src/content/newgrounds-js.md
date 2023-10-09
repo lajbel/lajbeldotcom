@@ -1,6 +1,8 @@
 ---
-title: Newgrounds.js
 layout: single.njk
+title: Newgrounds.js
+id: "newgrounds-js"
+lang: "en"
 description: "A newgrounds.io api wrapper"
 public: true
 image: https://www.newgrounds.io/img/newgrounds_logo.png

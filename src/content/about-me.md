@@ -1,14 +1,13 @@
 ---
-title: About Me
 layout: single.njk
-description: "About me and this website."
+title: About Me
+id: "about"
+lang: "en"
+description: "About me and this website"
 public: true
 image: https://i.imgur.com/6ZHLsWS.png
 tags:
     - about
-theme:
-    space-background: "#fff"
-    space-headers: "#6388d2"
 ---
 
 # About me

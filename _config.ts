@@ -50,13 +50,27 @@ function createContentJSON(pages: Page[]) {
 
     for (const page of pages) {
         if (page.data.url.toString().startsWith("/content/")) {
-            data[page.data.title?.toString() || ""] = {
-                "title": page.data.title?.toString() || "",
-                "url": page.data.url.toString(),
-                "content": page.data.children?.toString() || "",
-                "theme": page.data.theme,
-                "image": page.data.image,
-            };
+            if (!data[page.data.id?.toString() || ""]) {
+                data[page.data.id?.toString()] = {};
+            }
+            if (page.data.lang?.toString() === "en") {
+                data[page.data.id?.toString() || ""] = {
+                    "title": page.data.title?.toString() || "",
+                    "url": page.data.url.toString(),
+                    "content": page.data.children?.toString() || "",
+                    "image": page.data.image,
+                    "description": page.data.description?.toString() || "",
+                }
+            }
+            else {
+                data[page.data.id?.toString() || ""][page.data.lang?.toString() || ""] = {
+                    "title": page.data.title?.toString() || "",
+                    "url": page.data.url.toString(),
+                    "content": page.data.children?.toString() || "",
+                    "image": page.data.image,
+                    "description": page.data.description?.toString() || "",
+                }
+            }
         }
     }
 
@@ -70,16 +84,5 @@ site.addEventListener("afterBuild", (event) => {
 site.addEventListener("afterUpdate", (event) => {
     createContentJSON(event.pages);
 });
-
-// site.process([".html"], (page) => {
-//     console.log(page.src.path);
-//     if (page.src.path != "/index") return;
-//     const spacePost = page.document?.querySelector(".space__post");
-//     console.log(spacePost?.id, spacePost?.classList);
-
-//     if (spacePost) {
-//         spacePost.innerHTML = data[spacePost.id]?.content?.toString() || "";
-//     }
-// });
 
 export default site;

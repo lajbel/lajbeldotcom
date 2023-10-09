@@ -16,7 +16,7 @@ body {
 
 .page {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.625rem;
     background-color: var(--all-background-color);
     padding: 10px;
@@ -24,8 +24,4 @@ body {
     height: 100vh;
     line-height: 1.8rem;
     font-family: $main-font-family;
-
-    @media screen and (min-width: $desktop-width) {
-        flex-direction: row;
-    }
 }

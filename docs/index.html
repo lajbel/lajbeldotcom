@@ -26,21 +26,22 @@
     <div class="nav__cards-container">
         <div class='
 card-folder  card-folder--active '
+id=home
 >
     <div class="card-folder__cover">
-        <h2>Home</h2>
+        <h2 class="card-folder__title">Home</h2>
     </div>
 
     <div class="card-folder__cards-container">
         
-        <div id="About Me" class="card" style='
+        <div id="about" class="card" style='
 --card-img: url("https://i.imgur.com/6ZHLsWS.png");
 --card-color: ;
 --card-info-opacity: 0.4;
 '>
     <div class="card__info">
         <h4 class="card__name">About Me</h4>
-        <p class="card__description">About me and this website.</p>
+        <p class="card__description">About me and this website</p>
     </div>
 </div>
         
@@ -48,14 +49,15 @@ card-folder  card-folder--active '
 </div>
         <div class='
 card-folder  '
+id=projects
 >
     <div class="card-folder__cover">
-        <h2>Code Projects</h2>
+        <h2 class="card-folder__title">Code Projects</h2>
     </div>
 
     <div class="card-folder__cards-container">
         
-        <div id="Mandarina" class="card" style='
+        <div id="mandarina" class="card" style='
 --card-img: url("https://i.imgur.com/l36SzfL.png");
 --card-color: ;
 --card-info-opacity: 0.4;
@@ -66,7 +68,7 @@ card-folder  '
     </div>
 </div>
         
-        <div id="Newgrounds.js" class="card" style='
+        <div id="newgrounds-js" class="card" style='
 --card-img: url("https://www.newgrounds.io/img/newgrounds_logo.png");
 --card-color: ;
 --card-info-opacity: 0.4;
@@ -81,14 +83,15 @@ card-folder  '
 </div>
         <div class='
 card-folder  '
+id=games
 >
     <div class="card-folder__cover">
-        <h2>Games</h2>
+        <h2 class="card-folder__title">Games</h2>
     </div>
 
     <div class="card-folder__cards-container">
         
-        <div id="Eggou" class="card" style='
+        <div id="eggou" class="card" style='
 --card-img: url("https://i.imgur.com/UgVonEY.png");
 --card-color: ;
 --card-info-opacity: 0.4;
@@ -102,14 +105,21 @@ card-folder  '
     </div>
 </div>
     </div>
+    <p class="nav__footer">
+        Made with <span class="nav__heart">❤</span> and Lume
+    </p>
+    <div class="nav__button">
+        <i class="fa-solid fa-caret-right"></i>
+    </div>
 </nav>
 <div class="space">
     
     <div class="space__controls">
+        <button class="space__btn space__btn--active space__en-btn"><span class="space__btn-text">EN</span></button>
+        <button class="space__btn space__es-btn"><span class="space__btn-text">ES</span></button>
         <button class="space__btn space__exit-btn"><i class="space__btn-text fa-solid fa-x"></i></button>
     </div>
     
-
 
     <div class="space__post ">
         <div class="space__post-header">
@@ -123,7 +133,7 @@ card-folder  '
     </div>
 
     <div class="space__nothing">
-        <p class="space__nothing-text">A random quote. <br> - A person </p>
+        <p class="space__nothing-text"><i class="fa-solid fa-ghost"></i></p>
     </div>
 </div>
 

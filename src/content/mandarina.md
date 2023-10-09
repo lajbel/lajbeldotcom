@@ -1,6 +1,8 @@
 ---
-title: Mandarina
 layout: single.njk
+title: Mandarina
+id: "mandarina"
+lang: "en"
 description: "A visual novel engine"
 public: true
 image: "https://i.imgur.com/l36SzfL.png"

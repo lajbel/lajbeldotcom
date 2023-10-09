@@ -1,6 +1,8 @@
 ---
-title: Eggou
 layout: single.njk
+title: Eggou
+id: "eggou"
+lang: "en"
 description: "A flyers chicken egg hell"
 public: true
 image: https://i.imgur.com/UgVonEY.png
