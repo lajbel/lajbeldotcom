@@ -17,8 +17,7 @@ high school, and I'm planning to study Computer Science in the college.
 
 ## Social Medias
 
-I don't like so much social media, but I have some accounts in some of them.
-There's a specific use for each one.
+There's all my most-used social medias, where I publish content.
 
 <div class="social-medias">
 <a href="https://github.com/lajbel" target="_blank" class="social-media-icon social-media-icon--github"><i class="fa-brands fa-github"></i></a>
