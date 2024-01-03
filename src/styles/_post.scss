@@ -57,6 +57,13 @@
         list-style-position: inside;
     }
 
+    &__li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+
     &__img {
         max-width: 100%;
         height: auto;

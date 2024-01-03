@@ -13,6 +13,7 @@ const site = lume({
 });
 
 // Plugins
+site.copy("images");
 site.use(sass());
 site.use(esbuild({
     options: {

@@ -1,6 +1,6 @@
 /// <reference lib="dom" />
 import { config } from "./config.ts";
-import { updatePostWCard } from "./post.ts";
+import { updatePost } from "./post.ts";
 
 const cardFolders = document.querySelectorAll('.card-folder');
 const cards = document.querySelectorAll('.card');
@@ -14,7 +14,7 @@ const cardFolderNames = {
     },
     "en": {
         "home": "Home",
-        "projects": "Code Projects",
+        "projects": "Projects",
         "games": "Games",
     }
 }
@@ -45,7 +45,7 @@ export function swapLanguage(language: "es" | "en") {
         }
     });
 
-    updatePostWCard(config.currentCard);
+    updatePost(config.currentCard);
 
 }
 

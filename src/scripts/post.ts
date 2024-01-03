@@ -8,11 +8,14 @@ fetch("/content.json").then((response) => response.json()).then(
     (data) => {
         jsonContent = data;
         config.jsonContent = jsonContent;
+        const cards = document.querySelectorAll('.card') as NodeListOf<HTMLDivElement>;
+        // click first card
+        cards[0].click();
     }
 );
 
 // Functions    
-export function updatePostWCard(cardId: string) {
+export function updatePost(cardId: string) {
     const dataContent = jsonContent[cardId];
     if (!dataContent) return;
 

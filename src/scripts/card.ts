@@ -1,6 +1,6 @@
 /// <reference lib="dom" />
 import { config } from "./config.ts";
-import { updatePostWCard } from "./post.ts";
+import { updatePost } from "./post.ts";
 
 const cards = document.querySelectorAll('.card');
 const spacePost = document.querySelector('.space__post');
@@ -22,7 +22,7 @@ function handleCardClick(card: HTMLDivElement) {
     activeCard = card as HTMLDivElement;
     activeCardFolder = card.parentElement?.parentElement as HTMLDivElement;
 
-    updatePostWCard(card.id);
+    updatePost(card.id);
     spacePost?.classList.add("space__post--active");
 }
 

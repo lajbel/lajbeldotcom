@@ -3,7 +3,7 @@ id: "about"
 lang: "es"
 title: Sobre mi
 layout: single.njk
-description: "Acerca de mi y este sitio"
+description: "Acerca de mi, lajbel"
 public: true
 image: https://i.imgur.com/6ZHLsWS.png
 tags:

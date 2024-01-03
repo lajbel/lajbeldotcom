@@ -1,40 +1,24 @@
 ---
 layout: single.njk
-title: About Me
+title: lajbel
 id: "about"
 lang: "en"
-description: "About me and this website"
+description: "About me, lajbel"
 public: true
-image: https://i.imgur.com/6ZHLsWS.png
+image: /images/banners/about-me.png
 tags:
     - about
 ---
 
-# About me
-
 I'm Dani, an Argentinian software developer. I'm currently in my last year of
 high school, and I'm planning to study Computer Science in the college.
+<br/><br/>
 
-## Social Medias
+There's some interesting facts about me:
 
-There's all my most-used social medias, where I publish content.
-
-<div class="social-medias">
-<a href="https://github.com/lajbel" target="_blank" class="social-media-icon social-media-icon--github"><i class="fa-brands fa-github"></i></a>
-<a href="https://twitter.com/lajbel" target="_blank" class="social-media-icon social-media-icon--twitter"><i class="fa-brands fa-x-twitter"></i></a>
-</div>
-
-## About this website
-
-This website was made with the idea of being the museum of all my content,
-projects and games. It's like my portfolio, my blog and my arcade. It's not
-pretty finished, but I'm working on it.
-
-## Services
-
-I'm currently working on some freelance services, like web development and
-discord bots.
-
-If you want to contact me, you can send me an email to
-[lajbelms@gmail.com](mailto:@lajbelms@gmail.com) or
-[**Contact me on Fiverr**](https://www.fiverr.com/lajbel)
+- I've born a 12th of July of 2006, in Buenos Aires, Argentina 🇦🇷
+- The first game that I played was
+  [Super Mario 64](https://en.wikipedia.org/wiki/Super_Mario_64) ⭐
+- I started programming when I was 10 years old, with
+  [Scratch](https://scratch.mit.edu/) 🐱‍👤
+- My first videogame was a pong clone made with [Love2D](https://love2d.org/) 🎮

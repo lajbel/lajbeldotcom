@@ -2,9 +2,11 @@
     <h1 class="nav__title">lajbel</h1>
     <div class="nav__cards-container">
         {{ comp.cardFolder({ cardTitle: "Home", tag: "about", active: true, id: "home" }) | safe }}
-        {{ comp.cardFolder({ cardTitle: "Code Projects", tag: "project", id: "projects" }) | safe }}
+        {{ comp.cardFolder({ cardTitle: "Projects", tag: "project", id: "projects" }) | safe }}
         {{ comp.cardFolder({ cardTitle: "Games", tag: "game", id: "games" }) | safe }}
     </div>
+    {{ comp.socials() | safe }}
+    {# {{ comp.themeSelector() | safe }} #}
     <p class="nav__footer">
         Made with <span class="nav__heart">❤</span> and Lume
     </p>
