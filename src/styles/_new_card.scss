@@ -1,0 +1,40 @@
+@use "theme/colors" as *;
+@use "theme/mixins" as *;
+
+.new-card {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid $accent-color;
+    border-radius: 5px;
+    color: inherit;
+    text-decoration: none;
+
+    &__image {
+        border-radius: 5px 5px 0px 0px;
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        background-color: $accent-color;
+        padding: 10px;
+    }
+
+    &__title {
+        @include subtitle-small;
+        text-align: left;
+    }
+
+    &--big {
+        width: 500px;
+        max-width: 500px;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+}

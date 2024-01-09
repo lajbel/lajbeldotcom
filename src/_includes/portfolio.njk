@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.njk" %}
 
-<head>
-    <title>lajbel</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="/styles/index.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mukta&family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Tajawal&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon"
-        href="https://cdn.discordapp.com/attachments/987845845342883920/1148403888978927718/c01e108969c0c85413a95069fef97b31.png">
-</head>
-
-<body>
-    <main class="page">
-        
+{% block page %}
 <div class="pf">
     <div class="pf__content">
         <h1 class="pf__title pf__title--accent">lajbel</h1>
@@ -38,25 +18,25 @@
                     <div class="pf__data-item">
                         <i class="pf__data-icon fa-solid fa-person"></i>
                         <p class="pf__data-text">
-                            He/Him - Male
+                            {{ info.gender }}
                         </p>
                     </div>
                     <div class="pf__data-item">
                         <i class="pf__data-icon fa-solid fa-envelope"></i>
                         <p class="pf__data-text">
-                            lajbelms@gmail.com
+                            {{ info.email }}
                         </p>
                     </div>
                     <div class="pf__data-item">
                         <i class="pf__data-icon fa-solid fa-map-marker"></i>
                         <p class="pf__data-text">
-                            Buenos Aires
+                            {{ info.city }}
                         </p>
                     </div>
                     <div class="pf__data-item">
                         <i class="pf__data-icon fa-solid fa-cake-candles"></i>
                         <p class="pf__data-text">
-                            12 July 2006
+                            {{ info.birth }}
                         </p>
                     </div>
                 </div>
@@ -78,25 +58,11 @@
             <h2 class="pf__subtitle pf__subtitle--accent">Featured Projects</h2>
 
             <div class="pf__featured-projects">
-                
-                
-
-<a id="mandarina" href="/space/?card=mandarina" class="new-card new-card--big">
-    <img class="new-card__image" src="https://i.imgur.com/l36SzfL.png" alt="Mandarina" />
-    <div class="new-card__info">
-        <h4 class="new-card__title new-card__title--light">Mandarina</h4>
-        <p class="new-card__description">A javascript library for creating visual novels.</p>
-    </div>
-</a>
-                
+                {% for project in search.pages(["lang=en featured=true", tag] | join) %}
+                {{ comp.newCard(project) | safe }}
+                {% endfor %}
             </div>
         </section>
     </div>
 </div>
-
-    </main>
-
-    <script src="/scripts/main.js"></script>
-</body>
-
-</html>
+{% endblock %}

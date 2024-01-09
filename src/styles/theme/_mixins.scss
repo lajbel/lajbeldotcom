@@ -1,0 +1,81 @@
+@use "colors" as *;
+@use "sizes" as *;
+
+// Texts
+// --------------------------------------------------
+@mixin title {
+    color: $dark-color;
+    font-size: $text-size-huge;
+    text-align: center;
+    @include color_variants();
+}
+
+@mixin subtitle {
+    color: $dark-color;
+    font-size: $text-size-large;
+    text-align: center;
+    @include color_variants();
+}
+
+@mixin subtitle-small {
+    color: $dark-color;
+    font-size: $text-size-medium;
+    text-align: center;
+    @include color_variants();
+}
+
+@mixin text {
+    color: $dark-color;
+    font-size: $text-size-medium;
+    text-align: center;
+    @include color_variants();
+}
+
+@mixin text-small {
+    color: $dark-color;
+    font-size: $text-size-small;
+    text-align: center;
+    @include color_variants();
+}
+
+@mixin button {
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: 1px solid $accent-color;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 10px 20px;
+    max-width: 200px;
+    color: $accent-color;
+    font-size: $text-size-small;
+
+    &:hover {
+        background-color: $accent-color;
+        color: $light-color;
+    }
+
+    &--light {
+        border: 1px solid $light-color;
+        color: $light-color;
+
+        &:hover {
+            background-color: $light-color;
+            color: $dark-color;
+        }
+    }
+}
+
+@mixin color_variants {
+    &--dark {
+        color: $dark-color;
+    }
+
+    &--light {
+        color: $light-color;
+    }
+
+    &--accent {
+        color: $accent-color;
+    }
+}

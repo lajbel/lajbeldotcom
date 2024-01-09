@@ -5,11 +5,9 @@
         {{ comp.cardFolder({ cardTitle: "Projects", tag: "project", id: "projects" }) | safe }}
         {{ comp.cardFolder({ cardTitle: "Games", tag: "game", id: "games" }) | safe }}
     </div>
-    {{ comp.socials() | safe }}
-    {# {{ comp.themeSelector() | safe }} #}
-    <p class="nav__footer">
-        Made with <span class="nav__heart">❤</span> and Lume
-    </p>
+    <a href="/">
+        <button class="nav__btn nav__btn--light">Back to portfolio</button>
+    </a>
     <div class="nav__button">
         <i class="fa-solid fa-caret-right"></i>
     </div>

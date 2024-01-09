@@ -1,11 +1,15 @@
 ---
+# Layout and page
 layout: single.njk
 title: Mandarina
-id: "mandarina"
 lang: "en"
-description: "A visual novel engine"
+# Project
+id: "mandarina"
+description: "A javascript library for creating visual novels."
 public: true
 image: "https://i.imgur.com/l36SzfL.png"
+featured: true
+stack: ["typescript", "node.js"]
 tags:
     - project
 ---

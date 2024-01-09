@@ -9,8 +9,21 @@ fetch("/content.json").then((response) => response.json()).then(
         jsonContent = data;
         config.jsonContent = jsonContent;
         const cards = document.querySelectorAll('.card') as NodeListOf<HTMLDivElement>;
-        // click first card
-        cards[0].click();
+
+        // If URL has card id
+        const url = new URL(window.location.href);
+        const cardId = url.searchParams.get("card");
+
+        if (cardId) {
+            cards.forEach((card) => {
+                if (card.id === cardId) {
+                    card.click();
+                }
+            });
+        }
+        else {
+            cards[0].click();
+        }
     }
 );
 

@@ -1,6 +1,7 @@
-import type { Page } from "lume/core.ts";
+import { Page } from "lume/core/file.ts";
 import lume from "lume/mod.ts";
 import sass from "lume/plugins/sass.ts";
+import nunjucks from "lume/plugins/nunjucks.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import sourceMaps from "lume/plugins/source_maps.ts";
@@ -14,6 +15,7 @@ const site = lume({
 
 // Plugins
 site.copy("images");
+site.use(nunjucks());
 site.use(sass());
 site.use(esbuild({
     options: {
@@ -52,7 +54,7 @@ function createContentJSON(pages: Page[]) {
     for (const page of pages) {
         if (page.data.url.toString().startsWith("/content/")) {
             if (!data[page.data.id?.toString() || ""]) {
-                data[page.data.id?.toString()] = {};
+                data[page.data.id?.toString() ?? 0] = {};
             }
             if (page.data.lang?.toString() === "en") {
                 data[page.data.id?.toString() || ""] = {

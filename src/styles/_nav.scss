@@ -1,4 +1,6 @@
-@use "variables" as *;
+@use "theme/colors" as *;
+@use "theme/mixins" as *;
+@use "theme/sizes" as *;
 
 .nav {
     display: flex;
@@ -6,12 +8,14 @@
     top: 0px;
     left: 0px;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
     transform: translateX(-100%);
     z-index: 100;
     transition: all 0.5s;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    background-color: #ffc561;
+    background-color: $accent-color;
     padding: 10px;
     width: 100%;
     max-width: 273px;
@@ -34,14 +38,8 @@
         overflow-y: auto;
     }
 
-    &__footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        border-radius: 0px 0px 4px 4px;
-        background-color: #fff;
-        padding: 10px;
+    &__btn {
+        @include button;
     }
 
     &__button {
@@ -49,11 +47,11 @@
         top: 50%;
         right: -50px;
         transform: translateY(-50%) rotate(0deg);
+        opacity: 0.5;
         transition: all 0.5s;
         cursor: pointer;
-        color: #ffc561;
+        color: $accent-color;
         font-size: 4rem;
-        opacity: 0.5;
     }
 
     &--active {

@@ -1,19 +1,19 @@
 {
-    "tasks": {
-        "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
-        "build": "deno task lume",
-        "dev": "deno task lume -s"
-    },
-    "imports": {
-        "lume/": "https://deno.land/x/lume@v1.18.2/",
-        "react": "https://cdn.skypack.dev/react@17.0.1"
-    },
-    "compilerOptions": {
-        "jsx": "react-jsx",
-        "jsxImportSource": "npm:react"
-    },
-    "fmt": {
-        "semiColons": true,
-        "indentWidth": 4
-    }
+  "tasks": {
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "build": "deno task lume",
+    "dev": "deno task lume -s"
+  },
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v2.0.2/",
+    "react": "https://cdn.skypack.dev/react@17.0.1"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "npm:react"
+  },
+  "fmt": {
+    "semiColons": true,
+    "indentWidth": 4
+  }
 }

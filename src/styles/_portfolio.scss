@@ -1,0 +1,141 @@
+@use "theme/mixins" as *;
+@use "theme/colors" as *;
+@use "theme/sizes" as *;
+
+.pf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-y: auto;
+
+    // Elements
+    &__title {
+        @include title();
+    }
+
+    &__subtitle {
+        @include subtitle();
+    }
+
+    &__avatar {
+        // drop shadow to left
+        box-shadow: -5px 5px 0px 0px $accent-color;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    &__description {
+        margin-bottom: 10px;
+        width: 100%;
+        font-weight: 100;
+        font-size: $text-size-medium;
+
+        &-blue {
+            color: #3178c6;
+        }
+    }
+
+    &__data-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
+        font-weight: 100;
+    }
+
+    &__data-text {
+        font-size: $text-size-small;
+    }
+
+    &__data-icon {
+        width: 30px;
+        color: $accent-color;
+        font-size: $text-size-medium;
+        text-align: center;
+    }
+
+    &__button {
+        display: inline-block;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        border: 1px solid $accent-color;
+        border-radius: 5px;
+        background-color: transparent;
+        padding: 10px 20px;
+        max-width: 200px;
+        color: $accent-color;
+        font-size: $text-size-small;
+
+        &:hover {
+            background-color: $accent-color;
+            color: $light-color;
+        }
+    }
+
+    // Containers
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        padding: 20px;
+        width: 100%;
+        max-width: 1000px;
+        height: 100%;
+    }
+
+    &__summary {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
+
+    &__data {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: fit-content;
+    }
+
+    &__projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        padding: 20px;
+    }
+
+    &__featured-projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        padding: 20px;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+        &__summary {
+            flex-direction: row;
+        }
+    }
+}
