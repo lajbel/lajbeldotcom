@@ -21,9 +21,6 @@ fetch("/content.json").then((response) => response.json()).then(
                 }
             });
         }
-        else {
-            cards[0].click();
-        }
     }
 );
 
