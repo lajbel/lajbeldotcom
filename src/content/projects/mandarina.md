@@ -29,7 +29,3 @@ It uses kaboom.js as base, and it's made with JavaScript. <br><br>
 - 🎨 Fully customizable.
 - 👾 Easy to integrate minigames
 - 💥 Based in kaboom.js
-
-## Screenshots
-
-![](https://i.imgur.com/kmwGiux.png)
