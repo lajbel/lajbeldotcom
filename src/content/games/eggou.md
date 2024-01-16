@@ -5,14 +5,12 @@ id: "eggou"
 lang: "en"
 description: "A flyers chicken shooter, in the bullet hell style."
 public: true
-featured: true
+featured: false
 stack: ["javascript"]
 image: https://i.imgur.com/UgVonEY.png
 tags:
     - game
 ---
-
-# Eggou
 
 Eggou is a bullet hell game, made for the "Newgrounds July Game Jam 2021", with
 the theme "Egg". It was my first game, there's the itch.io embed game if you

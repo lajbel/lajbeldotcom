@@ -1,4 +1,4 @@
 ---
 title: "lajbel"
-layout: myspace.njk
+layout: space.njk
 ---

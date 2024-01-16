@@ -1,5 +1,6 @@
 {% set spaceLink = "/space/?card=" + id %}
 {% set featuredClass = "new-card--featured" if featured else ""%}
+{% set cardDescription = featuredDescription if featured else description %}
 
 <div id="{{ id }}" class="new-card {{ featuredClass }}">
     <img class="new-card__image" src="{{ image }}" alt="{{ title }}" />
@@ -7,8 +8,23 @@
     --card-img: url("{{ image }}");
     '>
         <div class="new-card__info">
-            <h4 class="new-card__title new-card__title--light">{{ title }}</h4>
-            <p class="new-card__description">{{ description }}</p>
+            <h4 class="new-card__title new-card__title--light">{{- title -}}</h4>
+            <p class="new-card__description">{{- cardDescription -}}</p>
+        </div>
+
+        <div class="new-card__featured">
+            <div class="new-card__buttons">
+                {{ c.common.button({
+                icon: "rocket",
+                link: spaceLink,
+                modifiers: ["flat", "light", "full"]
+                }) | safe }}
+                {{ c.common.button({
+                icon: "github",
+                link: repo,
+                modifiers: ["flat", "light", "full"]
+                }) | safe }}
+            </div>
 
             <div class="new-card__stack">
                 {% for stack in stack %}
@@ -18,19 +34,6 @@
                 }) | safe }}
                 {% endfor %}
             </div>
-        </div>
-
-        <div class="new-card__buttons">
-            {{ c.common.button({
-            text: "View in Space",
-            link: spaceLink,
-            color: "light"
-            }) | safe }}
-            {{ c.common.button({
-            text: "View in GitHub",
-            link: repo,
-            color: "light"
-            }) | safe }}
         </div>
     </div>
 </div>

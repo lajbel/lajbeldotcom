@@ -1,10 +1,15 @@
-{% set colorClass %}
-{{ ["laj-button--", color] | join }}
+{% set className %}
+{{- "button" -}}
 {% endset %}
 
+{% set modifierClasses = "" %}
+{% for modifier in modifiers %}
+{%- set modifierClasses = (modifierClasses + " " + className + "--" + modifier) -%}
+{% endfor %}
 
-<button class="laj-button {{ colorClass }}">
-    <a class="laj-button__link" href={{ link }}>
+<button class="button {{- modifierClasses -}}">
+    <a class="button__link" href={{ link }}>
         {{ text }}
+        <i class="button__icon {{ icons[icon] }}"></i>
     </a>
 </button>

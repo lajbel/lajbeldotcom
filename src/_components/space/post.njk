@@ -1,12 +1,29 @@
-<div class="post {{ " post--active" if single else "" }}">
-    <div class="post__header">
-        <h1 class="post__title">{{ title }}</h1>
-        <img class="post__banner" src="{{ image }}" alt="Post's banner">
-    </div>
+<article class="post {{ " post--active" if single else "" }}">
+    {{ titleImage }}
+    <header class="post__header">
+        {% if titleImage %}
+        <img class="post__title" src="{{ titleImage }}" alt="Post's Title">
+        {% endif %}
 
-    <div class="post__content">
+        {% if not titleImage %}
+        <h1 class="post__title">{{ title }}</h1>
+        {% endif %}
+
+        <div class="post__stack">
+            {% for stack in stack %}
+            {{ c.common.badge({
+            icon: stack,
+            text: stack
+            }) | safe }}
+            {% endfor %}
+        </div>
+
+        <img class="post__banner" src="{{ image }}" alt="Post's banner">
+    </header>
+
+    <main class="post__content">
         {% if single %}
         {{ content | safe }}
         {% endif %}
-    </div>
-</div>
+    </main>
+</article>

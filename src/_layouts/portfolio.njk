@@ -3,17 +3,21 @@
 {% block page %}
 <div class="portfolio">
     <div class="portfolio__content">
-        <h1 class="portfolio__title portfolio__title--accent">lajbel</h1>
-        {{ c.portfolio.profile() | safe }}
-        <section class="portfolio__projects">
-            <h2 class="portfolio__subtitle portfolio__subtitle--accent">Featured Projects</h2>
+        <header class="portfolio__header">
+            <h1 class="portfolio__title portfolio__title--accent">lajbel</h1>
+        </header>
+        <main class="portfolio__main">
+            {{ c.portfolio.profile() | safe }}
+            <section class="portfolio__projects">
+                <h2 class="portfolio__subtitle portfolio__subtitle--accent">Featured Projects</h2>
 
-            <div class="portfolio__featured-projects">
-                {% for project in search.pages(["lang=en featured=true", tag] | join) %}
-                {{ c.newCard(project) | safe }}
-                {% endfor %}
-            </div>
-        </section>
+                <div class="portfolio__featured-projects">
+                    {% for project in search.pages(["featured=true", tag] | join) %}
+                    {{ c.newCard(project) | safe }}
+                    {% endfor %}
+                </div>
+            </section>
+        </main>
     </div>
 </div>
 {% endblock %}

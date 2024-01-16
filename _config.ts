@@ -14,9 +14,7 @@ const site = lume({
     dest: "./site",
     includes: "_layouts",
     location: new URL("https://lajbel.github.io"),
-    components: {
-        variable: "c",
-    },
+    components: { variable: "c" },
 });
 // #endregion
 
@@ -44,7 +42,7 @@ site.use(metas());
 // #region Markdown it
 // -----------------------------------------------------------------------------------------------
 site.hooks.addMarkdownItPlugin(markdownItClass, {
-    "h1": "post__title",
+    "h1": "post__h1",
     "h2": "post__h2",
     "h3": "post__h3",
     "h4": "post__h4",
@@ -67,7 +65,14 @@ site.filter("check", (value) => {
 
 // #region Events
 // -----------------------------------------------------------------------------------------------
-const data: Record<string, any> = {};
+const data: Record<string, {
+    title?: string;
+    url?: string;
+    content?: string;
+    image?: string;
+    titleImage?: string;
+    description?: string;
+}> = {};
 
 function createContentJSON(pages: Lume.Page[]) {
     const textEncoder = new TextEncoder();
@@ -77,25 +82,15 @@ function createContentJSON(pages: Lume.Page[]) {
             if (!data[page.data.id?.toString() || ""]) {
                 data[page.data.id?.toString() ?? ""] = {};
             }
-            if (page.data.lang?.toString() === "en") {
-                data[page.data.id?.toString() || ""] = {
-                    "title": page.data.title?.toString() || "",
-                    "url": page.data.url.toString(),
-                    "content": page.data.children?.toString() || "",
-                    "image": page.data.image,
-                    "description": page.data.description?.toString() || "",
-                };
-            } else {
-                data[page.data.id?.toString() || ""][
-                    page.data.lang?.toString() || ""
-                ] = {
-                    "title": page.data.title?.toString() || "",
-                    "url": page.data.url.toString(),
-                    "content": page.data.children?.toString() || "",
-                    "image": page.data.image,
-                    "description": page.data.description?.toString() || "",
-                };
-            }
+
+            data[page.data.id?.toString() || ""] = {
+                "title": page.data.title?.toString() || "",
+                "url": page.data.url.toString(),
+                "content": page.data.children?.toString() || "",
+                "image": page.data.image,
+                "titleImage": page.data.titleImage,
+                "description": page.data.description?.toString() || "",
+            };
         }
     }
 

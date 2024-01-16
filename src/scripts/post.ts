@@ -33,6 +33,7 @@ export function updatePost(cardId: string) {
     const content = dataLangContent?.content?.toString() || dataContent.content?.toString() || "";
     const title = dataLangContent?.title?.toString() || dataContent.title?.toString() || "";
     const image = dataContent.image?.toString() || "";
+    const banner = dataContent.banner?.toString() || "";
 
     updatePostElements(
         content,

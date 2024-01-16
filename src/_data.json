@@ -12,6 +12,9 @@
         "human": "fa-solid fa-person",
         "location": "fa-solid fa-map-marker-alt",
         "calendar": "fa-solid fa-calendar-alt",
-        "mail": "fa-solid fa-envelope"
+        "mail": "fa-solid fa-envelope",
+        "rocket": "fa-solid fa-rocket",
+        "github": "fa-brands fa-github",
+        "game development": "fa-solid fa-chess-rook"
     }
 }

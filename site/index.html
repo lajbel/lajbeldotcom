@@ -27,8 +27,11 @@
         
 <div class="portfolio">
     <div class="portfolio__content">
-        <h1 class="portfolio__title portfolio__title--accent">lajbel</h1>
-        <article class="profile">
+        <header class="portfolio__header">
+            <h1 class="portfolio__title portfolio__title--accent">lajbel</h1>
+        </header>
+        <main class="portfolio__main">
+            <article class="profile">
     <figure class="profile__avatar">
         <img class="profile__avatar-image" src="/images/banners/realajbel.jpg" alt="lajbel">
     </figure>
@@ -71,81 +74,35 @@
             
 
 
-<button class="laj-button 
-laj-button--
-">
-    <a class="laj-button__link" href="/">
+
+
+<button class="button">
+    <a class="button__link" href="/">
         Check CV
+        <i class="button__icon "></i>
     </a>
 </button>
             
 
 
-<button class="laj-button 
-laj-button--
-">
-    <a class="laj-button__link" href="/space">
+
+
+<button class="button">
+    <a class="button__link" href="/space">
         Check my space
+        <i class="button__icon "></i>
     </a>
 </button>
         </div>
     </div>
 </article>
-        <section class="portfolio__projects">
-            <h2 class="portfolio__subtitle portfolio__subtitle--accent">Featured Projects</h2>
+            <section class="portfolio__projects">
+                <h2 class="portfolio__subtitle portfolio__subtitle--accent">Featured Projects</h2>
 
-            <div class="portfolio__featured-projects">
-                
-                
+                <div class="portfolio__featured-projects">
+                    
+                    
 
-
-<div id="eggou" class="new-card new-card--featured">
-    <img class="new-card__image" src="https://i.imgur.com/UgVonEY.png" alt="Eggou">
-    <div class="new-card__summary" style="
-    --card-img: url(&quot;https://i.imgur.com/UgVonEY.png&quot;);
-    ">
-        <div class="new-card__info">
-            <h4 class="new-card__title new-card__title--light">Eggou</h4>
-            <p class="new-card__description">A flyers chicken shooter, in the bullet hell style.</p>
-
-            <div class="new-card__stack">
-                
-                
-
-<div class="badge">
-    <i class="badge__icon devicon-javascript-plain colored"></i>
-    <p class="badge__text">javascript</p>
-</div>
-                
-            </div>
-        </div>
-
-        <div class="new-card__buttons">
-            
-
-
-<button class="laj-button 
-laj-button--light
-">
-    <a class="laj-button__link" href="/space/?card=eggou">
-        View in Space
-    </a>
-</button>
-            
-
-
-<button class="laj-button 
-laj-button--light
-">
-    <a class="laj-button__link" href="">
-        View in GitHub
-    </a>
-</button>
-        </div>
-    </div>
-</div>
-                
-                
 
 
 <div id="mandarina" class="new-card new-card--featured">
@@ -155,9 +112,43 @@ laj-button--light
     ">
         <div class="new-card__info">
             <h4 class="new-card__title new-card__title--light">Mandarina</h4>
-            <p class="new-card__description">A javascript library for creating visual novels.</p>
+            <p class="new-card__description">A visual novel engine with the objetive of being lightweight and easy for novel development learning.</p>
+        </div>
+
+        <div class="new-card__featured">
+            <div class="new-card__buttons">
+                
+
+
+
+
+<button class="button button--flat button--light button--full">
+    <a class="button__link" href="/space/?card=mandarina">
+        
+        <i class="button__icon fa-solid fa-rocket"></i>
+    </a>
+</button>
+                
+
+
+
+
+<button class="button button--flat button--light button--full">
+    <a class="button__link" href="https://github.com/lajbel/mandarina">
+        
+        <i class="button__icon fa-brands fa-github"></i>
+    </a>
+</button>
+            </div>
 
             <div class="new-card__stack">
+                
+                
+
+<div class="badge">
+    <i class="badge__icon fa-solid fa-chess-rook"></i>
+    <p class="badge__text">game development</p>
+</div>
                 
                 
 
@@ -175,34 +166,12 @@ laj-button--light
                 
             </div>
         </div>
-
-        <div class="new-card__buttons">
-            
-
-
-<button class="laj-button 
-laj-button--light
-">
-    <a class="laj-button__link" href="/space/?card=mandarina">
-        View in Space
-    </a>
-</button>
-            
-
-
-<button class="laj-button 
-laj-button--light
-">
-    <a class="laj-button__link" href="https://github.com/lajbel/mandarina">
-        View in GitHub
-    </a>
-</button>
-        </div>
     </div>
 </div>
-                
-            </div>
-        </section>
+                    
+                </div>
+            </section>
+        </main>
     </div>
 </div>
 

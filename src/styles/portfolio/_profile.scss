@@ -8,6 +8,8 @@
     display: flex;
     gap: 20px;
     width: 100%;
+    flex-direction: column;
+    align-items: center;
 
     &__info {
         display: flex;
@@ -35,6 +37,11 @@
         width: min-content;
     }
 
+    &__buttons {
+        display: flex;
+        gap: 10px;
+    }
+
     &__description {
         width: 100%;
         font-weight: 100;
@@ -43,5 +50,9 @@
         &-blue {
             color: #3178c6;
         }
+    }
+
+    @media screen and (min-width: $desktop-width) {
+        flex-direction: row;
     }
 }

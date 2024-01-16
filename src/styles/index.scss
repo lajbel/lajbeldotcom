@@ -13,11 +13,10 @@
 // #region Space components
 @use "space/space";
 @use "space/post";
+@use "space/window";
 // #endregion
 
 /// #region Legacy files (to be removed)
 @use "card";
-@use "my_space";
 @use "nav";
 @use "page";
-@use "social-media";
