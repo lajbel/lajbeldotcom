@@ -8,7 +8,7 @@ id={{ id }}
 
     <div class="card-folder__cards-container">
         {% for post in search.pages(["lang=en ", tag] | join) %}
-        {{ comp.card(post) | safe }}
+        {{ c.card(post) | safe }}
         {% endfor %}
     </div>
 </div>

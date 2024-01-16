@@ -1,0 +1,49 @@
+@use "../theme/colors" as *;
+@use "../theme/sizes" as *;
+@use "../theme/mixins" as *;
+
+@mixin colorize($text, $background, $border) {
+    border-color: $border;
+    background-color: $background;
+    color: $text;
+}
+
+.laj-button {
+    @include shadow();
+    @include colorize($accent-color, $light-color, $accent-color);
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 5px 20px;
+    max-width: 200px;
+    font-size: $text-size-small;
+    text-decoration: none;
+
+    &:hover {
+        @include colorize($light-color, $accent-color, $accent-color);
+    }
+
+    &--light {
+        @include colorize($light-color, $accent-color, $light-color);
+
+        &:hover {
+            @include colorize($accent-color, $light-color, $light-color);
+        }
+    }
+
+    &--dark {
+        @include colorize($dark-color, $light-color, $dark-color);
+
+        &:hover {
+            @include colorize($light-color, $dark-color, $dark-color);
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: inherit;
+    }
+}

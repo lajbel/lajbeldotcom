@@ -1,0 +1,5 @@
+{% extends "base.njk" %}
+
+{% block page %}
+{{ c.space.post({ single: true, content: content }) | safe }}
+{% endblock %}

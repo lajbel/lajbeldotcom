@@ -34,7 +34,7 @@ export function updatePost(cardId: string) {
     const title = dataLangContent?.title?.toString() || dataContent.title?.toString() || "";
     const image = dataContent.image?.toString() || "";
 
-    updatePostContent(
+    updatePostElements(
         content,
         cardId,
         title,
@@ -42,16 +42,16 @@ export function updatePost(cardId: string) {
     )
 }
 
-export function updatePostContent(content: string, id: string, title: string, image: string) {
-    const spacePostContent = document.querySelector('.space__post-content');
-    const spacePostTitle = document.querySelector<HTMLHeadingElement>('.space__post-title');
-    const spacePostImage = document.querySelector<HTMLImageElement>('.space__post-image');
+export function updatePostElements(content: string, id: string, title: string, image: string) {
+    const postContent = document.querySelector('.post__content');
+    const postTitle = document.querySelector<HTMLHeadingElement>('.post__title');
+    const postBanner = document.querySelector<HTMLImageElement>('.post__banner');
 
-    if (spacePostContent && spacePostImage && spacePostTitle) {
-        spacePostContent.innerHTML = content;
-        spacePostContent.id = id;
-        spacePostTitle.innerHTML = title;
-        spacePostImage.src = image;
+    if (postContent && postBanner && postTitle) {
+        postContent.innerHTML = content;
+        postContent.id = id;
+        postTitle.innerHTML = title;
+        postBanner.src = image;
     }
 }
 

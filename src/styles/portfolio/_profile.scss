@@ -1,0 +1,47 @@
+@use "../theme/sizes" as *;
+@use "../theme/animations" as *;
+@use "../theme/colors" as *;
+@use "../theme/mixins" as *;
+@use "sass:color" as color;
+
+.profile {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    &__avatar {
+        @include shadow();
+        width: 200px;
+        height: 200px;
+    }
+
+    &__avatar-image {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    &__stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: min-content;
+    }
+
+    &__description {
+        width: 100%;
+        font-weight: 100;
+        font-size: $text-size-medium;
+
+        &-blue {
+            color: #3178c6;
+        }
+    }
+}

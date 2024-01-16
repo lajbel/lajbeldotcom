@@ -1,0 +1,10 @@
+{% set colorClass %}
+{{ ["laj-button--", color] | join }}
+{% endset %}
+
+
+<button class="laj-button {{ colorClass }}">
+    <a class="laj-button__link" href={{ link }}>
+        {{ text }}
+    </a>
+</button>

@@ -1,0 +1,68 @@
+@use "../theme/mixins" as *;
+@use "../theme/colors" as *;
+@use "../theme/sizes" as *;
+@use "../theme/animations" as *;
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-y: auto;
+
+    &__title {
+        @include title();
+    }
+
+    &__subtitle {
+        @include subtitle();
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        padding: 20px;
+        width: 100%;
+        max-width: 1120px;
+        height: 100%;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
+
+    &__projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    &__featured-projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 0px;
+        width: 100%;
+    }
+
+    @media screen and (min-width: $desktop-width) {
+        &__summary {
+            flex-direction: row;
+        }
+    }
+}

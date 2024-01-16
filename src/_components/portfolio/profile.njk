@@ -1,0 +1,25 @@
+<article class="profile">
+    <figure class="profile__avatar">
+        <img class="profile__avatar-image" src="/images/banners/realajbel.jpg" alt="lajbel">
+    </figure>
+
+    <div class="profile__info">
+        <p class="profile__description">
+            I'm a 17 year old developer from Argentina, I'm a <span class="profile__description-blue">TypeScript</span>
+            developer, specialized in Front-End
+            development.
+        </p>
+
+        <dl class="profile__stats">
+            {{ c.portfolio.stat({ icon: "human", text: "Male" }) | safe }}
+            {{ c.portfolio.stat({ icon: "location", text: "Argentina" }) | safe }}
+            {{ c.portfolio.stat({ icon: "calendar", text: "July 12 2006" }) | safe }}
+            {{ c.portfolio.stat({ icon: "mail", text: "lajbelms@gmail.com" }) | safe }}
+        </dl>
+
+        <div class="profile__buttons">
+            {{ c.common.button({ link: "/", text: "Check CV" }) | safe }}
+            {{ c.common.button({ link: "/space", text: "Check my space" }) | safe }}
+        </div>
+    </div>
+</article>

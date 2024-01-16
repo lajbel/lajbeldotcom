@@ -3,8 +3,10 @@ layout: single.njk
 title: Eggou
 id: "eggou"
 lang: "en"
-description: "A flyers chicken egg hell"
+description: "A flyers chicken shooter, in the bullet hell style."
 public: true
+featured: true
+stack: ["javascript"]
 image: https://i.imgur.com/UgVonEY.png
 tags:
     - game

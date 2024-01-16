@@ -1,0 +1,12 @@
+@use "colors" as *;
+
+// an animation that appears a outline
+@keyframes box-shadow-appear {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(5px, -5px);
+    }
+}

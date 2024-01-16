@@ -1,0 +1,12 @@
+@use "../theme/colors" as *;
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 5px;
+    background-color: $light-color;
+    padding: 0px 5px;
+    width: fit-content;
+    height: fit-content;
+}

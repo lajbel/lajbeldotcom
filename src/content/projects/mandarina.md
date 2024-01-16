@@ -7,9 +7,10 @@ lang: "en"
 id: "mandarina"
 description: "A javascript library for creating visual novels."
 public: true
+repo: "https://github.com/lajbel/mandarina"
 image: "https://i.imgur.com/l36SzfL.png"
 featured: true
-stack: ["typescript", "node.js"]
+stack: ["typescript", "nodejs"]
 tags:
     - project
 ---

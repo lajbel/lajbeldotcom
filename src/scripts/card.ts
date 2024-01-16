@@ -3,7 +3,7 @@ import { config } from "./config.ts";
 import { updatePost } from "./post.ts";
 
 const cards = document.querySelectorAll('.card');
-const spacePost = document.querySelector('.space__post');
+const post = document.querySelector('.post');
 const exitBtn = document.querySelector('.space__exit-btn');
 
 let activeCard: HTMLDivElement | null = null;
@@ -23,7 +23,7 @@ function handleCardClick(card: HTMLDivElement) {
     activeCardFolder = card.parentElement?.parentElement as HTMLDivElement;
 
     updatePost(card.id);
-    spacePost?.classList.add("space__post--active");
+    post?.classList.add("post--active");
 }
 
 cards.forEach((card) => {
@@ -35,10 +35,10 @@ cards.forEach((card) => {
 // Exit and return card
 exitBtn?.addEventListener('click', () => {
     activeCard?.classList.remove("card--in-space");
-    spacePost?.classList.remove("space__post--active");
+    post?.classList.remove("post--active");
 
-    if (spacePost) {
-        spacePost.id = "";
+    if (post) {
+        post.id = "";
     }
 
     if (activeCardFolder?.classList.contains('card-folder--active')) {

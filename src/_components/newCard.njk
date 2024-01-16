@@ -1,9 +1,36 @@
 {% set spaceLink = "/space/?card=" + id %}
+{% set featuredClass = "new-card--featured" if featured else ""%}
 
-<a id="{{ id }}" href="{{ spaceLink }}" class="new-card new-card--big">
+<div id="{{ id }}" class="new-card {{ featuredClass }}">
     <img class="new-card__image" src="{{ image }}" alt="{{ title }}" />
-    <div class="new-card__info">
-        <h4 class="new-card__title new-card__title--light">{{ title }}</h4>
-        <p class="new-card__description">{{ description }}</p>
+    <div class="new-card__summary" style='
+    --card-img: url("{{ image }}");
+    '>
+        <div class="new-card__info">
+            <h4 class="new-card__title new-card__title--light">{{ title }}</h4>
+            <p class="new-card__description">{{ description }}</p>
+
+            <div class="new-card__stack">
+                {% for stack in stack %}
+                {{ c.common.badge({
+                icon: stack,
+                text: stack
+                }) | safe }}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="new-card__buttons">
+            {{ c.common.button({
+            text: "View in Space",
+            link: spaceLink,
+            color: "light"
+            }) | safe }}
+            {{ c.common.button({
+            text: "View in GitHub",
+            link: repo,
+            color: "light"
+            }) | safe }}
+        </div>
     </div>
-</a>
+</div>

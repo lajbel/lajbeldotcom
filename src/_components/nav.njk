@@ -1,12 +1,10 @@
 <nav class="nav">
     <h1 class="nav__title">lajspace</h1>
     <div class="nav__cards-container">
-        {{ comp.cardFolder({ cardTitle: "Projects", tag: "project", id: "projects" }) | safe }}
-        {{ comp.cardFolder({ cardTitle: "Games", tag: "game", id: "games" }) | safe }}
+        {{ c.cardFolder({ cardTitle: "Projects", tag: "project", id: "projects" }) | safe }}
+        {{ c.cardFolder({ cardTitle: "Games", tag: "game", id: "games" }) | safe }}
     </div>
-    <a href="/">
-        <button class="nav__btn nav__btn--light">Back to portfolio</button>
-    </a>
+    {{ c.common.button({ text: "Back to portfolio", link: "/", color: "light" }) | safe }}
     <div class="nav__button">
         <i class="fa-solid fa-caret-right"></i>
     </div>

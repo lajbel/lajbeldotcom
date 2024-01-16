@@ -1,0 +1,13 @@
+<div class="space">
+    {% if not single %}
+    <div class="space__controls">
+        <button class="space__btn space__exit-btn"><i class="space__btn-text fa-solid fa-x"></i></button>
+    </div>
+    {% endif %}
+
+    {{ c.space.post() | safe }}
+
+    <div class="space__nothing">
+        <p class="space__nothing-text"><i class="fa-solid fa-ghost"></i></p>
+    </div>
+</div>
