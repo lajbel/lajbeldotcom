@@ -13,6 +13,7 @@
     color: $dark-color;
     font-size: $text-size-huge;
     text-align: center;
+    line-height: 1;
     @include color_variants();
 }
 
@@ -96,5 +97,21 @@
 
     &--accent {
         color: $accent-color;
+    }
+
+    &--green {
+        color: #45d145;
+    }
+
+    &--red {
+        color: #d14545;
+    }
+
+    &--blue {
+        color: #45a8d1;
+    }
+
+    &--dark-blue {
+        color: #1d2d44;
     }
 }

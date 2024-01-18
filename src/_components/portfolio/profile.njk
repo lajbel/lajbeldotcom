@@ -5,8 +5,12 @@
 
     <div class="profile__info">
         <p class="profile__description">
-            I'm a <span class="profile__description-blue">Full Stack Web</span>
-            developer, specialized with MongoDB, Express, React and Node.js. My favorite drink is the coffee
+            I'm a <span class="profile__description">Full Stack Web developer</span>, specialized with <span
+                class="profile__description profile__description--green">MongoDB</span>,
+            <span class="profile__description profile__description--blue">Express</span>, <span
+                class="profile__description profile__description--blue">React</span> and <span
+                class="profile__description profile__description--blue">Node.js</span>. My favorite
+            drink is the coffee
         </p>
 
         <dl class="profile__stats">
@@ -17,8 +21,8 @@
         </dl>
 
         <div class="profile__buttons">
-            {{ c.common.button({ link: "/", text: "Check CV" }) | safe }}
-            {{ c.common.button({ link: "/space", text: "Check my space" }) | safe }}
+            {{ c.common.button({ link: "/", text: "Check CV", modifiers: ["flat"] }) | safe }}
+            {{ c.common.button({ link: "/space", text: "Check my space", modifiers: ["flat"] }) | safe }}
         </div>
     </div>
 </article>

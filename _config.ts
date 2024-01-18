@@ -56,7 +56,7 @@ site.hooks.addMarkdownItPlugin(markdownItClass, {
 });
 // #endregion
 
-// #region Nunjucks Filter
+// #region Nunjucks Filters
 // -----------------------------------------------------------------------------------------------
 site.filter("check", (value) => {
     console.log(value);
