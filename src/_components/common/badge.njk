@@ -1,6 +1,6 @@
-{% set badgeIcon = icons[icon] %}
-
 <div class="badge">
-    <i class="badge__icon {{ badgeIcon }}"></i>
-    <p class="badge__text">{{ text }}</p>
+    <strong class="badge__text">
+        <span aria-hidden="true" class="badge__icon {{ icons[icon] }}"></span>
+        {{- text -}}
+    </strong>
 </div>
