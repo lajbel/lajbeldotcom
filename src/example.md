@@ -1,5 +1,5 @@
 ---
-layout: single.njk
+layout: space.njk
 title: Example
 id: "example"
 description: "An example post for test ui"

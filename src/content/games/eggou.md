@@ -1,5 +1,5 @@
 ---
-layout: single.njk
+layout: space.njk
 title: Eggou
 id: "eggou"
 lang: "en"

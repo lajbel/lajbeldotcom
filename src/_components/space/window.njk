@@ -1,17 +1,10 @@
-<div class="window">
-    {% if not single %}
-    <div class="window__controls">
-        <button class="window__btn window__exit-btn"><i class="window__btn-text fa-solid fa-x"></i></button>
-    </div>
-    {% endif %}
+{% set postData = "" %}
+{% for data in search.pages("id=" + id)%}
+{% set postData = data %}
+{% endfor %}
 
-    {{ c.space.post({
-    content: content,
-    single: single,
-    title: title,
-    image: image,
-    titleImage: titleImage
-    }) | safe }}
+<div class="window">
+    {{ c.space.post(postData) | safe }}
 
     <div class="window__nothing">
         <p class="window__nothing-text"><i class="fa-solid fa-ghost"></i></p>

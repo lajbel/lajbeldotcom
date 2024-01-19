@@ -1,5 +1,5 @@
 ---
-layout: single.njk
+layout: space.njk
 title: Mandarina
 id: mandarina
 description: A javascript library for creating visual novels.

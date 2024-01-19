@@ -1,4 +1,6 @@
-<article class="post {{ " post--active" if single else "" }}">
+{% set active = false if nopost else true %}
+
+<article class="post {{- " post--active" if active else "" }}">
     {{ titleImage }}
     <header class="post__header">
         {% if titleImage %}
@@ -9,21 +11,12 @@
         <h1 class="post__title">{{ title }}</h1>
         {% endif %}
 
-        <div class="post__stack">
-            {% for stack in stack %}
-            {{ c.common.badge({
-            icon: stack,
-            text: stack
-            }) | safe }}
-            {% endfor %}
-        </div>
-
         <img class="post__banner" src="{{ image }}" alt="Post's banner">
     </header>
 
     <main class="post__content">
-        {% if single %}
-        {{ content | safe }}
+        {% if active %}
+        {{ content | md | safe }}
         {% endif %}
     </main>
 </article>

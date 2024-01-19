@@ -14,10 +14,10 @@
         </p>
 
         <dl class="profile__stats">
-            {{ c.portfolio.stat({ icon: "human", text: "Male" }) | safe }}
-            {{ c.portfolio.stat({ icon: "location", text: "Argentina" }) | safe }}
-            {{ c.portfolio.stat({ icon: "calendar", text: "July 12 2006" }) | safe }}
-            {{ c.portfolio.stat({ icon: "mail", text: "lajbelms@gmail.com" }) | safe }}
+            {{ c.portfolio.stat({ icon: "human", text: info.gender }) | safe }}
+            {{ c.portfolio.stat({ icon: "location", text: info.city }) | safe }}
+            {{ c.portfolio.stat({ icon: "calendar", text: info.birth }) | safe }}
+            {{ c.portfolio.stat({ icon: "mail", text: info.email }) | safe }}
         </dl>
 
         <div class="profile__buttons">

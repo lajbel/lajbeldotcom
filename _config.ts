@@ -4,6 +4,7 @@ import nunjucks from "lume/plugins/nunjucks.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import sourceMaps from "lume/plugins/source_maps.ts";
+import multilanguage from "lume/plugins/multilanguage.ts";
 import metas from "lume/plugins/metas.ts";
 import markdownItClass from "npm:@toycode/markdown-it-class";
 
@@ -30,13 +31,17 @@ site.use(nunjucks());
 site.use(sass());
 site.use(sitemap());
 site.use(sourceMaps());
+site.use(metas());
 site.use(esbuild({
     options: {
         minify: true,
         keepNames: true,
     },
 }));
-site.use(metas());
+site.use(multilanguage({
+    languages: ["en", "es"],
+    defaultLanguage: "en",
+}));
 // #endregion
 
 // #region Markdown it
@@ -60,51 +65,6 @@ site.hooks.addMarkdownItPlugin(markdownItClass, {
 // -----------------------------------------------------------------------------------------------
 site.filter("check", (value) => {
     console.log(value);
-});
-// #endregion
-
-// #region Events
-// -----------------------------------------------------------------------------------------------
-const data: Record<string, {
-    title?: string;
-    url?: string;
-    content?: string;
-    image?: string;
-    titleImage?: string;
-    description?: string;
-}> = {};
-
-function createContentJSON(pages: Lume.Page[]) {
-    const textEncoder = new TextEncoder();
-
-    for (const page of pages) {
-        if (page.data.url.toString().startsWith("/content/")) {
-            if (!data[page.data.id?.toString() || ""]) {
-                data[page.data.id?.toString() ?? ""] = {};
-            }
-
-            data[page.data.id?.toString() || ""] = {
-                "title": page.data.title?.toString() || "",
-                "url": page.data.url.toString(),
-                "content": page.data.children?.toString() || "",
-                "image": page.data.image,
-                "titleImage": page.data.titleImage,
-                "description": page.data.description?.toString() || "",
-            };
-        }
-    }
-
-    Deno.createSync("./site/content.json").write(
-        textEncoder.encode(JSON.stringify(data)),
-    );
-}
-
-site.addEventListener("afterBuild", (event) => {
-    createContentJSON(event.pages);
-});
-
-site.addEventListener("afterUpdate", (event) => {
-    createContentJSON(event.pages);
 });
 // #endregion
 

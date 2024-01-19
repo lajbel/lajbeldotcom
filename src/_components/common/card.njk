@@ -1,0 +1,38 @@
+{% set spaceLink = "/space/?card=" + data.id %}
+{% set featuredClass = "card--featured" if featured else ""%}
+{% set cardDescription = data.featuredDescription if featured else data.description %}
+
+<div id="{{ data.id }}" class="card {{ featuredClass }}">
+    <img class="card__image" src={{ data.image }} alt="{{ title }}" />
+    <div class="card__summary" style='
+    --card-img: url("{{ data.image }}");
+    '>
+        <a href={{ data.url }} class="card__info">
+            <h4 class="card__title card__title--light">{{- data.title -}}</h4>
+            <p class="card__description">{{- cardDescription -}}</p>
+        </a>
+        <div class="card__featured">
+            <div class="card__buttons">
+                {{ c.common.button({
+                icon: "rocket",
+                link: spaceLink,
+                modifiers: ["flat", "light", "full"]
+                }) | safe }}
+                {{ c.common.button({
+                icon: "github",
+                link: data.repo,
+                modifiers: ["flat", "light", "full"]
+                }) | safe }}
+            </div>
+
+            <div class="card__stack">
+                {% for stack in data.stack %}
+                {{ c.common.badge({
+                icon: stack,
+                text: stack
+                }) | safe }}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 ---
 # Layout and page
-layout: single.njk
+layout: space.njk
 title: Juicy Beat
 lang: "en"
 id: "juicybeat"

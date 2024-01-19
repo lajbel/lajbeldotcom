@@ -1,0 +1,42 @@
+@use "../theme/colors" as *;
+@use "../theme/sizes" as *;
+@use "sass:color" as color;
+
+
+.card-folder {
+    transition: .2s;
+    background-color: color.scale($accent-color, $blackness: 15%);
+    height: fit-content;
+
+    &__cover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        height: $card-height;
+        color: $light-color;
+        user-select: none;
+    }
+
+    &__cards-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        transition: .2s;
+        border-width: 4px;
+        border-style: solid;
+        border-color: color.scale($accent-color, $blackness: 20%);
+        background-color: color.scale($accent-color, $blackness: 20%);
+        height: max-content;
+        max-height: 400px;
+        overflow-x: hidden;
+        overflow-y: auto
+    }
+
+    &--active & {
+        &__cards-container {
+            gap: 4px;
+            border-width: 4px;
+        }
+    }
+}

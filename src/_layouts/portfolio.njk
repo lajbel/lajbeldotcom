@@ -1,5 +1,12 @@
 {% extends "base.njk" %}
 
+{% set data = "" %}
+{% for pageData in search.pages(("id=" + id + " lang=" + lang)) %}
+{% set data = pageData %}
+{% endfor %}
+
+{{ data.info | check }}
+
 {% block page %}
 <div class="portfolio">
     <div class="portfolio__content">
@@ -7,21 +14,21 @@
             <h1 class="portfolio__title portfolio__title--accent">lajbel</h1>
         </header>
         <main class="portfolio__main">
-            {{ c.portfolio.profile() | safe }}
+            {{ c.portfolio.profile(data) | safe }}
             <section class="portfolio__projects">
                 <h2 class="portfolio__subtitle portfolio__subtitle--accent">Featured Projects</h2>
 
                 <div class="portfolio__featured-projects">
-                    {% for project in search.pages(["featured=true", tag] | join) %}
-                    {{ c.newCard(project) | safe }}
+                    {% for page in search.pages(["featured=true", tag] | join) %}
+                    {{ c.common.card({ data: page, featured: true }) | safe }}
                     {% endfor %}
                 </div>
             </section>
         </main>
 
     </div>
-    <footer class="portfolio__footer">
+    {# <footer class="portfolio__footer">
         hi
-    </footer>
+    </footer> #}
 </div>
 {% endblock %}

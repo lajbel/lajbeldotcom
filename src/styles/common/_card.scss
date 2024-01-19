@@ -2,7 +2,7 @@
 @use "../theme/mixins" as *;
 @use "../theme/sizes" as *;
 
-.new-card {
+.card {
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease-in-out;
@@ -10,9 +10,8 @@
     background-position: center;
     background-size: cover;
     background-color: var(--card-color);
-    width: $card-width;
-    height: $card-height;
-    max-height: 100%;
+    height: 0px;
+    min-height: $card-height;
     color: inherit;
     text-decoration: none;
 
@@ -39,14 +38,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: rgb(0, 0, 0, 0.3);
+        background-color: rgb(0, 0, 0, 0.5);
         padding: 10px;
         height: 100%;
         overflow-y: hidden;
     }
 
     &__featured {
-        display: flex;
+        display: none;
         flex-direction: row-reverse;
         justify-content: space-between;
         padding: 10px;
@@ -73,12 +72,12 @@
 
     &__description {
         @include text-small;
+        color: $light-color;
         font-weight: 400;
-        text-align: left;
     }
 
     &--active {
-        max-height: 100px;
+        max-height: 0px;
     }
 
     &--featured {
@@ -98,6 +97,7 @@
 
         &__description {
             color: $dark-color;
+            text-align: left;
         }
 
         &__image {
@@ -117,6 +117,10 @@
             display: flex;
             flex-wrap: wrap;
             gap: 5px;
+        }
+
+        &__featured {
+            display: flex;
         }
     }
 }
