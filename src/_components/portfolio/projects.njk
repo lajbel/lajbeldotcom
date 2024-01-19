@@ -1,0 +1,13 @@
+<section class="projects">
+    <div class="projects__featured">
+        {% for data in search.pages(["featured=true", tag] | join) %}
+        {{ c.common.card({ data: data, featured: true }) | safe }}
+        {% endfor %}
+    </div>
+
+    <div class="projects__other">
+        {% for data in search.pages("type=project featured=false") %}
+        {{ c.common.card({ data: data }) | safe }}
+        {% endfor %}
+    </div>
+</section>

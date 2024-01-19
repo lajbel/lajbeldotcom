@@ -1,8 +1,8 @@
 <nav class="nav">
     <h1 class="nav__title">lajspace</h1>
     <div class="nav__cards-container">
-        {{ c.cardFolder({ cardTitle: "Projects", tag: "project", id: "projects" }) | safe }}
-        {{ c.cardFolder({ cardTitle: "Games", tag: "game", id: "games" }) | safe }}
+        {{ c.space.cardFolder({ cardTitle: "Projects", tag: "project", id: "projects", currentCard: id }) | safe }}
+        {{ c.space.cardFolder({ cardTitle: "Games", tag: "game", id: "games", currentCard: id }) | safe }}
     </div>
     {{ c.common.button({ text: "Back to portfolio", link: "/", modifiers: ["light", "flat"] }) | safe }}
     <div class="nav__button">

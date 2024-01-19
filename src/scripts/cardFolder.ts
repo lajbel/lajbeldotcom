@@ -1,27 +1,26 @@
 /// <reference lib="dom" />
 
-const cardFolders = document.querySelectorAll('.card-folder');
+const cardFolders = document.querySelectorAll<HTMLDivElement>('.card-folder');
 
-function changeFolderCardsState(cardFolder: HTMLDivElement, state?: boolean) {
-    const cardsContainer = cardFolder.querySelector(".card-folder__cards-container");
-    const cards = cardsContainer?.querySelectorAll(".card");
+function toggleFolderCardsActive(cardFolder: HTMLDivElement, toggle: boolean) {
+    const cardsContainer = cardFolder.querySelector<HTMLDivElement>(".card-folder__cards-container");
+    const cards = cardsContainer?.querySelectorAll<HTMLDivElement>(".card");
 
     cards?.forEach((card) => {
-        if (card.classList.contains('card--in-space')) return;
-        card.classList.toggle('card--active', state);
+        card.classList.toggle('card--active', toggle);
     });
 }
 
 function onCardFolderClick(cardFolder: HTMLDivElement) {
     cardFolder.classList.toggle('card-folder--active');
-    changeFolderCardsState(cardFolder, cardFolder.classList.contains('card-folder--active'));
+    toggleFolderCardsActive(cardFolder, cardFolder.classList.contains("card-folder--active"));
 }
 
 cardFolders.forEach((cardFolder) => {
-    changeFolderCardsState(cardFolder as HTMLDivElement, cardFolder.classList.contains('card-folder--active'));
+    toggleFolderCardsActive(cardFolder, cardFolder.classList.contains('card-folder--active'));
     const folderCover = cardFolder.querySelector(".card-folder__cover");
 
     folderCover?.addEventListener('click', () => {
-        onCardFolderClick(cardFolder as HTMLDivElement);
+        onCardFolderClick(cardFolder);
     });
 });

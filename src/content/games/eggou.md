@@ -1,14 +1,15 @@
 ---
-layout: space.njk
-title: Eggou
 id: "eggou"
-lang: "en"
-description: "A flyers chicken shooter, in the bullet hell style."
+layout: space.njk
+type: "project"
+title: Eggou
+lang: en
+description: A flyers chicken shooter, in the bullet hell style.
 public: true
 featured: true
 featuredDescription: "A flyers chicken shooter, in the bullet hell style. My first completed game with Kaboom.js"
 repo: https://github.com/lajbel/eggou
-stack: ["game development", "javascript", "nodejs"]
+stack: [game development, javascript, nodejs]
 image: https://i.imgur.com/UgVonEY.png
 tags:
     - game

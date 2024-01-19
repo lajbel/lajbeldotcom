@@ -1,15 +1,16 @@
 ---
-layout: space.njk
-title: Mandarina
 id: mandarina
+layout: space.njk
+type: project
+title: Mandarina
+lang: en
 description: A javascript library for creating visual novels.
-repo: https://github.com/lajbel/mandarina
-image: https://i.imgur.com/l36SzfL.png
-banner: https://i.imgur.com/l36SzfL.png
+public: true
 featured: true
 featuredDescription: A visual novel engine with the objetive of being lightweight and easy for novel development learning.
-public: true
-stack: ["game development", "typescript", "nodejs"]
+repo: https://github.com/lajbel/eggou
+stack: [game development, typescript, nodejs]
+image: /images/banners/mandarina.png
 tags:
     - project
 ---

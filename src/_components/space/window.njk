@@ -1,10 +1,10 @@
-{% set postData = "" %}
-{% for data in search.pages("id=" + id)%}
-{% set postData = data %}
+{% set data = "" %}
+{% for pageData in search.pages("id=" + id)%}
+{% set data = pageData %}
 {% endfor %}
 
 <div class="window">
-    {{ c.space.post(postData) | safe }}
+    {{ c.space.post(data) | safe }}
 
     <div class="window__nothing">
         <p class="window__nothing-text"><i class="fa-solid fa-ghost"></i></p>

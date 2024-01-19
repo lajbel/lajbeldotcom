@@ -5,30 +5,26 @@
 {% set data = pageData %}
 {% endfor %}
 
-{{ data.info | check }}
-
 {% block page %}
 <div class="portfolio">
     <div class="portfolio__content">
         <header class="portfolio__header">
             <h1 class="portfolio__title portfolio__title--accent">lajbel</h1>
         </header>
+
         <main class="portfolio__main">
             {{ c.portfolio.profile(data) | safe }}
-            <section class="portfolio__projects">
-                <h2 class="portfolio__subtitle portfolio__subtitle--accent">Featured Projects</h2>
 
-                <div class="portfolio__featured-projects">
-                    {% for page in search.pages(["featured=true", tag] | join) %}
-                    {{ c.common.card({ data: page, featured: true }) | safe }}
-                    {% endfor %}
-                </div>
-            </section>
+            <h2 class="portfolio__subtitle portfolio__subtitle--accent">Projects</h2>
+
+            {{ c.portfolio.projects(data) | safe }}
         </main>
 
     </div>
-    {# <footer class="portfolio__footer">
-        hi
-    </footer> #}
+    <footer class="portfolio__footer">
+        <div class="portfolio__description">
+            Made by Daniel Báez (@lajbel) with Lume
+        </div>
+    </footer>
 </div>
 {% endblock %}

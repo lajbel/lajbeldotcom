@@ -14,13 +14,8 @@
     &__avatar {
         padding: 20px;
         background-color: $accent-color;
-    }
-
-    &__info {
         display: flex;
-        flex-direction: column;
-        padding: 20px;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     &__avatar-image {
@@ -30,16 +25,24 @@
         border-radius: 50%;
     }
 
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
     &__stats {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        gap: 15px;
         width: min-content;
     }
 
     &__buttons {
         display: flex;
-        gap: 10px;
+        gap: 20px;
     }
 
     &__description {

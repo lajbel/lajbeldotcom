@@ -1,6 +1,7 @@
 @use "theme/reset";
 
 // #region Common Components
+@use "common/page";
 @use "common/badge";
 @use "common/button";
 @use "common/card";
@@ -9,6 +10,7 @@
 // #region Portfolio components
 @use "portfolio/portfolio";
 @use "portfolio/profile";
+@use "portfolio/projects";
 @use "portfolio/stat";
 // #endregion
 
@@ -17,8 +19,5 @@
 @use "space/post";
 @use "space/window";
 @use "space/card_folder";
+@use "space/nav";
 // #endregion
-
-/// #region Legacy files (to be removed)
-@use "nav";
-@use "page";

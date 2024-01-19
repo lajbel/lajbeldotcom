@@ -1,6 +1,6 @@
-@use "theme/colors" as *;
-@use "theme/mixins" as *;
-@use "theme/sizes" as *;
+@use "../theme/colors" as *;
+@use "../theme/mixins" as *;
+@use "../theme/sizes" as *;
 
 .nav {
     display: flex;
