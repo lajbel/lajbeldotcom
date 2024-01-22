@@ -6,6 +6,10 @@ import sitemap from "lume/plugins/sitemap.ts";
 import sourceMaps from "lume/plugins/source_maps.ts";
 import multilanguage from "lume/plugins/multilanguage.ts";
 import metas from "lume/plugins/metas.ts";
+import slugifyUrls from "lume/plugins/slugify_urls.ts";
+import codeHighlight from "lume/plugins/code_highlight.ts";
+import lang_javascript from "npm:highlight.js/lib/languages/javascript";
+import lang_bash from "npm:highlight.js/lib/languages/bash";
 import markdownItClass from "npm:@toycode/markdown-it-class";
 
 // #region Basic site configuration
@@ -41,6 +45,13 @@ site.use(esbuild({
 site.use(multilanguage({
     languages: ["en", "es"],
     defaultLanguage: "en",
+}));
+site.use(slugifyUrls());
+site.use(codeHighlight({
+    languages: {
+        javascript: lang_javascript,
+        bash: lang_bash,
+    },
 }));
 // #endregion
 

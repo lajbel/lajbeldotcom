@@ -1,8 +1,9 @@
 {% set spaceLink = "/space/?card=" + data.id %}
-{% set featuredClass = "card--featured" if featured else ""%}
+{% set featuredClass = "card--featured" if featured else "" %}
+{% set activeClass = "card--active" if active else "" %}
 {% set cardDescription = data.featuredDescription if featured else data.description %}
 
-<div id="{{ data.id }}" class="card {{ featuredClass }}">
+<div id="{{ data.id }}" class="card {{ featuredClass }} {{ activeClass }}">
     <img class="card__image" src={{ data.image }} alt="{{ title }}" />
     <div class="card__summary" style='
     --card-img: url("{{ data.image }}");

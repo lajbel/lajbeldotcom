@@ -21,3 +21,7 @@
 @use "space/card_folder";
 @use "space/nav";
 // #endregion
+
+// Resources
+@import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css";
+@import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/atom-one-dark.min.css";
