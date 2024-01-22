@@ -1,0 +1,12 @@
+@use "../theme/sizes" as *;
+
+.space {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+
+    @media (width>=$desktop-width) {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,13 @@
+<nav class="nav">
+    <h1 class="nav__title">lajspace</h1>
+    <div class="nav__cards-container">
+        {{ c.space.cardFolder({ cardTitle: "Kaboom.js Tutorials", tag: "kaboomjs", id: "kaboomjs", currentCard: id }) |
+        safe }}
+        {{ c.space.cardFolder({ cardTitle: "Projects", tag: "project", id: "projects", currentCard: id }) | safe }}
+        {{ c.space.cardFolder({ cardTitle: "Games", tag: "game", id: "games", currentCard: id }) | safe }}
+    </div>
+    {{ c.common.button({ text: "Check Portfolio", link: "/", modifiers: ["light", "flat"] }) | safe }}
+    <div class="nav__button">
+        <i class="fa-solid fa-caret-right"></i>
+    </div>
+</nav>

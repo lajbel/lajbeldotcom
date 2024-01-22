@@ -9,6 +9,6 @@
         "editor.defaultFormatter": "vscode.html-language-features"
     },
     "files.associations": {
-        "*.njk": "html"
+        "*.njk": "html",
     }
 }

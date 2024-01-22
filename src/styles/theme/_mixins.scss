@@ -1,12 +1,19 @@
 @use "colors" as *;
 @use "sizes" as *;
 
+// Shadow
+// --------------------------------------------------
+@mixin shadow {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
 // Texts
 // --------------------------------------------------
 @mixin title {
     color: $dark-color;
     font-size: $text-size-huge;
     text-align: center;
+    line-height: 1;
     @include color_variants();
 }
 
@@ -38,14 +45,23 @@
     @include color_variants();
 }
 
+@mixin text-tiny {
+    color: $dark-color;
+    font-size: $text-size-ssmall;
+    text-align: center;
+    @include color_variants();
+}
+
 @mixin button {
     display: inline-block;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-    border: 1px solid $accent-color;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $accent-color;
     border-radius: 5px;
     background-color: transparent;
-    padding: 10px 20px;
+    padding: 5px 20px;
     max-width: 200px;
     color: $accent-color;
     font-size: $text-size-small;
@@ -56,13 +72,17 @@
     }
 
     &--light {
-        border: 1px solid $light-color;
+        border-color: $light-color;
         color: $light-color;
 
         &:hover {
             background-color: $light-color;
             color: $dark-color;
         }
+    }
+
+    &--small {
+        padding: 2px 2px;
     }
 }
 
@@ -77,5 +97,21 @@
 
     &--accent {
         color: $accent-color;
+    }
+
+    &--green {
+        color: #45d145;
+    }
+
+    &--red {
+        color: #d14545;
+    }
+
+    &--blue {
+        color: #45a8d1;
+    }
+
+    &--dark-blue {
+        color: #1d2d44;
     }
 }

@@ -1,0 +1,15 @@
+{% set className %}
+{{- "button" -}}
+{% endset %}
+
+{% set modifierClasses = "" %}
+{% for modifier in modifiers %}
+{%- set modifierClasses = (modifierClasses + " " + className + "--" + modifier) -%}
+{% endfor %}
+
+<button class="button {{- modifierClasses -}}">
+    <a class="button__link" href={{ link }}>
+        {{ text }}
+        <i class="button__icon {{ icons[icon] }}"></i>
+    </a>
+</button>

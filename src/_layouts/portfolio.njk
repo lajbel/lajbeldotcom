@@ -1,0 +1,30 @@
+{% extends "base.njk" %}
+
+{% set data = "" %}
+{% for pageData in search.pages(("id=" + id + " lang=" + lang)) %}
+{% set data = pageData %}
+{% endfor %}
+
+{% block page %}
+<div class="portfolio">
+    <div class="portfolio__content">
+        <header class="portfolio__header">
+            <h1 class="portfolio__title portfolio__title--accent">lajbel</h1>
+        </header>
+
+        <main class="portfolio__main">
+            {{ c.portfolio.profile(data) | safe }}
+
+            <h2 class="portfolio__subtitle portfolio__subtitle--accent">Projects</h2>
+
+            {{ c.portfolio.projects(data) | safe }}
+        </main>
+
+    </div>
+    <footer class="portfolio__footer">
+        <div class="portfolio__description">
+            Made by Daniel Báez (@lajbel) with Lume
+        </div>
+    </footer>
+</div>
+{% endblock %}

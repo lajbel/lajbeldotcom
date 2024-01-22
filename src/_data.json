@@ -1,0 +1,20 @@
+{
+    "metas": {
+        "title": "=title",
+        "twitter": "@lajbel",
+        "icon": "/images/avatar.png",
+        "lang": "en"
+    },
+    "icons": {
+        "typescript": "devicon-typescript-plain colored",
+        "javascript": "devicon-javascript-plain colored",
+        "nodejs": "devicon-nodejs-plain colored",
+        "human": "fa-solid fa-person",
+        "location": "fa-solid fa-map-marker-alt",
+        "calendar": "fa-solid fa-calendar-alt",
+        "mail": "fa-solid fa-envelope",
+        "rocket": "fa-solid fa-rocket",
+        "github": "fa-brands fa-github",
+        "game development": "fa-solid fa-chess-rook"
+    }
+}

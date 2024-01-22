@@ -1,0 +1,15 @@
+<div class='
+card-folder' id={{ id }}>
+    <div class="card-folder__cover">
+        <h2 class="card-folder__title">{{ cardTitle }}</h2>
+    </div>
+
+    <div class="card-folder__cards-container">
+        {% for data in search.pages(["", tag] | join) %}
+        {% if not (data.id == currentCard) %}
+        {{ c.common.card({ data: data, active: false }) | safe }}
+        {% endif %}
+        {% endfor %}
+    </div>
+
+</div>

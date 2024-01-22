@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {{ c.common.styles() | safe }}
+</head>
+
+<body>
+    <main class="page">
+        {% block page %}
+        {{ content | safe }}
+        {% endblock %}
+    </main>
+
+    <script src="/scripts/main.js"></script>
+</body>
+
+</html>

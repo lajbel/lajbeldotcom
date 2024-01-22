@@ -1,3 +1,0 @@
-var o=Object.defineProperty;var t=(e,c)=>o(e,"name",{value:c,configurable:!0});var s=document.querySelectorAll(".card-folder");function a(e,c){e.querySelector(".card-folder__cards-container")?.querySelectorAll(".card")?.forEach(r=>{r.classList.contains("card--in-space")||r.classList.toggle("card--active",c)})}t(a,"changeFolderCardsState");function n(e){e.classList.toggle("card-folder--active"),a(e,e.classList.contains("card-folder--active"))}t(n,"onCardFolderClick");s.forEach(e=>{a(e,e.classList.contains("card-folder--active")),e.querySelector(".card-folder__cover")?.addEventListener("click",()=>{n(e)})});
-
-//# sourceMappingURL=./cardFolder.js.map

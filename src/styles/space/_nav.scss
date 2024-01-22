@@ -1,0 +1,75 @@
+@use "../theme/colors" as *;
+@use "../theme/mixins" as *;
+@use "../theme/sizes" as *;
+
+.nav {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transform: translateX(-100%);
+    z-index: 100;
+    transition: all 0.5s;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: $accent-color;
+    padding: 10px;
+    width: 100%;
+    max-width: 273px;
+    height: 100%;
+
+    &__title {
+        padding: 10px;
+        color: #fff;
+        font-weight: 600;
+        font-size: $text-size-large;
+        text-align: center;
+    }
+
+    &__cards-container {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        height: 100%;
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+    &__btn {
+        @include button;
+    }
+
+    &__button {
+        position: absolute;
+        top: 50%;
+        right: -50px;
+        transform: translateY(-50%) rotate(0deg);
+        opacity: 0.5;
+        transition: all 0.5s;
+        cursor: pointer;
+        color: $accent-color;
+        font-size: 4rem;
+    }
+
+    &--active {
+        transform: translateX(0%);
+    }
+
+    &--active & {
+        &__button {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+
+    @media screen and (min-width: $desktop-width) {
+        position: relative;
+        transform: none;
+
+        &__button {
+            display: none;
+        }
+    }
+}

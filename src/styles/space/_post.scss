@@ -1,0 +1,111 @@
+@use "../theme/sizes" as *;
+@use "../theme/colors" as *;
+
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .5s;
+    background-color: $light-color;
+    height: 0px;
+    overflow-y: auto;
+
+    &--active {
+        height: 100%;
+    }
+
+    &__header {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: end;
+        width: 100%;
+        height: 240px;
+    }
+
+    &__banner {
+        filter: brightness(50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__title {
+        position: absolute;
+        z-index: 2;
+        margin-bottom: 10px;
+        padding: 14px;
+        width: 100%;
+        max-width: 1000px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 3.5rem;
+        line-height: 4rem;
+        text-wrap: balance;
+    }
+
+    // Regular styles
+    &__h1 {
+        font-size: 3.2rem;
+    }
+
+    &__h2 {
+        font-weight: 400;
+        font-size: 2.56rem;
+    }
+
+    &__h3 {
+        font-weight: 400;
+        font-size: 2.048rem;
+    }
+
+    &__h4 {
+        font-weight: 400;
+        font-size: 1.6384rem;
+    }
+
+    &__h5 {
+        font-weight: 400;
+        font-size: 1.31072rem;
+    }
+
+    &__h6 {
+        font-weight: 400;
+        font-size: 1.048576rem;
+    }
+
+    &__p {
+        margin-bottom: 10px;
+        font-size: 1.4em;
+    }
+
+    &__a {
+        color: $accent-color;
+        text-decoration: none;
+    }
+
+    &__ul {
+        padding-left: 10px;
+        list-style-position: inside;
+    }
+
+    &__li {
+        font-size: 1.4em;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__content {
+        padding: 14px;
+        width: 100%;
+        max-width: 1000px;
+        line-height: 1.6;
+
+        @media screen and (min-width: $desktop-width) {
+            width: 80%;
+        }
+    }
+}

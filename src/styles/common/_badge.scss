@@ -1,0 +1,19 @@
+@use "../theme/colors" as *;
+
+.badge {
+    background-color: $light-color;
+    padding: 0px 5px;
+    width: fit-content;
+    height: fit-content;
+    user-select: none;
+
+    &__text {
+        font-weight: 400;
+        line-height: 2;
+    }
+
+    &__icon {
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+}

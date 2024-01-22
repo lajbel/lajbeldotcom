@@ -1,0 +1,11 @@
+.page {
+    display: flex;
+    flex-direction: row;
+    gap: 0.625rem;
+    background-color: var(--all-background-color);
+    width: 100%;
+    height: 100vh;
+    line-height: 1.8rem;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 300;
+}

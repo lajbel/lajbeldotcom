@@ -1,33 +1,64 @@
-import { Page } from "lume/core/file.ts";
 import lume from "lume/mod.ts";
 import sass from "lume/plugins/sass.ts";
 import nunjucks from "lume/plugins/nunjucks.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import sourceMaps from "lume/plugins/source_maps.ts";
+import multilanguage from "lume/plugins/multilanguage.ts";
+import metas from "lume/plugins/metas.ts";
+import slugifyUrls from "lume/plugins/slugify_urls.ts";
+import codeHighlight from "lume/plugins/code_highlight.ts";
+import lang_javascript from "npm:highlight.js/lib/languages/javascript";
+import lang_bash from "npm:highlight.js/lib/languages/bash";
 import markdownItClass from "npm:@toycode/markdown-it-class";
 
-// Site
+// #region Basic site configuration
+// -----------------------------------------------------------------------------------------------
 const site = lume({
     src: "./src",
-    dest: "./docs",
+    dest: "./site",
+    includes: "_layouts",
+    location: new URL("https://lajbel.github.io"),
+    components: { variable: "c" },
 });
+// #endregion
 
-// Plugins
-site.copy("images");
+// #region Static files and ignored files
+// -----------------------------------------------------------------------------------------------
+site.ignore("README.md");
+site.copyRemainingFiles();
+// #endregion
+
+// #region Plugin configuration
+// -----------------------------------------------------------------------------------------------
 site.use(nunjucks());
 site.use(sass());
-site.use(esbuild({
-    options: {
-        keepNames: true,
-    }
-}));
 site.use(sitemap());
 site.use(sourceMaps());
+site.use(metas());
+site.use(esbuild({
+    options: {
+        minify: true,
+        keepNames: true,
+    },
+}));
+site.use(multilanguage({
+    languages: ["en", "es"],
+    defaultLanguage: "en",
+}));
+site.use(slugifyUrls());
+site.use(codeHighlight({
+    languages: {
+        javascript: lang_javascript,
+        bash: lang_bash,
+    },
+}));
+// #endregion
 
-// Hooks
+// #region Markdown it
+// -----------------------------------------------------------------------------------------------
 site.hooks.addMarkdownItPlugin(markdownItClass, {
-    "h1": "post__title",
+    "h1": "post__h1",
     "h2": "post__h2",
     "h3": "post__h3",
     "h4": "post__h4",
@@ -39,53 +70,13 @@ site.hooks.addMarkdownItPlugin(markdownItClass, {
     "ul": "post__ul",
     "li": "post__li",
 });
+// #endregion
 
-// Filters
+// #region Nunjucks Filters
+// -----------------------------------------------------------------------------------------------
 site.filter("check", (value) => {
     console.log(value);
 });
-
-// Events
-const data: Record<string, any> = {};
-
-function createContentJSON(pages: Page[]) {
-    const textEncoder = new TextEncoder();
-
-    for (const page of pages) {
-        if (page.data.url.toString().startsWith("/content/")) {
-            if (!data[page.data.id?.toString() || ""]) {
-                data[page.data.id?.toString() ?? 0] = {};
-            }
-            if (page.data.lang?.toString() === "en") {
-                data[page.data.id?.toString() || ""] = {
-                    "title": page.data.title?.toString() || "",
-                    "url": page.data.url.toString(),
-                    "content": page.data.children?.toString() || "",
-                    "image": page.data.image,
-                    "description": page.data.description?.toString() || "",
-                }
-            }
-            else {
-                data[page.data.id?.toString() || ""][page.data.lang?.toString() || ""] = {
-                    "title": page.data.title?.toString() || "",
-                    "url": page.data.url.toString(),
-                    "content": page.data.children?.toString() || "",
-                    "image": page.data.image,
-                    "description": page.data.description?.toString() || "",
-                }
-            }
-        }
-    }
-
-    Deno.createSync("./docs/content.json").write(textEncoder.encode(JSON.stringify(data)));
-}
-
-site.addEventListener("afterBuild", (event) => {
-    createContentJSON(event.pages);
-});
-
-site.addEventListener("afterUpdate", (event) => {
-    createContentJSON(event.pages);
-});
+// #endregion
 
 export default site;
