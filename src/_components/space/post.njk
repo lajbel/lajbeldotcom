@@ -3,13 +3,9 @@
 <article class="post {{- " post--active" if active else "" }}">
     {{ titleImage }}
     <header class="post__header">
-        {% if titleImage %}
-        <img class="post__title" src="{{ titleImage }}" alt="Post's Title">
-        {% endif %}
-
-        {% if not titleImage %}
-        <h1 class="post__title">{{ title }}</h1>
-        {% endif %}
+        <div class="post__header-content">
+            <h1 class="post__title">{{ title }}</h1>
+        </div>
 
         <img class="post__banner" src="{{ image }}" alt="Post's banner">
     </header>
