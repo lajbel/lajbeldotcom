@@ -1,5 +1,5 @@
 {% set data = "" %}
-{% for pageData in search.pages("id=" + id)%}
+{% for pageData in search.pages("id=" + id + " lang=" + lang)%}
 {% set data = pageData %}
 {% endfor %}
 

@@ -2,9 +2,35 @@
 @use "../theme/sizes" as *;
 @use "sass:color" as color;
 
+@keyframes card-folder-appear {
+    0% {
+        gap: 0px;
+        border-top-width: 0px;
+        border-bottom-width: 0px;
+    }
+
+    100% {
+        gap: 4px;
+        border-top-width: 4px;
+        border-bottom-width: 4px;
+    }
+}
+
+@keyframes card-folder-disappear {
+    0% {
+        gap: 4px;
+        border-top-width: 4px;
+        border-bottom-width: 4px;
+    }
+
+    100% {
+        gap: 0px;
+        border-top-width: 0px;
+        border-bottom-width: 0px;
+    }
+}
 
 .card-folder {
-    transition: .2s;
     background-color: color.scale($accent-color, $blackness: 15%);
     height: fit-content;
 
@@ -19,10 +45,12 @@
     }
 
     &__cards-container {
+        animation: card-folder-disappear ease-in-out;
+        animation-fill-mode: forwards;
         display: flex;
         flex-direction: column;
         gap: 0px;
-        transition: .2s;
+        transition: .1s;
         border-top-width: 0px;
         border-bottom-width: 0px;
         border-style: solid;
@@ -36,9 +64,8 @@
 
     &--active & {
         &__cards-container {
-            gap: 4px;
-            border-top-width: 4px;
-            border-bottom-width: 4px;
+            animation: card-folder-appear ease-in-out;
+            animation-fill-mode: forwards;
         }
     }
 }

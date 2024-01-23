@@ -8,6 +8,7 @@ import multilanguage from "lume/plugins/multilanguage.ts";
 import metas from "lume/plugins/metas.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import codeHighlight from "lume/plugins/code_highlight.ts";
+import feed from "lume/plugins/feed.ts";
 import lang_javascript from "npm:highlight.js/lib/languages/javascript";
 import lang_bash from "npm:highlight.js/lib/languages/bash";
 import markdownItClass from "npm:@toycode/markdown-it-class";
@@ -18,7 +19,7 @@ const site = lume({
     src: "./src",
     dest: "./site",
     includes: "_layouts",
-    location: new URL("https://lajbel.github.io"),
+    location: new URL("https://www.lajbel.com"),
     components: { variable: "c" },
 });
 // #endregion
@@ -53,6 +54,19 @@ site.use(codeHighlight({
         bash: lang_bash,
     },
 }));
+site.use(feed({
+    output: ["/blogs.rss"],
+    query: "type=blogs",
+    info: {
+        title: "=site.title",
+        description: "=site.description",
+    },
+    items: {
+        title: "=title",
+        description: "=excerpt",
+    },
+}));
+
 // #endregion
 
 // #region Markdown it

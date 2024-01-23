@@ -1,7 +1,6 @@
 {% set active = false if nopost else true %}
 
 <article id="post" tabindex="0" class="post {{- " post--active" if active else "" }}">
-    {{ titleImage }}
     <header class="post__header">
         <div class="post__header-content">
             <h1 class="post__title">{{ title }}</h1>

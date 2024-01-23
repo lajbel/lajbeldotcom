@@ -1,9 +1,9 @@
 ---
 id: index
-title: portafolio de lajbel
+title: Portafolio de Lajbel
 lang: es
 layout: portfolio.njk
-url: "/es/"
+url: /es/index.html
 metas: {
     title: "=title",
     description: "$ .profile__description",

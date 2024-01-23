@@ -3,7 +3,8 @@
         "title": "=title",
         "twitter": "@lajbel",
         "icon": "/images/avatar.png",
-        "lang": "en"
+        "lang": "=lang",
+        "color": "#ffa45b"
     },
     "icons": {
         "typescript": "devicon-typescript-plain colored",

@@ -1,9 +1,9 @@
 ---
 id: index
-title: lajbel's portfolio
+title: Lajbel's Portfolio
 lang: en
 layout: portfolio.njk
-url: "/"
+url: /
 metas: {
     title: "=title",
     description: "$ .profile__description",
