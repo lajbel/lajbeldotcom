@@ -15,6 +15,9 @@ tags: [
     "juegos",
     "español"
 ]
+metas: {
+    description: "$ .post__p",
+}
 ---
 Es normal que a medida que nuestros juegos crecen en tamaño, queramos mantener una mejor organización de archivos. En este post aprenderás una manera práctica de aplicarlo en tus proyectos.
 

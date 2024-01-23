@@ -4,15 +4,16 @@
     <title>{{ title }}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow">
     {{ c.common.styles() | safe }}
 </head>
 
 <body>
-    <main class="page">
+    <div class="page">
         {% block page %}
         {{ content | safe }}
         {% endblock %}
-    </main>
+    </div>
 
     <script src="/scripts/main.js"></script>
 </body>

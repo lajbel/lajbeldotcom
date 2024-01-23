@@ -13,6 +13,9 @@ tags: [
     "kaboomjs",
     "games"
 ]
+metas: {
+    description: "$ .post__p",
+}
 ---
 
 It's normal that as our games grow in size, we want to maintain better file organization. In this post, you'll learn a practical way to apply it to your projects.
