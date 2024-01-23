@@ -7,7 +7,7 @@ title: Como separar mis archivos en Kaboom.js
 lang: "es"
 description: Tutorial acerca de separar tus archivos en Kaboom.js
 public: true
-image: https://cdn.glitch.global/6dc82ede-830f-4296-b221-d0f185e0cf50/ea1106d2-a4eb-49db-837a-c49b3a3a1bdc.image.png?v=1705955046911
+image: /images/banners/kaboombean.png
 tags: [
     "blog",
     "kaboomjs",

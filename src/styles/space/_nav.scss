@@ -39,6 +39,18 @@
         overflow-y: auto;
     }
 
+    &__button {
+        position: absolute;
+        top: 50%;
+        right: -50px;
+        transform: translateY(-50%) rotate(0deg);
+        opacity: 0.5;
+        transition: all 0.5s;
+        cursor: pointer;
+        color: $accent-color;
+        font-size: 4rem;
+    }
+
     &--active {
         transform: translateX(0%);
     }

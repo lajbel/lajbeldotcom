@@ -1,12 +1,18 @@
-{% set featuredClass = "card--featured" if featured else "" %}
-{% set activeClass = "card--active" if active else "" %}
 {% set cardDescription = data.featuredDescription if featured else data.description %}
 
-<div id="{{ data.id }}" class="card {{ featuredClass }} {{ activeClass }}">
-    <img class="card__image" src={{ data.image }} alt="{{ title }}" transform-images="png 600" />
-    <div class="card__summary" style='
-    --card-img: url("{{ data.image }}");
-    '>
+{% set className %}
+{{- "card" -}}
+{% endset %}
+
+{% set modifierClasses = "" %}
+{% for modifier in modifiers %}
+{%- set modifierClasses = (modifierClasses + " " + className + "--" + modifier) -%}
+{% endfor %}
+
+<div id="{{ data.id }}" class="card {{- modifierClasses -}}">
+    <img class="card__image" src={{ data.image }} alt="{{ title }}" transform-images="webp 600" loading="lazy" />
+
+    <div class="card__summary">
         <a href={{ data.url }} class="card__info">
             <h4 class="card__title card__title--light">{{- data.title -}}</h4>
             <p class="card__description">{{- cardDescription -}}</p>

@@ -7,9 +7,7 @@
 {%- set modifierClasses = (modifierClasses + " " + className + "--" + modifier) -%}
 {% endfor %}
 
-<button class="button {{- modifierClasses -}}">
-    <a class="button__link" aria-label={{ label }} href={{ link }}>
-        {{ text }}
-        <i class="button__icon {{ icons[icon] }}"></i>
-    </a>
-</button>
+<a class="button {{ modifierClasses }}" aria-label="{{ label }}" href={{ link }}>
+    {{ text }}
+    <i class="button__icon {{ icons[icon] }}"></i>
+</a>

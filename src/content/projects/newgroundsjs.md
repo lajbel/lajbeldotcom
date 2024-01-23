@@ -5,7 +5,7 @@ id: "newgroundsjs"
 lang: "en"
 description: "A newgrounds.io api wrapper for Node.js"
 public: true
-image: https://www.newgrounds.io/img/newgrounds_logo.png
+image: /images/banners/ngio.png
 tags:
     - project
 ---

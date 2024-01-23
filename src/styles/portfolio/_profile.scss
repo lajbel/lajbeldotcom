@@ -34,8 +34,6 @@
 
     &__stats {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
         width: min-content;
     }
 
@@ -52,5 +50,10 @@
 
     @media screen and (min-width: $desktop-width) {
         flex-direction: row;
+
+        &__stats {
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
     }
 }

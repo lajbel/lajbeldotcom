@@ -7,7 +7,7 @@ card-folder' id={{ id }}>
     <div class="card-folder__cards-container">
         {% for data in search.pages("lang=" + lang + " " + tag) %}
         {% if not (data.id == currentCard) %}
-        {{ c.common.card({ data: data, active: false }) | safe }}
+        {{ c.common.card({ data: data }) | safe }}
         {% endif %}
         {% endfor %}
     </div>
