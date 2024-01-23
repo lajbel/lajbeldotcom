@@ -8,7 +8,7 @@
 {% endfor %}
 
 <button class="button {{- modifierClasses -}}">
-    <a class="button__link" href={{ link }}>
+    <a class="button__link" aria-label={{ label }} href={{ link }}>
         {{ text }}
         <i class="button__icon {{ icons[icon] }}"></i>
     </a>

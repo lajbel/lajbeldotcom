@@ -10,7 +10,7 @@ featured: true
 featuredDescription: "A flyers chicken shooter, in the bullet hell style. My first completed game with Kaboom.js"
 repo: https://github.com/lajbel/eggou
 stack: [game development, javascript, nodejs]
-image: https://i.imgur.com/UgVonEY.png
+image: /images/banners/eggou.png
 tags:
     - game
 ---

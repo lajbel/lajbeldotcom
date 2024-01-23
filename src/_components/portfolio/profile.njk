@@ -1,6 +1,6 @@
 <section class="profile">
     <figure class="profile__avatar">
-        <img class="profile__avatar-image" src="/images/realajbel.jpg" alt="lajbel">
+        <img class="profile__avatar-image" src="/images/realajbel.jpg" alt="lajbel" transform-images="webp 220">
     </figure>
 
     <div class="profile__info">
@@ -22,8 +22,9 @@
 
         <div class="profile__buttons">
             {{ c.common.button({ link: "https://danibi.notion.site/Daniel-B-ez-b22bf2f2afc54e5a89b45f73dafcd692", text:
-            "Check CV", modifiers: ["flat"] }) | safe }}
-            {{ c.common.button({ link: "/space", text: "Check my space", modifiers: ["flat"] }) | safe }}
+            "Check CV", modifiers: ["flat"], label: "Check Daniel's CV" }) | safe }}
+            {{ c.common.button({ link: "/space", text: "Check my space", modifiers: ["flat"], label: "Check all my
+            website content" }) | safe }}
         </div>
     </div>
 </section>

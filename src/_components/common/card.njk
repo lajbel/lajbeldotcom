@@ -3,7 +3,7 @@
 {% set cardDescription = data.featuredDescription if featured else data.description %}
 
 <div id="{{ data.id }}" class="card {{ featuredClass }} {{ activeClass }}">
-    <img class="card__image" src={{ data.image }} alt="{{ title }}" />
+    <img class="card__image" src={{ data.image }} alt="{{ title }}" transform-images="png 600" />
     <div class="card__summary" style='
     --card-img: url("{{ data.image }}");
     '>
@@ -16,12 +16,14 @@
                 {{ c.common.button({
                 icon: "rocket",
                 link: data.url,
-                modifiers: ["flat", "light", "full"]
+                modifiers: ["flat", "light", "full"],
+                label: "Check the project in a blog post"
                 }) | safe }}
                 {{ c.common.button({
                 icon: "github",
                 link: data.repo,
-                modifiers: ["flat", "light", "full"]
+                modifiers: ["flat", "light", "full"],
+                label: "Check the project's github repository"
                 }) | safe }}
             </div>
 

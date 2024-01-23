@@ -1,6 +1,6 @@
 ---
 id: index
-title: Daniel "lajbel" Báez - Desarrollador Full Stack, Desarrollador de Juegos, ¡y más!
+title: Daniel "lajbel" Báez - Desarrollador Web Full Stack y de juegos
 lang: es
 layout: portfolio.njk
 url: /es/index.html
