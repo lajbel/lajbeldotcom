@@ -4,7 +4,6 @@ title: Example
 id: "example"
 description: "An example post for test ui"
 public: false
-image: https://www.newgrounds.io/img/newgrounds_logo.png
 ---
 
 # Header 1
@@ -24,8 +23,6 @@ This is a paragraph.
 
 ###### Header 6
 This is a paragraph.
-
-
 
 - This is an unordered list item.
 - This is an unordered list item.

@@ -4,17 +4,15 @@
 @use "sass:color" as color;
 
 .profile {
-    @include shadow;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    width: 100%;
+    --gap: 0rem;
 
     &__avatar {
         padding: 20px;
         background-color: $accent-color;
         display: flex;
         justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
     }
 
     &__avatar-image {
@@ -49,8 +47,6 @@
     }
 
     @media screen and (min-width: $desktop-width) {
-        flex-direction: row;
-
         &__stats {
             grid-template-columns: 1fr 1fr;
             gap: 15px;

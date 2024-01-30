@@ -37,7 +37,11 @@ site.copyRemainingFiles();
 // #region Plugin configuration
 // -----------------------------------------------------------------------------------------------
 site.use(nunjucks());
-site.use(sass());
+site.use(sass({
+    options: {
+        sourceMap: false,
+    }
+}));
 site.use(sitemap());
 site.use(sourceMaps());
 site.use(metas());

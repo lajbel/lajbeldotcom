@@ -3,6 +3,10 @@
     "editor.formatOnSave": true,
     "deno.enable": true,
     "tailwindCSS.includeLanguages": {
-        "nunjucks": "html"
-    }
+        "html-nunjucks": "html"
+    },
+    "cssPeek.peekFromLanguages": [
+        "html",
+        "html-nunjucks"
+    ],
 }
