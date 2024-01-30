@@ -8,18 +8,18 @@
 {% block page %}
 <div class="portfolio">
     <div class="portfolio__content">
-        <header class="portfolio__header">
-            <h1 class="portfolio__title portfolio__title--accent">lajbel</h1>
+        <header class="portfolio__header | cs-flex-col | p-5 items-center">
+            <h1 class="my-2 text-xl text-center text-accent font-bold">lajbel</h1>
         </header>
 
         <main class="portfolio__main">
             {{ c.portfolio.profile(data) | safe }}
 
-            <h2 class="portfolio__subtitle portfolio__subtitle--accent">Projects</h2>
+            <h2 class="my-2 text-lg text-center text-accent font-bold">Projects</h2>
 
             {{ c.portfolio.projects(data) | safe }}
 
-            <h2 class="portfolio__subtitle portfolio__subtitle--accent">Latest blogs</h2>
+            <h2 class="my-2 text-lg text-center text-accent font-bold">Latest blogs</h2>
 
             {{ c.portfolio.blogs(data) | safe }}
         </main>

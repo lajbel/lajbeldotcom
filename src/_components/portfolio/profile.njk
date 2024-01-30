@@ -1,26 +1,27 @@
-<section class="[ cs-flex-column lg:cs-flex-row ] [ bg-white w-full shadow-md ] [ profile ]">
-    <figure class="profile__avatar">
-        <img class="profile__avatar-image" src="/images/realajbel.jpg" alt="lajbel" transform-images="webp 220">
+<section class="profile | cs-flex-column lg:cs-flex-row | w-full shadow-md bg-white">
+    <figure class="profile__avatar | cs-flex-center ] | p-5 bg-accent">
+        <img
+            class="profile__avatar-image | rounded-full"
+            src="/images/realajbel.jpg"
+            alt="lajbel's avatar" 
+            transform-images="webp 220"
+        >
     </figure>
 
-    <div class="profile__info">
-        <p class="profile__description">
-            I'm a <span class="profile__description">Full Stack Web developer</span>, specialized with <span
-                class="profile__description profile__description--green">MongoDB</span>,
-            <span class="profile__description profile__description--blue">Express</span>, <span
-                class="profile__description profile__description--blue">React</span> and <span
-                class="profile__description profile__description--blue">Node.js</span>. My favorite
-            drink is the coffee
+    <div class="profile__info | cs-flex-column | p-5 justify-between">
+        <p class="profile__description | text-base text-pretty">
+            Hello, I'm Daniel, a full stack web developer. My first contact with technology was
+            with Project 64, I was 4 years old. My favourite drink is the latte coffe.
         </p>
 
-        <dl class="profile__stats">
+        <dl class="profile__stats | grid | lg:grid-cols-2">
             {{ c.portfolio.stat({ icon: "human", text: info.gender }) | safe }}
             {{ c.portfolio.stat({ icon: "location", text: info.city }) | safe }}
             {{ c.portfolio.stat({ icon: "calendar", text: info.birth }) | safe }}
             {{ c.portfolio.stat({ icon: "mail", text: info.email }) | safe }}
         </dl>
 
-        <div class="profile__buttons">
+        <div class="profile__buttons | cs-flex-row">
             {{ c.common.button({ link: "https://danibi.notion.site/Daniel-B-ez-b22bf2f2afc54e5a89b45f73dafcd692", text:
             "Check CV", modifiers: ["flat"], label: "Check Daniel's CV" }) | safe }}
             {{ c.common.button({ link: "/space", text: "Check my space", modifiers: ["flat"], label: "Check all my
