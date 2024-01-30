@@ -1,7 +1,7 @@
 <section class="projects">
     <div class="projects__featured">
         {% for data in search.pages(["featured=true", tag] | join) %}
-        {{ c.common.card({ data: data, modifiers: ["active", "featured"] }) | safe }}
+            {{ c.portfolio.projectCard({ data: data }) | safe }}
         {% endfor %}
     </div>
 </section>

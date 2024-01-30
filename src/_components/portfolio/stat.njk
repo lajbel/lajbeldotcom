@@ -1,6 +1,12 @@
 {% set statIcon = icons[icon] %}
 
-<div class="stat">
-    <i class="stat__icon {{ statIcon }}"></i>
-    <p class="stat__text">{{ text }}</p>
-</div>
+<dt class="hidden">{{ title }}</dt>
+<dd class="text-sm">
+    <i 
+        class="{{ statIcon }}
+        | align-middle mr-2 w-[30px]
+        | text-base text-center text-accent"
+        role="img"
+    ></i>
+    {{- text -}}
+</dd>

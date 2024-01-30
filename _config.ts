@@ -16,6 +16,7 @@ import lang_bash from "npm:highlight.js/lib/languages/bash";
 import markdownItClass from "npm:@toycode/markdown-it-class";
 import tailwindcss from "lume/plugins/tailwindcss.ts";
 import postcss from "lume/plugins/postcss.ts";
+import inline from "lume/plugins/inline.ts";
 import tailwindOptions from "./tailwind.config.ts";
 
 // #region Basic site configuration
@@ -81,6 +82,7 @@ site.use(tailwindcss({
     options: tailwindOptions,
 }));
 site.use(postcss());
+site.use(inline());
 
 // #endregion
 

@@ -61,18 +61,6 @@
         display: none;
     }
 
-    &__title {
-        @include text-small;
-        line-height: normal;
-    }
-
-    &__description {
-        @include text-tiny;
-        color: $light-color;
-        font-weight: 400;
-        line-height: normal;
-    }
-
     &--active {
         min-height: $card-height;
     }
@@ -84,19 +72,8 @@
     }
 
     &--featured & {
-        &__title {
-            @include subtitle-small;
-            text-align: left;
-        }
-
         &__image {
             height: 50%;
-        }
-
-        &__description {
-            @include text-small;
-            color: $light-color;
-            font-weight: 400;
         }
 
         &__info {

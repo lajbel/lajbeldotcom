@@ -1,0 +1,21 @@
+<article id="{{ data.id }}" class="project-card | cs-flex-column">
+    <img
+        class="project-card__image"
+        src={{ data.image }}
+        alt="{{ title }}"
+        transform-images="webp 600"
+    />
+
+    <div class="project-card__content">
+        <h3 class="font-semibold text-base text-light">{{- data.title -}}</h4>
+        <p class="text-sm">{{- cardDescription -}}</p>
+        <div class="card__stack">
+            {% for stack in data.stack %}
+                {{ c.common.badge({
+                    icon: stack,
+                    text: stack 
+                }) | safe }}
+            {% endfor %}
+        </div>
+    </div>
+</article>

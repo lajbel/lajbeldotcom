@@ -1,5 +1,3 @@
-@use "../theme/sizes" as *;
-
 .profile {
     --gap: 0rem;
 
@@ -22,7 +20,7 @@
         gap: var(--gap);
     }
 
-    @media screen and (min-width: $desktop-width) {
+    @media screen and (min-width: 1024px) {
         &__stats {
             --gap: 15px;
         }

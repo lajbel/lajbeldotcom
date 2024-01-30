@@ -1,7 +1,7 @@
 {% extends "base.njk" %}
 
 {% block page %}
-<div class="space">
+<div class="space | h-screen">
     {{ c.space.window({ id: id, lang: lang }) | safe }}
     {{ c.space.nav({ id: id, lang: lang }) | safe }}
 </div>
