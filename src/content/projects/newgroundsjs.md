@@ -1,5 +1,4 @@
 ---
-layout: space.njk
 title: Newgrounds.js
 id: "newgroundsjs"
 lang: "en"
@@ -11,10 +10,12 @@ tags:
 ---
 
 Newgrounds.js a javascript library for use
-[Newgrounds.io](https://newgrounds.io) functions and utilities for your game. You can use with any framework or game engine of Javascript or web
-tecnologies, like [Kaboom.js](https://kaboomjs.com).
+[Newgrounds.io](https://newgrounds.io) functions and utilities for your game.
+You can use with any framework or game engine of Javascript or web tecnologies,
+like [Kaboom.js](https://kaboomjs.com).
 
-<a class="button button--flat" href="https://github.com/lajbel/newgrounds-js/wiki" target="_blank">Visit Website</a>
+<a class="button button--flat" href="https://github.com/lajbel/newgrounds-js/wiki" target="_blank">Visit
+Website</a>
 
 ## Features
 

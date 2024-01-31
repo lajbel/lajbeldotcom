@@ -6,10 +6,10 @@
             "command": "task",
             "label": "task",
             "args": [
-                "dev",
+                "dev"
             ],
             "runOptions": {
-                "runOn": "folderOpen",
+                "runOn": "folderOpen"
             }
         }
     ]

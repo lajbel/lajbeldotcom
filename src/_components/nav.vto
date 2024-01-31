@@ -1,0 +1,30 @@
+<nav class="nav | cs-flex-column | text-white text-center bg-accent max-w-72">
+    <div>
+        <a class="text-lg font-semibold" href="/">lajbel.com</a>
+        <p class="text-sm">the online lajbel space</p>    
+    </div>
+
+    <div class="nav__cards-container">
+        {{ c.space.cardFolder({ cardTitle: "Kaboom.js Tutorials", tag: "kaboomjs", id: "kaboomjs", currentCard: id, lang: lang }) }}
+        {{ c.space.cardFolder({ cardTitle: "Projects", tag: "project", id: "projects", currentCard: id, lang: lang }) }}
+        {{ c.space.cardFolder({ cardTitle: "Games", tag: "game", id: "games", currentCard: id, lang: lang })}}
+    </div>
+
+    <ul>
+        {{ for alt of it.alternates }}
+            {{ if alt.lang != lang }}
+                <li>
+                    <a href="{{ alt.url }}" {{ if alt.lang == lang }}aria-current="page"{{ /if }}>
+                        {{ languageMessages[alt.lang] }}
+                    </a>
+                </li>
+            {{ /if }}
+        {{ /for}}
+    </ul>
+
+    <div class="nav__button">
+        <i class="fa-solid fa-caret-right">
+            <span class="sr-only">Open menu</span>
+        </i>
+    </div>
+</nav>

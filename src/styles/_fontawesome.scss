@@ -514,6 +514,10 @@ readers do not read off random characters that represent icons */
 .fa-calendar-alt:before {
   content: "\f133"; }
 
+.fa-caret-right:before {
+  content: "\f0da";
+}
+
 :root, :host {
   --fa-style-family-classic: 'Font Awesome 6 Free';
   --fa-font-regular: normal 400 1em/1 'Font Awesome 6 Free'; }

@@ -18,5 +18,9 @@
         "rocket": "fa-solid fa-rocket",
         "github": "fa-brands fa-github",
         "game development": "fa-solid fa-chess-rook"
+    },
+    "languageMessages": {
+        "en": "See this page in English?",
+        "es": "Ver esta página en Español?"
     }
 }

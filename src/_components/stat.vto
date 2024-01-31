@@ -1,9 +1,7 @@
-{% set statIcon = icons[icon] %}
-
-<dt class="hidden">{{ title }}</dt>
+<dt class="sr-only">{{ title }}</dt>
 <dd class="text-sm">
     <i 
-        class="{{ statIcon }}
+        class="{{ icons[icon] }}
         | align-middle mr-2 w-[30px]
         | text-base text-center text-accent"
         role="img"

@@ -1,5 +1,0 @@
-<section class="blogs">
-    {% for data in search.pages("type=blog" + " lang=" + lang) %}
-    {{ c.common.card({ data: data, modifiers: ["active", "featured"] }) | safe }}
-    {% endfor %}
-</section>

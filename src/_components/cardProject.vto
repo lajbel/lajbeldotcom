@@ -1,0 +1,21 @@
+<article id="{{ data.id }}" class="project-card | cs-flex-column | border border-accent h-min">
+    <img
+        class="project-card__image | object-cover h-[200px]"
+        src="{{ data.image }}"
+        alt="{{ data.title + "\'s project image" }}"
+        transform-images="webp 600"
+    />
+
+    <div class="project-card__content | cs-flex-column | bg-accent p-3" style="--gap: 0.5rem">
+        <h3 class="font-semibold text-light">{{- data.title -}}</h3>
+        <p class="text-sm">{{- data.description -}}</p>
+        <div class="project-card__stack | cs-flex-row" style="--gap: 0.3rem">
+            {{ for stack of data.stack }}
+                {{ c.badge({
+                    icon: stack,
+                    text: stack 
+                }) }}
+            {{ /for }}
+        </div>
+    </div>
+</article>

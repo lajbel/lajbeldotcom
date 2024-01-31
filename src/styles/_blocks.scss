@@ -1,11 +1,15 @@
+// components
+.portfolio {
+    --gap: 2rem;
+}
+
+.projects {
+    --gap: 1rem;
+    --grid-columns: 2;
+}
+
 .profile {
     --gap: 0rem;
-
-    &__avatar-image {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-    }
 
     &__info {
         --gap: 1rem;
@@ -24,5 +28,14 @@
         &__stats {
             --gap: 15px;
         }
+    }
+}
+
+.project-card {
+    --gap: 0px;
+    flex-shrink: 0;
+
+    &__stack {
+        --gap: 1rem;
     }
 }

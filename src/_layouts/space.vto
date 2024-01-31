@@ -1,0 +1,9 @@
+{{ layout "base.vto" }}
+<div class="space | cs-flex-row | h-screen">
+    {{ c.nav({ id: it.id, lang: it.lang, alternates: it.alternates }) }}
+
+    <div class="w-full overflow-auto flex justify-center">
+        {{ content }}
+    </div>
+</div>
+{{ /layout }}

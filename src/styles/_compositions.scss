@@ -19,3 +19,8 @@
     flex-shrink: 0;
 }
 
+.cs-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns, 1), 1fr);
+    gap: var(--gap, 1rem);
+}

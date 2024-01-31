@@ -15,32 +15,6 @@
     <div class="card__summary">
         <a href={{ data.url }} class="card__info">
             <h4 class="card__title | font-semibold text-base text-light">{{- data.title -}}</h4>
-            <p class="card__description text-sm">{{- cardDescription -}}</p>
         </a>
-        <div class="card__featured">
-            <div class="card__buttons">
-                {{ c.common.button({
-                icon: "rocket",
-                link: data.url,
-                modifiers: ["flat", "light", "full"],
-                label: "Check the project in a blog post"
-                }) | safe }}
-                {{ c.common.button({
-                icon: "github",
-                link: data.repo,
-                modifiers: ["flat", "light", "full"],
-                label: "Check the project's github repository"
-                }) | safe }}
-            </div>
-
-            <div class="card__stack">
-                {% for stack in data.stack %}
-                {{ c.common.badge({
-                icon: stack,
-                text: stack
-                }) | safe }}
-                {% endfor %}
-            </div>
-        </div>
     </div>
 </div>

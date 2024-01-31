@@ -1,6 +1,5 @@
 ---
 id: "eggou"
-layout: space.njk
 type: "project"
 title: Eggou
 lang: en

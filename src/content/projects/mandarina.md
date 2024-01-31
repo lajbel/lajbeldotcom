@@ -1,6 +1,5 @@
 ---
 id: mandarina
-layout: space.njk
 type: project
 title: Mandarina
 lang: en
@@ -15,9 +14,11 @@ tags:
     - project
 ---
 
-Mandarina is a little visual novel engine, made with the idea of being a simple. It uses kaboom.js as base, and it's made with JavaScript.
+Mandarina is a little visual novel engine, made with the idea of being a simple.
+It uses kaboom.js as base, and it's made with JavaScript.
 
-<a class="button button--flat" href="https://lajbel.github.io/mandarina" target="_blank">Visit Website</a>
+<a class="button button--flat" href="https://lajbel.github.io/mandarina" target="_blank">Visit
+Website</a>
 
 ## Features
 

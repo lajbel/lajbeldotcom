@@ -9,4 +9,8 @@
         "html",
         "html-nunjucks"
     ],
+    "material-icon-theme.files.associations": {
+        "*.vto": "html"
+    },
+    "tailwindCSS.rootFontSize": 22,
 }

@@ -1,0 +1,17 @@
+{{ layout "space.vto" }}
+<article id="post" tabindex="0" class="post | w-full">
+    <header class="post__header">
+        <div class="post__header-content">
+            <h1 class="post__title">{{ title }}</h1>
+        </div>
+
+        {{ if image }}
+            <img class="post__banner" src="{{ image }}" alt="Post's banner" transform-images="webp 600">
+        {{ /if }}
+    </header>
+
+    <main class="post__content">
+        {{ content |> md |> safe }}
+    </main>
+</article>
+{{ /layout }}

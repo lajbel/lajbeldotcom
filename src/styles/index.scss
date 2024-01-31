@@ -1,36 +1,20 @@
-@use "theme/fonts";
-@use "theme/reset";
-
-// #region Common Components
-@use "common/badge";
 @use "common/button";
 @use "common/card";
-// #endregion
-
-// #region Portfolio components
-@use "portfolio/portfolio";
-@use "portfolio/projects";
-// #endregion
-
-// #region Space components
-@use "space/space";
 @use "space/post";
-@use "space/window";
 @use "space/card_folder";
 @use "space/nav";
-
-@use "fontawesome";
-
-@import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github.min.css";
-@import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/atom-one-dark.min.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/atom-one-dark.min.css";
+@import "fontawesome";
+@import "fonts";
+@import "reset";
+
 @layer components {
     @import "compositions";
-    @import "common/page";
-    @import "portfolio/portfolio";
-    @import "portfolio/profile";
+    @import "blocks";
 }
+

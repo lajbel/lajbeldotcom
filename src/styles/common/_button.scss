@@ -9,8 +9,6 @@
 }
 
 .button {
-    @include shadow();
-    @include colorize($accent-color, $light-color, $accent-color);
     display: inline-flex;
     justify-content: center;
     align-items: center;

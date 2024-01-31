@@ -1,0 +1,27 @@
+<section class="profile | cs-flex-column lg:cs-flex-row | w-full">
+    <figure class="profile__avatar | cs-flex-center ] | p-4 bg-accent">
+        <img
+            class="profile__avatar-image | rounded-full"
+            src="/images/realajbel.jpg"
+            alt="lajbel's avatar" 
+            transform-images="webp 220"
+        >
+    </figure>
+
+    <div class="profile__info | cs-flex-column | px-4 justify-between">
+        <p class="profile__description | text-base text-pretty">
+            {{ data.description }}
+        </p>
+
+        <dl class="profile__stats | grid | lg:grid-cols-2">
+            {{ c.stat({ title: name + "'s gender", icon: "human", text: data.info.gender }) }}
+            {{ c.stat({ title: name + "'s location", icon: "location", text: data.info.city }) }}
+            {{ c.stat({ title: name + "'s birthday", icon: "calendar", text: data.info.birth }) }}
+            {{ c.stat({ title: name + "'s e-mail", icon: "mail", text: data.info.email }) }}
+        </dl>
+
+        <div class="profile__buttons | cs-flex-row">
+            {{ c.common.button({ link: "https://drive.google.com/file/d/1o1XuyNoL9sH3-OGtwHpidKE69zpaDK6p/view?usp=sharing", text: "Check CV", modifiers: ["flat"], label: "Check Daniel's CV" }) }}
+        </div>
+    </div>
+</section>
