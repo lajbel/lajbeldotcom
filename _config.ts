@@ -14,8 +14,8 @@ import transformImages from "lume/plugins/transform_images.ts";
 import tailwindcss from "lume/plugins/tailwindcss.ts";
 import postcss from "lume/plugins/postcss.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
+import favicon from "lume/plugins/favicon.ts";
 import lang_javascript from "npm:highlight.js/lib/languages/javascript";
-import markdownItClass from "npm:@toycode/markdown-it-class";
 import tailwindOptions from "./tailwind.config.ts";
 
 // Basic site configuration
@@ -72,7 +72,10 @@ site.use(nunjucks())
     .use(sitemap())
     .use(sourceMaps())
     .use(metas())
-    .use(minifyHTML());
+    .use(minifyHTML())
+    .use(favicon({
+        input: "images/favicon.svg",
+    }));
 
 // Nunjucks Filters
 // -----------------------------------------------------------------------------------------------
