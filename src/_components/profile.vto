@@ -1,10 +1,10 @@
 <section class="profile | cs-flex-column lg:cs-flex-row | w-full">
-    <figure class="profile__avatar | cs-flex-center ] | p-4 bg-accent">
+    <figure class="profile__avatar | cs-flex-center px-3">
         <img
-            class="profile__avatar-image | rounded-full"
-            src="/images/realajbel.jpg"
+            class="profile__avatar-image | rounded-md"
+            src="/images/avatar.png"
             alt="lajbel's avatar" 
-            transform-images="webp 220"
+            transform-images="webp 260"
         >
     </figure>
 
@@ -21,7 +21,7 @@
         </dl>
 
         <div class="profile__buttons | cs-flex-row">
-            {{ c.common.button({ link: "https://drive.google.com/file/d/1o1XuyNoL9sH3-OGtwHpidKE69zpaDK6p/view?usp=sharing", text: "Check CV", modifiers: ["flat"], label: "Check Daniel's CV" }) }}
+            {{ c.button({ link: "https://drive.google.com/file/d/1o1XuyNoL9sH3-OGtwHpidKE69zpaDK6p/view?usp=sharing", text: "Check CV", modifiers: ["flat"], label: `Check ${name}'s CV`, nofollow: true, icon: null }) }}
         </div>
     </div>
 </section>

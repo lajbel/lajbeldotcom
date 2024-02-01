@@ -51,7 +51,7 @@ k.scene("gameover", () => {
 });
 
 // Initial scene
-k.go("main");`
+k.go("main");
 ```
 
 You can already imagine how much code these files can end up having.

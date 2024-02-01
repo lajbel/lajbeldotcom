@@ -1,11 +1,19 @@
 // components
 .portfolio {
-    --gap: 2rem;
+    --gap: 0rem;
+
+    @screen lg {
+        --gap: 2rem;
+    }
 }
 
 .projects {
     --gap: 1rem;
-    --grid-columns: 2;
+    --grid-columns: 1;
+
+    @screen lg {
+        --grid-columns: 2;
+    }
 }
 
 .profile {

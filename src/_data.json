@@ -5,7 +5,7 @@
         "twitter": "@lajbel",
         "icon": "/images/avatar.png",
         "lang": "=lang",
-        "color": "#ffa45b"
+        "color": "#7d2ca0"
     },
     "icons": {
         "typescript": "devicon-typescript-plain colored",
@@ -16,8 +16,10 @@
         "calendar": "fa-solid fa-calendar-alt",
         "mail": "fa-solid fa-envelope",
         "rocket": "fa-solid fa-rocket",
+        "game development": "fa-solid fa-chess-rook",
         "github": "fa-brands fa-github",
-        "game development": "fa-solid fa-chess-rook"
+        "linkedin": "fa-brands fa-linkedin",
+        "twitter": "fa-brands fa-x-twitter"
     },
     "languageMessages": {
         "en": "See this page in English?",

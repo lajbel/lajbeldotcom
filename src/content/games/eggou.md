@@ -3,10 +3,9 @@ id: "eggou"
 type: "project"
 title: Eggou
 lang: en
-description: A flyers chicken shooter, in the bullet hell style.
+description: A flyers chicken shooter game, in the Touhou style, where you have to defeat a boss!
 public: true
 featured: true
-featuredDescription: A flyers chicken shooter, in the bullet hell style/
 repo: https://github.com/lajbel/eggou
 stack: [game development, javascript, nodejs]
 image: /images/banners/eggou.png

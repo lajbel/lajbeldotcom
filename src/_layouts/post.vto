@@ -1,5 +1,5 @@
 {{ layout "space.vto" }}
-<article id="post" tabindex="0" class="post | w-full">
+<article id="post" tabindex="0" class="post | w-full h-max">
     <header class="post__header">
         <div class="post__header-content">
             <h1 class="post__title">{{ title }}</h1>
@@ -10,8 +10,10 @@
         {{ /if }}
     </header>
 
-    <main class="post__content">
-        {{ content |> md |> safe }}
+    <main class="post__content | min-h-screen">
+        {{ content |> safe }}
     </main>
+
+    {{ c.footer() }}
 </article>
 {{ /layout }}

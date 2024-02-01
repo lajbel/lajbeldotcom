@@ -1,20 +1,82 @@
-<nav class="nav | cs-flex-column | text-white text-center bg-accent max-w-72">
+{{> 
+const navDescription = {
+    "es": "el espacio online de lajbel",
+    "en": "the online lajbel space",
+}
+
+const navFolders = {
+    "es": [
+        {
+            "title": "Tutoriales de Kaboom.js",
+            "tag": "kaboomjs",
+            "id": "kaboomjs"
+        },
+        {
+            "title": "Proyectos",
+            "tag": "project",
+            "id": "projects"
+        },
+        {
+            "title": "Juegos",
+            "tag": "game",
+            "id": "games"
+        }
+    ],
+    "en": [
+        {
+            "title": "Kaboom.js Tutorials",
+            "tag": "kaboomjs",
+            "id": "kaboomjs"
+        },
+        {
+            "title": "Projects",
+            "tag": "project",
+            "id": "projects"
+        },
+        {
+            "title": "Games",
+            "tag": "game",
+            "id": "games"
+        }
+    ]
+}
+}}
+
+{{ function navIcon(link, icon) }}
+<li>
+    <a href="{{ link }}">
+        <i class="{{ icons[icon] }}"></i>
+    </a>
+</li>
+{{ /function }}
+
+
+
+<nav class="nav | cs-flex-column | text-center text-light bg-accent w-80">
     <div>
         <a class="text-lg font-semibold" href="/">lajbel.com</a>
-        <p class="text-sm">the online lajbel space</p>    
+        <p class="text-sm">
+            {{ navDescription[itContext.lang] }}
+        </p>  
     </div>
 
+    <ul class="cs-flex-row justify-center w-full text-lg">
+        {{ navIcon("https://github.com/lajbel", "github") }}
+        {{ navIcon("https://linkedin.com/in/lajbel", "linkedin") }}
+        {{ navIcon("https://x.com/lajbel", "twitter") }}
+    </ul>
+
     <div class="nav__cards-container">
-        {{ c.space.cardFolder({ cardTitle: "Kaboom.js Tutorials", tag: "kaboomjs", id: "kaboomjs", currentCard: id, lang: lang }) }}
-        {{ c.space.cardFolder({ cardTitle: "Projects", tag: "project", id: "projects", currentCard: id, lang: lang }) }}
-        {{ c.space.cardFolder({ cardTitle: "Games", tag: "game", id: "games", currentCard: id, lang: lang })}}
+        {{ for folder of navFolders[itContext.lang] }}
+            {{ c.space.cardFolder({ cardTitle: folder.title, tag: folder.tag, id: folder.id, currentCard: itContext.id, lang: itContext.lang }) }}
+        {{ /for }}
     </div>
 
     <ul>
-        {{ for alt of it.alternates }}
-            {{ if alt.lang != lang }}
-                <li>
-                    <a href="{{ alt.url }}" {{ if alt.lang == lang }}aria-current="page"{{ /if }}>
+        {{ for alt of itContext.alternates }}
+            {{ if alt.lang != itContext.lang }}
+                <li class="text-sm hover:underline">
+                    <a href="{{ alt.url }}">
                         {{ languageMessages[alt.lang] }}
                     </a>
                 </li>

@@ -1,21 +1,26 @@
-<article id="{{ data.id }}" class="project-card | cs-flex-column | border border-accent h-min">
-    <img
-        class="project-card__image | object-cover h-[200px]"
-        src="{{ data.image }}"
-        alt="{{ data.title + "\'s project image" }}"
-        transform-images="webp 600"
-    />
+<a href={{ data.url }}>
+    <article id="{{ data.id }}" class="project-card | cs-flex-column h-min max-w-[468px] border-2 border-accents-200">
+        <img
+            class="project-card__image | object-cover h-[300px]"
+            src="{{ data.image }}"
+            alt="{{ data.title + "\'s project image" }}"
+            transform-images="webp 600"
+        />
+    
+        <div class="project-card__content | cs-flex-column justify-between p-3 bg-accents-50 h-[380px] border-t-2 border-accents-200" style="--gap: 0.5rem">
+            <div class="px-4">
+                <h3 class="font-semibold text-lg text-accent text-center">{{- data.title -}}</h3>
+                <p class="text-base">{{- data.description -}}</p>
+            </div>    
 
-    <div class="project-card__content | cs-flex-column | bg-accent p-3" style="--gap: 0.5rem">
-        <h3 class="font-semibold text-light">{{- data.title -}}</h3>
-        <p class="text-sm">{{- data.description -}}</p>
-        <div class="project-card__stack | cs-flex-row" style="--gap: 0.3rem">
-            {{ for stack of data.stack }}
-                {{ c.badge({
-                    icon: stack,
-                    text: stack 
-                }) }}
-            {{ /for }}
+            <div class="project-card__stack | cs-flex-row | justify-center items-center flex-wrap">
+                {{ for stack of data.stack }}
+                    {{ c.badge({
+                        icon: stack,
+                        text: stack 
+                    }) }}
+                {{ /for }}
+            </div>
         </div>
-    </div>
-</article>
+    </article>
+</a>

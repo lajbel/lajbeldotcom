@@ -3,11 +3,13 @@
     "editor.formatOnSave": true,
     "deno.enable": true,
     "tailwindCSS.includeLanguages": {
-        "html-nunjucks": "html"
+        "html-nunjucks": "html",
+        "vento": "html",
     },
     "cssPeek.peekFromLanguages": [
         "html",
-        "html-nunjucks"
+        "html-nunjucks",
+        "vento"
     ],
     "material-icon-theme.files.associations": {
         "*.vto": "html"

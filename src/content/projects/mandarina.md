@@ -3,10 +3,9 @@ id: mandarina
 type: project
 title: Mandarina
 lang: en
-description: A javascript library for creating visual novels.
+description: A visual novel engine with the objetive of being lightweight and easy for novel development learning.
 public: true
 featured: true
-featuredDescription: A visual novel engine with the objetive of being lightweight and easy for novel development learning.
 repo: https://github.com/lajbel/eggou
 stack: [game development, typescript, nodejs]
 image: /images/banners/mandarina.png

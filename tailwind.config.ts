@@ -2,10 +2,24 @@ export default {
     theme: {
         extend: {
             colors: {
-                accent: "#ffa45b",
-                light: "#ffffff",
-                dark: "#000000",
+                accent: "#7d2ca0",
+                light: "#EEF2F8",
+                dark: "#18191B",
                 back: "#e1e3ee",
+                'accents': {
+                    '50': '#faf5fe',
+                    '100': '#f5eafd',
+                    '200': '#ead5f9',
+                    '300': '#ddb4f3',
+                    '400': '#c987eb',
+                    '500': '#b058dd',
+                    '600': '#9539c0',
+                    '700': '#7d2ca0',
+                    '800': '#672682',
+                    '900': '#58246b',
+                    '950': '#370c46',
+                },
+                
             },
             fontSize: {
                 sm: "clamp(1.1rem, 0.13vw + 1.07rem, 1.17rem)",
