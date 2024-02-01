@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'ljicons';
+  src:  url('../fonts/ljicons.eot?b7ioom');
+  src:  url('../fonts/ljicons.eot?b7ioom#iefix') format('embedded-opentype'),
+    url('../fonts/ljicons.ttf?b7ioom') format('truetype'),
+    url('../fonts/ljicons.woff?b7ioom') format('woff'),
+    url('../fonts/ljicons.svg?b7ioom#ljicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ljicon-"], [class*=" ljicon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ljicons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ljicon-x:before {
+  content: "\e900";
+}
+.ljicon-deno:before {
+  content: "\e91e";
+}
+.ljicon-vscode:before {
+  content: "\e9da";
+}
+.ljicon-linkedin:before {
+  content: "\e947";
+}
+.ljicon-visualstudio:before {
+  content: "\e9f8";
+}
+.ljicon-typescript:before {
+  content: "\e9fb";
+}
+.ljicon-twitter:before {
+  content: "\ea00";
+}
+.ljicon-github:before {
+  content: "\ea10";
+}
+.ljicon-css3:before {
+  content: "\e679";
+}
+.ljicon-html5:before {
+  content: "\e7f7";
+}
+.ljicon-javascript:before {
+  content: "\e845";
+}
+.ljicon-nodejs:before {
+  content: "\eb6a";
+}
+.ljicon-sass:before {
+  content: "\ebcb";
+}
+.ljicon-trello:before {
+  content: "\ebcf";
+}
+.ljicon-arrow:before {
+  content: "\e901";
+}
+.ljicon-user:before {
+  content: "\f007";
+}
+.ljicon-map-marker:before {
+  content: "\f041";
+}
+.ljicon-calendar:before {
+  content: "\f073";
+}
+.ljicon-envelope:before {
+  content: "\f0e0";
+}
+.ljicon-dice:before {
+  content: "\e915";
+}

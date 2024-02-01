@@ -1,5 +1,15 @@
-<a href={{ data.url }}>
-    <article id="{{ data.id }}" class="project-card | cs-flex-column h-min max-w-[468px] border-2 border-accents-200">
+{{>
+const iconsByStack = {
+    "typescript": "typescript",
+    "javascript": "javascript",
+    "nodejs": "nodejs",
+    "game development": "dice",
+}
+}}
+
+
+<article id={{ data.id }} class="project-card | cs-flex-column h-min max-w-[468px] border-2 border-accents-200">
+    <a href={{ data.url }}>
         <img
             class="project-card__image | object-cover h-[300px]"
             src="{{ data.image }}"
@@ -7,20 +17,17 @@
             transform-images="webp 600"
         />
     
-        <div class="project-card__content | cs-flex-column justify-between p-3 bg-accents-50 h-[380px] border-t-2 border-accents-200" style="--gap: 0.5rem">
+        <section class="project-card__content | cs-flex-column justify-between p-3 bg-accents-50 h-[380px] border-t-2 border-accents-200" style="--gap: 0.5rem">
             <div class="px-4">
                 <h3 class="font-semibold text-lg text-accent text-center">{{- data.title -}}</h3>
                 <p class="text-base">{{- data.description -}}</p>
-            </div>    
-
-            <div class="project-card__stack | cs-flex-row | justify-center items-center flex-wrap">
-                {{ for stack of data.stack }}
-                    {{ c.badge({
-                        icon: stack,
-                        text: stack 
-                    }) }}
-                {{ /for }}
             </div>
-        </div>
-    </article>
-</a>
+
+            <ul class="project-card__stack | cs-flex-row | justify-center items-center flex-wrap">
+                {{ for stack of data.stack }}
+                    <li>{{ c.badge({ icon: iconsByStack[stack], text: stack }) }}</li>
+                {{ /for }}
+            </ul>
+        </section>
+    </a>
+</article>

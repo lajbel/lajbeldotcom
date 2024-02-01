@@ -43,27 +43,21 @@ const navFolders = {
 }}
 
 {{ function navIcon(link, icon) }}
-<li>
-    <a href="{{ link }}">
-        <i class="{{ icons[icon] }}"></i>
-    </a>
-</li>
+    <li>{{ c.icon({ link, icon }) }}</li>
 {{ /function }}
 
-
-
 <nav class="nav | cs-flex-column | text-center text-light bg-accent w-80">
-    <div>
+    <section>
         <a class="text-lg font-semibold" href="/">lajbel.com</a>
         <p class="text-sm">
             {{ navDescription[itContext.lang] }}
         </p>  
-    </div>
+    </section>
 
     <ul class="cs-flex-row justify-center w-full text-lg">
         {{ navIcon("https://github.com/lajbel", "github") }}
         {{ navIcon("https://linkedin.com/in/lajbel", "linkedin") }}
-        {{ navIcon("https://x.com/lajbel", "twitter") }}
+        {{ navIcon("https://x.com/lajbel", "x") }}
     </ul>
 
     <div class="nav__cards-container">
@@ -85,8 +79,7 @@ const navFolders = {
     </ul>
 
     <div class="nav__button">
-        <i class="fa-solid fa-caret-right">
-            <span class="sr-only">Open menu</span>
-        </i>
+        <span class="sr-only">Open menu</span>
+        {{ c.icon({ icon: "arrow" }) }}
     </div>
 </nav>

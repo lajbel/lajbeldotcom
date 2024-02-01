@@ -15,6 +15,7 @@ import tailwindcss from "lume/plugins/tailwindcss.ts";
 import postcss from "lume/plugins/postcss.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
 import favicon from "lume/plugins/favicon.ts";
+import lightningCss from "lume/plugins/lightningcss.ts";
 import lang_javascript from "npm:highlight.js/lib/languages/javascript";
 import tailwindOptions from "./tailwind.config.ts";
 
@@ -72,9 +73,20 @@ site.use(nunjucks())
     .use(sitemap())
     .use(sourceMaps())
     .use(metas())
-    .use(minifyHTML())
+    .use(minifyHTML({
+        options: {
+            minify_css: true,
+        }
+    }))
     .use(favicon({
         input: "images/favicon.svg",
+    }))
+    .use(lightningCss({
+        extensions: [".css", ".scss", ".pcss"],
+        includes: false,
+        options: {
+          minify: true,
+        }
     }));
 
 // Nunjucks Filters

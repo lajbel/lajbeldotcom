@@ -1,10 +1,7 @@
 <dt class="sr-only">{{ title }}</dt>
 <dd class="text-sm">
-    <i 
-        class="{{ icons[icon] }}
-        | align-middle mr-2 w-[30px]
-        | text-base text-center text-accent"
-        role="img"
-    ></i>
+    <span class="inline-block align-middle mr-2 w-[30px] text-center text-accent text-base">
+        {{ c.icon({ link: it.link, icon: it.icon }) }}
+    </span>
     {{- text -}}
 </dd>

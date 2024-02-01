@@ -1,4 +1,4 @@
-<section class="profile | cs-flex-column lg:cs-flex-row | w-full">
+<section class="profile | cs-flex-column justify-between content-between lg:cs-flex-row | w-full">
     <figure class="profile__avatar | cs-flex-center px-3">
         <img
             class="profile__avatar-image | rounded-md"
@@ -8,16 +8,16 @@
         >
     </figure>
 
-    <div class="profile__info | cs-flex-column | px-4 justify-between">
+    <div class="profile__info | cs-flex-column | justify-between">
         <p class="profile__description | text-base text-pretty">
             {{ data.description }}
         </p>
 
         <dl class="profile__stats | grid | lg:grid-cols-2">
-            {{ c.stat({ title: name + "'s gender", icon: "human", text: data.info.gender }) }}
-            {{ c.stat({ title: name + "'s location", icon: "location", text: data.info.city }) }}
+            {{ c.stat({ title: name + "'s gender", icon: "user", text: data.info.gender }) }}
+            {{ c.stat({ title: name + "'s location", icon: "map-marker", text: data.info.city }) }}
             {{ c.stat({ title: name + "'s birthday", icon: "calendar", text: data.info.birth }) }}
-            {{ c.stat({ title: name + "'s e-mail", icon: "mail", text: data.info.email }) }}
+            {{ c.stat({ title: name + "'s e-mail", icon: "envelope", text: data.info.email }) }}
         </dl>
 
         <div class="profile__buttons | cs-flex-row">

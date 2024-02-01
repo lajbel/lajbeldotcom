@@ -44,7 +44,7 @@ es: {
             {{ /for }}
         </section>
 
-        <h2 class="my-2 text-xl text-center text-accent font-bold">{{- headers[1] -}}</h2>
+        <h2 class="text-lg text-center text-accent font-bold">{{- headers[1] -}}</h2>
 
         <section class="blogs | cs-grid | cs-grid-desktop">
             {{ for data of search.pages("type=blog" + " lang=" + lang) }}
