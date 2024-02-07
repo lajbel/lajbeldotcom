@@ -13,11 +13,9 @@ interface Props {
 const { title, description, tags, img, kind, link } = Astro.props;
 ---
 
-<article
-	class="card bg-base-100 shadow-xl hover:-translate-y-1 transform transition-all"
->
+<article class="card bg-base-100 shadow-xl up-on-hover">
 	<a href={link} target="_blank">
-		<figure>
+		<figure class="bg-base-300">
 			<Image class="object-cover" src={img} alt={title} />
 		</figure>
 		<div class="card-body">

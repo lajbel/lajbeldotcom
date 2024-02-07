@@ -4,6 +4,7 @@ import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
 import "../styles/fonts.css";
 import "../styles/icons.css";
+import "../styles/utilities.css";
 
 interface Props {
 	meta: {
@@ -28,7 +29,9 @@ const { meta } = Astro.props;
 	</head>
 	<body>
 		<Draw>
-			<slot />
+			<div class="ljcontent pb-8">
+				<slot />
+			</div>
 			<Footer />
 		</Draw>
 		<style is:global>

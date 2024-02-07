@@ -21,7 +21,7 @@ export const projects = [
 		title: "Mandarina",
 		description: `A JavaScript Visual novel engine, made with Kaboom.js. 
         Optimized for beginners, easy to use and highly customizable.`,
-		link: "https://lajbel.com/mandarina",
+		link: "https://www.lajbel.com/mandarina",
 		image: mandarinaBanner,
 		kind: "Library",
 		tags: ["Kaboom.js", "Visual Novel", "Game Engine"],
@@ -52,7 +52,7 @@ export const projects = [
 		title: "Newgrounds.js",
 		description: `A library for interact with the Newgrounds API, made 
         in TypeScript.`,
-		link: "https://lajbel.com/newgrounds.js",
+		link: "https://www.lajbel.com/newgrounds.js",
 		image: newgroundsjsBanner,
 		kind: "Library",
 		tags: ["API", "TypeScript"],

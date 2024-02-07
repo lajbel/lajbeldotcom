@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import SidebarCard from "./cards/SidebarCard.astro";
 import ThemeController from "./ThemeController";
 import Logo from "./icons/Logo";
 import { importantLinks } from "../config";
@@ -27,15 +28,14 @@ const allTutorialPosts = await getCollection("tutorial");
 
 <div class="drawer lg:drawer-open h-full">
 	<input id="mydraw" type="checkbox" class="drawer-toggle" />
+	<label for="mydraw" class="btn btn-ghost lg:hidden fixed z-10">
+		<i class="ljicon-bars text-2xl text-primary top-4 left-4"></i>
+	</label>
 
 	<div class="drawer-content w-full">
-		<label for="mydraw" class="btn btn-ghost lg:hidden fixed z-50">
-			<i class="ljicon-bars text-2xl text-primary top-4 left-4"></i>
-		</label>
-
 		<slot />
 	</div>
-	<div class="drawer-side h-dvh">
+	<div class="drawer-side h-dvh" data-theme="light">
 		<label for="mydraw" aria-label="close sidebar" class="drawer-overlay"
 		></label>
 
@@ -80,23 +80,12 @@ const allTutorialPosts = await getCollection("tutorial");
 			<ul class="justify-center">
 				{
 					allTutorialPosts.map((post) => (
-						<li class="text-lg">
-							<a href={`/tutorial/${post.slug}`}>
-								<div class="card card-compact bg-base-100 shadow-xl image-full h-4">
-									<figure>
-										<img
-											class="object-cover w-full h-full"
-											src={post.data.image}
-											alt={post.data.title}
-										/>
-									</figure>
-									<div class="card-body">
-										<h2 class="card-title">
-											{post.data.title}
-										</h2>
-									</div>
-								</div>
-							</a>
+						<li>
+							<SidebarCard
+								title={post.data.title}
+								image={post.data.image}
+								link={`/tutorial/${post.slug}`}
+							/>
 						</li>
 					))
 				}
@@ -106,7 +95,7 @@ const allTutorialPosts = await getCollection("tutorial");
 </div>
 
 <style>
-	#mydraw:checked ~ .drawer-content label {
+	#mydraw:checked ~ label {
 		display: none;
 	}
 </style>

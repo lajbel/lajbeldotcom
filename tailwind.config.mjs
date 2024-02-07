@@ -7,7 +7,6 @@ const allThemes = {
 	"--animation-input": ".2s",
 
 	"--btn-text-case": "uppercase",
-	"--navbar-padding": ".5rem",
 	"--border-btn": "1px",
 };
 
@@ -46,7 +45,7 @@ export default {
 					...allThemes,
 				},
 				dark: {
-					...require("daisyui/src/theming/themes")["coffee"],
+					...require("daisyui/src/theming/themes")["dracula"],
 					...allThemes,
 				},
 			},
