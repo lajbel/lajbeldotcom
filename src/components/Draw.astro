@@ -29,7 +29,7 @@ const allTutorialPosts = await getCollection("tutorial");
 	<input id="mydraw" type="checkbox" class="drawer-toggle" />
 
 	<div class="drawer-content w-full">
-		<label for="mydraw" class="btn btn-ghost lg:hidden fixed">
+		<label for="mydraw" class="btn btn-ghost lg:hidden fixed z-50">
 			<i class="ljicon-bars text-2xl text-primary top-4 left-4"></i>
 		</label>
 
@@ -104,3 +104,9 @@ const allTutorialPosts = await getCollection("tutorial");
 		</div>
 	</div>
 </div>
+
+<style>
+	#mydraw:checked ~ .drawer-content label {
+		display: none;
+	}
+</style>
