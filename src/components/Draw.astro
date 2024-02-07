@@ -26,7 +26,7 @@ const socials = [
 const allTutorialPosts = await getCollection("tutorial");
 ---
 
-<div class="drawer lg:drawer-open h-full">
+<div class="drawer lg:drawer-open h-full z-20">
 	<input id="mydraw" type="checkbox" class="drawer-toggle" />
 	<label for="mydraw" class="btn btn-ghost lg:hidden fixed z-10">
 		<i class="ljicon-bars text-2xl text-primary top-4 left-4"></i>
@@ -35,11 +35,15 @@ const allTutorialPosts = await getCollection("tutorial");
 	<div class="drawer-content w-full">
 		<slot />
 	</div>
-	<div class="drawer-side h-dvh" data-theme="light">
+
+	<div class="drawer-side h-dvh">
 		<label for="mydraw" aria-label="close sidebar" class="drawer-overlay"
 		></label>
 
-		<div class="p-3 w-80 min-h-full bg-primary text-center text-white">
+		<div
+			class="p-3 w-80 min-h-full bg-primary text-center text-white"
+			data-theme="light"
+		>
 			<div class="absolute" transition:persist>
 				<ThemeController client:visible />
 			</div>
