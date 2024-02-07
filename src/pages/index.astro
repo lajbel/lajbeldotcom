@@ -5,7 +5,13 @@ import Layout from "../layouts/Layout.astro";
 import birdyImage from "../images/birdy.png";
 ---
 
-<Layout title={'Daniel "lajbel" Báez - Full Stack Web Development'}>
+<Layout
+	meta={{
+		title: "Daniel Báez - Full Stack Web Development",
+		description:
+			"I'm Daniel, a Full Stack Web Developer, My first contact with technology was with Project 64. My first and favorite programming language is JavaScript",
+	}}
+>
 	<Hero className="flex-col-reverse lg:flex-row">
 		<div class="text-left">
 			<h1 class="text-5xl font-bold">Daniel Báez</h1>
