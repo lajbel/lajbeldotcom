@@ -6,21 +6,24 @@ import "../styles/fonts.css";
 import "../styles/icons.css";
 
 interface Props {
-	title: string;
+	meta: {
+		title: string;
+		description: string;
+	};
 }
 
-const { title } = Astro.props;
+const { meta } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" data-theme>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={meta.description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{meta.title}</title>
 		<ViewTransitions />
 	</head>
 	<body>
