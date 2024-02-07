@@ -1,0 +1,106 @@
+---
+import { getCollection } from "astro:content";
+import ThemeController from "./ThemeController";
+import Logo from "./icons/Logo";
+import { importantLinks } from "../config";
+
+const socials = [
+	{
+		name: "Twitter",
+		icon: "x",
+		link: "https://x.com/lajbel",
+	},
+	{
+		name: "LinkedIn",
+		icon: "linkedin",
+		link: "https://linkedin.com/in/lajbel",
+	},
+	{
+		name: "GitHub",
+		icon: "github",
+		link: "https://github.com/lajbel",
+	},
+];
+
+const allTutorialPosts = await getCollection("tutorial");
+---
+
+<div class="drawer lg:drawer-open h-full">
+	<input id="mydraw" type="checkbox" class="drawer-toggle" />
+
+	<div class="drawer-content w-full">
+		<label for="mydraw" class="btn btn-ghost lg:hidden fixed">
+			<i class="ljicon-bars text-2xl text-primary top-4 left-4"></i>
+		</label>
+
+		<slot />
+	</div>
+	<div class="drawer-side h-dvh">
+		<label for="mydraw" aria-label="close sidebar" class="drawer-overlay"
+		></label>
+
+		<div class="p-3 w-80 min-h-full bg-primary text-center text-white">
+			<div class="absolute" transition:persist>
+				<ThemeController client:visible />
+			</div>
+
+			<a href="/" class="btn btn-ghost h-fit w-fit flex-col">
+				<Logo className="fill-current" />
+
+				<p class="text-lg">the online space</p>
+			</a>
+			<ul class="menu menu-horizontal justify-center">
+				{
+					socials.map((social) => (
+						<li class="text-white text-2xl">
+							<a href={social.link} target="_blank">
+								<i class={`ljicon-${social.icon}`} />
+							</a>
+						</li>
+					))
+				}
+			</ul>
+			<nav>
+				<ul class="menu">
+					{
+						importantLinks.map((link) => (
+							<li class="text-lg">
+								<a
+									class="justify-center uppercase"
+									href={link.link}
+								>
+									{link.title}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+			<p class="text-xl uppercase my-4">Latest Tutorials</p>
+			<ul class="justify-center">
+				{
+					allTutorialPosts.map((post) => (
+						<li class="text-lg">
+							<a href={`/tutorial/${post.slug}`}>
+								<div class="card card-compact bg-base-100 shadow-xl image-full h-4">
+									<figure>
+										<img
+											class="object-cover w-full h-full"
+											src={post.data.image}
+											alt={post.data.title}
+										/>
+									</figure>
+									<div class="card-body">
+										<h2 class="card-title">
+											{post.data.title}
+										</h2>
+									</div>
+								</div>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</div>
+</div>

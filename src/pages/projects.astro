@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/cards/ProjectCard.astro";
+import { projects } from "../config";
+---
+
+<Layout
+	title={'Daniel "lajbel" Báez - Full Stack Web Development - My Projects'}
+>
+	<div class="min-h-screen p-8 ljcontent">
+		<div class="">
+			<h1 class="text-5xl font-bold">Projects</h1>
+
+			<div class="w-full grid grid-cols-autofit gap-4 mt-8">
+				{
+					projects
+						.filter((p) => p.featured)
+						.map((project) => (
+							<ProjectCard
+								title={project.title}
+								description={project.description}
+								tags={project.tags}
+								img={project.image}
+								kind={project.kind}
+								link={project.link}
+							/>
+						))
+				}
+			</div>
+
+			<div class="w-full grid grid-cols-autofill gap-4 mt-8">
+				{
+					projects
+						.filter((p) => !p.featured)
+						.map((project) => (
+							<ProjectCard
+								title={project.title}
+								description={project.description}
+								tags={project.tags}
+								img={project.image}
+								kind={project.kind}
+								link={project.link}
+							/>
+						))
+				}
+			</div>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.grid-cols-autofill {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	}
+
+	.grid-cols-autofit {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+</style>

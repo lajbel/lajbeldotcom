@@ -1,18 +1,5 @@
 {
-    "editor.defaultFormatter": "denoland.vscode-deno",
-    "editor.formatOnSave": true,
-    "deno.enable": true,
-    "tailwindCSS.includeLanguages": {
-        "html-nunjucks": "html",
-        "vento": "html",
-    },
-    "cssPeek.peekFromLanguages": [
-        "html",
-        "html-nunjucks",
-        "vento"
-    ],
-    "material-icon-theme.files.associations": {
-        "*.vto": "html"
-    },
-    "tailwindCSS.rootFontSize": 22,
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.documentSelectors": ["**/*.astro"]
 }

@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+	title: string;
+	description: string;
+	img: ImageMetadata;
+	tags: string[];
+	kind: string;
+	link: string;
+}
+
+const { title, description, tags, img, kind, link } = Astro.props;
+---
+
+<article
+	class="card bg-base-100 shadow-xl hover:-translate-y-1 transform transition-all"
+>
+	<a href={link} target="_blank">
+		<figure>
+			<Image class="object-cover" src={img} alt={title} />
+		</figure>
+		<div class="card-body">
+			<h2 class="card-title text-2xl">
+				{title}
+				<div class="badge badge-accent">{kind}</div>
+			</h2>
+			<p class="text-left text-lg">{description}</p>
+			<div class="card-actions justify-end">
+				{
+					tags.map((tag) => (
+						<span class="badge badge-primary">{tag}</span>
+					))
+				}
+			</div>
+		</div>
+	</a>
+</article>

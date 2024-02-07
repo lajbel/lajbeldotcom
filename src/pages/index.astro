@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import Hero from "../layouts/Hero.astro";
+import Layout from "../layouts/Layout.astro";
+import birdyImage from "../images/birdy.png";
+---
+
+<Layout title={'Daniel "lajbel" Báez - Full Stack Web Development'}>
+	<Hero className="flex-col-reverse lg:flex-row">
+		<div class="text-left">
+			<h1 class="text-5xl font-bold">Daniel Báez</h1>
+			<p class="text-lg py-6">
+				Hello, I'm Daniel, a full stack web developer. My first contact
+				with technology was with Project 64, a Nintendo 64 emulator.
+				<br />
+				<br />
+				My first and favorite programming language is JavaScript.
+			</p>
+			<a
+				class="btn btn-primary"
+				href="https://fiverr.com/lajbel"
+				rel="nofollow"
+				target="_blank"
+			>
+				Fiverr
+			</a>
+			<a class="btn btn-secondary" href="/projects" rel="nofollow">
+				Browse Projects
+			</a>
+		</div>
+
+		<figure>
+			<Image
+				src={birdyImage}
+				alt="Daniel Báez Face"
+				class="max-w-xs rounded-lg shadow-2xl lg:max-w-sm mb-4"
+			/>
+		</figure>
+	</Hero>
+</Layout>
