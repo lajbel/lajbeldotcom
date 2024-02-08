@@ -7,11 +7,11 @@ import markbotBanner from "./images/banners/markbot.png";
 
 export const importantLinks = [
 	{
-		title: "About me",
+		title: "About",
 		link: "/",
 	},
 	{
-		title: "My projects",
+		title: "Projects",
 		link: "/projects",
 	},
 ];
