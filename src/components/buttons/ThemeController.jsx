@@ -1,4 +1,5 @@
-import { useState, useEffect } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
+//FIXME: This is not accessible, and should be replaced with a more accessible method of do an swap
 
 export default function ThemeController() {
 	const [isDefaultThemeDark, setDefaultTheme] = useState();
@@ -24,7 +25,7 @@ export default function ThemeController() {
 
 	return (
 		<div class="join block">
-			<label class="swap btn btn-ghost btn-square">
+			<label class="swap btn btn-ghost btn-square" aria-label={"Theme swapper"}>
 				<input
 					type="checkbox"
 					// If is dark, the checkbox is for light, and vice versa
@@ -48,12 +49,14 @@ export default function ThemeController() {
 						(isDefaultThemeDark ? "swap-off" : "swap-on") +
 						" w-10 h-10 text-3xl ljicon-sun align-middle flex items-center justify-center"
 					}
+					aria-label={"Toggle light theme"}
 				/>
 				<i
 					class={
 						(isDefaultThemeDark ? "swap-on" : "swap-off") +
 						" w-10 h-10 text-3xl ljicon-moon align-middle flex items-center justify-center"
 					}
+					aria-label={"Toggle dark theme"}
 				/>
 			</label>
 		</div>

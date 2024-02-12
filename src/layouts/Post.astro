@@ -1,0 +1,45 @@
+---
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+import type { CollectionEntry } from "astro:content";
+import Base from "../layouts/Base.astro";
+
+type Props = CollectionEntry<"tutorial"> & {
+	content: AstroComponentFactory;
+};
+
+const { body, data, content: Content } = Astro.props;
+---
+
+<Base
+	meta={{
+		title: data.title,
+		description: body,
+	}}
+>
+	<header class="flex relative center items-end w-full h-40 bg-base-300">
+		<img
+			class="brightness-50 object-cover object-center w-full h-full"
+			src={data.image}
+			alt="Post's banner"
+		/>
+
+		<div
+			class="flex flex-col gap-2 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-full h-full justify-end max-w-[80ch] py-4 text-white px-2"
+		>
+			<h1 class="text-2xl font-bold">{data.title}</h1>
+			<ul class="flex gap-1 flex-wrap">
+				{
+					data.tags.map((tag) => (
+						<div class="badge badge-accent">{tag}</div>
+					))
+				}
+			</ul>
+			<p class="text-sm">
+				{data.date.toString().slice(0, 10)}, Daniel Báez
+			</p>
+		</div>
+	</header>
+	<main class="prose m-auto px-2 pb-2 max-w-[80ch]">
+		<Content />
+	</main>
+</Base>
