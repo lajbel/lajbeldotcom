@@ -1,27 +1,9 @@
 ---
 import { getCollection } from "astro:content";
+import { importantLinks, socials } from "../config";
 import SidebarCard from "./cards/SidebarCard.astro";
 import ThemeController from "./ThemeController";
 import Logo from "./images/Logo.astro";
-import { importantLinks } from "../config";
-
-const socials = [
-	{
-		name: "Twitter",
-		icon: "x",
-		link: "https://x.com/lajbel",
-	},
-	{
-		name: "LinkedIn",
-		icon: "linkedin",
-		link: "https://linkedin.com/in/lajbel",
-	},
-	{
-		name: "GitHub",
-		icon: "github",
-		link: "https://github.com/lajbel",
-	},
-];
 
 const allTutorialPosts = await getCollection("tutorial");
 ---
@@ -41,7 +23,7 @@ const allTutorialPosts = await getCollection("tutorial");
 		></label>
 
 		<div
-			class="p-3 w-80 min-h-full bg-primary text-center text-white"
+			class="p-3 w-72 min-h-full bg-primary text-center text-white"
 			data-theme="light"
 		>
 			<div class="absolute" transition:persist>

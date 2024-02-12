@@ -5,6 +5,24 @@ import eggouBanner from "./images/banners/eggou.png";
 import newgroundsjsBanner from "./images/banners/newgroundsjs.png";
 import markbotBanner from "./images/banners/markbot.png";
 
+export const socials = [
+	{
+		name: "Twitter",
+		icon: "x",
+		link: "https://x.com/lajbel",
+	},
+	{
+		name: "LinkedIn",
+		icon: "linkedin",
+		link: "https://linkedin.com/in/lajbel",
+	},
+	{
+		name: "GitHub",
+		icon: "github",
+		link: "https://github.com/lajbel",
+	},
+];
+
 export const importantLinks = [
 	{
 		title: "About",

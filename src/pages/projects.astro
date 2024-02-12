@@ -12,42 +12,22 @@ import { projects } from "../config";
 	}}
 >
 	<div class="min-h-screen p-2 lg:p-4">
-		<div class="">
-			<h1 class="text-5xl font-bold">Projects</h1>
+		<h1 class="text-5xl font-bold">Projects</h1>
 
-			<div class="w-full grid grid-cols-autofit gap-4 mt-8">
-				{
-					projects
-						.filter((p) => p.featured)
-						.map((project) => (
-							<ProjectCard
-								title={project.title}
-								description={project.description}
-								tags={project.tags}
-								img={project.image}
-								kind={project.kind}
-								link={project.link}
-							/>
-						))
-				}
-			</div>
+		<div class="w-full grid grid-cols-autofit gap-4 mt-8">
+			{
+				projects
+					.filter((p) => p.featured)
+					.map((project) => <ProjectCard {...project} />)
+			}
+		</div>
 
-			<div class="w-full grid grid-cols-autofill gap-4 mt-8">
-				{
-					projects
-						.filter((p) => !p.featured)
-						.map((project) => (
-							<ProjectCard
-								title={project.title}
-								description={project.description}
-								tags={project.tags}
-								img={project.image}
-								kind={project.kind}
-								link={project.link}
-							/>
-						))
-				}
-			</div>
+		<div class="w-full grid grid-cols-autofill gap-4 mt-8">
+			{
+				projects
+					.filter((p) => !p.featured)
+					.map((project) => <ProjectCard {...project} />)
+			}
 		</div>
 	</div>
 </Layout>
