@@ -1,9 +1,9 @@
 ---
 import { getCollection } from "astro:content";
-import { importantLinks, socials } from "../config";
-import SidebarCard from "./cards/SidebarCard.astro";
-import ThemeController from "./ThemeController";
-import Logo from "./images/Logo.astro";
+import { importantLinks, socials } from "../../config";
+import SidebarCard from "../cards/SidebarCard.astro";
+import ThemeController from "../buttons/ThemeController";
+import Logo from "../images/Logo.astro";
 
 const allTutorialPosts = await getCollection("tutorial");
 ---

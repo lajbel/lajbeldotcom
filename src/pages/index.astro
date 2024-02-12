@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
+import Hero from "../components/layout/Hero.astro";
 import LinkButton from "../components/buttons/LinkButton.astro";
 import birdyImage from "../images/birdy.png";
 ---
@@ -14,13 +14,13 @@ import birdyImage from "../images/birdy.png";
 			"I'm Daniel, a Full Stack Web Developer, My first contact with technology was with Project 64. My first and favorite programming language is JavaScript",
 	}}
 >
-	<Hero className="flex-col-reverse lg:flex-row gap-8">
-		<div class="text-left text-balance">
+	<Hero className="flex-col-reverse lg:flex-row gap-16">
+		<section class="text-left text-balance">
 			<h1 class="text-5xl font-bold">Daniel Báez</h1>
 			<h2 class="text-3xl font-semibold text-primary">
 				Full Stack Web Developer
 			</h2>
-			<p class="text-lg py-6 max-w-[30ch]">
+			<p class="text-lg py-6 lg:max-w-[30ch]">
 				I studied Fullstack web development at the Technology University
 				of Buenos Aires. My main stack is MERN.
 				<br />
@@ -28,7 +28,7 @@ import birdyImage from "../images/birdy.png";
 				I've worked in different projects, from chat bot implementations
 				for services to game engines, being maintener of Kaboom.js.
 			</p>
-			<div class="flex flex-wrap gap-2">
+			<nav class="flex flex-wrap gap-2">
 				<LinkButton
 					class="btn-primary btn-lg"
 					href="https://fiverr.com/lajbel"
@@ -40,14 +40,14 @@ import birdyImage from "../images/birdy.png";
 				<LinkButton class="btn-secondary btn-lg" href="/projects">
 					<Icon name="jam:grid-f" /> Browse Projects
 				</LinkButton>
-			</div>
-		</div>
+			</nav>
+		</section>
 
 		<figure>
 			<Image
 				src={birdyImage}
-				alt="Daniel Báez Face"
-				class="max-w-xs rounded-lg shadow-2xl lg:max-w-sm mb-4"
+				alt="Daniel Báez's potrait"
+				class="max-w-xs rounded-lg shadow-2xl lg:max-w-sm"
 			/>
 		</figure>
 	</Hero>
