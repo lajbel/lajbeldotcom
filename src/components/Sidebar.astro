@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import SidebarCard from "./cards/SidebarCard.astro";
 import ThemeController from "./ThemeController";
-import Logo from "./icons/Logo";
+import Logo from "./images/Logo.astro";
 import { importantLinks } from "../config";
 
 const socials = [
@@ -49,10 +49,10 @@ const allTutorialPosts = await getCollection("tutorial");
 			</div>
 
 			<a href="/" class="btn btn-ghost h-fit w-fit flex-col">
-				<Logo className="fill-current" />
-
+				<Logo class="fill-current" />
 				<p class="text-lg">the online space</p>
 			</a>
+
 			<ul class="menu menu-horizontal justify-center">
 				{
 					socials.map((social) => (
@@ -80,7 +80,9 @@ const allTutorialPosts = await getCollection("tutorial");
 					}
 				</ul>
 			</nav>
-			<p class="text-xl uppercase my-4">Latest Tutorials</p>
+
+			<p class="text-xl uppercase my-4 font-bold">Latest Tutorials</p>
+
 			<ul class="justify-center">
 				{
 					allTutorialPosts.map((post) => (

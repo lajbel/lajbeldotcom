@@ -1,7 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import Hero from "../components/Hero.astro";
+import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import LinkButton from "../components/buttons/LinkButton.astro";
 import birdyImage from "../images/birdy.png";
 ---
 
@@ -13,29 +15,30 @@ import birdyImage from "../images/birdy.png";
 	}}
 >
 	<Hero className="flex-col-reverse lg:flex-row">
-		<div class="text-left">
+		<div class="text-left text-balance">
 			<h1 class="text-5xl font-bold">Daniel Báez</h1>
 			<h2 class="text-3xl font-semibold text-primary">
 				Full Stack Web Developer
 			</h2>
 			<p class="text-lg py-6">
-				Hello, I'm Daniel, a full stack web developer. My first contact
-				with technology was with Project 64, a Nintendo 64 emulator.
+				I studied Fullstack web development at the Technology University
+				of Buenos Aires. My main stack is MERN.
 				<br />
 				<br />
-				My first and favorite programming language is JavaScript.
+				I've worked in different projects, from chat bot implementations
+				for services to game engines, being maintener of Kaboom.js.
 			</p>
-			<a
-				class="btn btn-primary"
+			<LinkButton
+				class="btn-primary btn-lg"
 				href="https://fiverr.com/lajbel"
-				rel="nofollow"
 				target="_blank"
 			>
-				Fiverr
-			</a>
-			<a class="btn btn-secondary" href="/projects" rel="nofollow">
-				Browse Projects
-			</a>
+				<Icon name="jam:fiverr" /> Fiverr
+			</LinkButton>
+
+			<LinkButton class="btn-secondary btn-lg" href="/projects">
+				<Icon name="jam:grid-f" /> Browse Projects
+			</LinkButton>
 		</div>
 
 		<figure>
