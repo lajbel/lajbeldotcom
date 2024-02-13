@@ -1,9 +1,9 @@
-import type { Project } from "./types";
-import mandarinaBanner from "./images/banners/mandarina.png";
-import kaboomjsBanner from "./images/banners/kaboomjs.png";
 import eggouBanner from "./images/banners/eggou.png";
-import newgroundsjsBanner from "./images/banners/newgroundsjs.png";
+import kaboomjsBanner from "./images/banners/kaboomjs.png";
+import mandarinaBanner from "./images/banners/mandarina.png";
 import markbotBanner from "./images/banners/markbot.png";
+import newgroundsjsBanner from "./images/banners/newgroundsjs.png";
+import type { Project } from "./types";
 
 export const socials = [
 	{

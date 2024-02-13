@@ -1,16 +1,19 @@
 ---
-import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import type { CollectionEntry } from "astro:content";
 import Base from "../layouts/Base.astro";
+import type { PropsWithT } from "../types";
 
-type Props = CollectionEntry<"tutorial"> & {
-	content: AstroComponentFactory;
-};
+type Props = PropsWithT<{
+	post: CollectionEntry<"tutorial">;
+}>;
 
-const { body, data, content: Content } = Astro.props;
+const { post, t, lang } = Astro.props;
+const { data, body } = post;
 ---
 
 <Base
+	{lang}
+	{t}
 	meta={{
 		title: data.title,
 		description: body,
@@ -40,6 +43,6 @@ const { body, data, content: Content } = Astro.props;
 		</div>
 	</header>
 	<main class="prose m-auto px-2 pb-2 max-w-[80ch]">
-		<Content />
+		<slot />
 	</main>
 </Base>

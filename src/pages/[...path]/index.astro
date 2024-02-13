@@ -1,24 +1,33 @@
 ---
-import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
-import Layout from "../layouts/Base.astro";
-import Hero from "../components/layout/Hero.astro";
-import LinkButton from "../components/buttons/LinkButton.astro";
-import birdyImage from "../images/birdy.png";
+import { Image } from "astro:assets";
+import LinkButton from "../../components/buttons/LinkButton.astro";
+import Hero from "../../components/layout/Hero.astro";
+import birdyImage from "../../images/birdy.png";
+import Layout from "../../layouts/Base.astro";
+import { getStaticPathsByLocales } from "../../util";
+
+export function getStaticPaths() {
+	return getStaticPathsByLocales();
+}
+
+const { t, lang } = Astro.props;
 ---
 
 <Layout
+	{t}
+	{lang}
 	meta={{
 		title: "Daniel Báez - Full Stack Web Development",
 		description:
 			"I'm Daniel, a Full Stack Web Developer, My first contact with technology was with Project 64. My first and favorite programming language is JavaScript",
 	}}
 >
-	<Hero className="flex-col-reverse lg:flex-row gap-16">
-		<section class="text-left text-balance">
+	<Hero class="flex-col-reverse lg:flex-row gap-16">
+		<section class="text-left text-balance max-w-lg">
 			<h1 class="text-5xl font-bold">Daniel Báez</h1>
 			<h2 class="text-3xl font-semibold text-primary">
-				Full Stack Web Developer
+				{t("home.role")}
 			</h2>
 			<p class="text-lg py-6 lg:max-w-[30ch]">
 				I studied Fullstack web development at the Technology University

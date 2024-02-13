@@ -2,11 +2,14 @@
 import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
 import { importantLinks, socials } from "../../config";
+import type { PropsWithT } from "../../types";
 import ThemeController from "../buttons/ThemeController";
 import SidebarCard from "../cards/SidebarCard.astro";
 import Logo from "../images/Logo.astro";
 
 const allTutorialPosts = await getCollection("tutorial");
+type Props = PropsWithT<{}>;
+const { t } = Astro.props;
 ---
 
 <div class="drawer lg:drawer-open h-full z-20">
@@ -33,7 +36,7 @@ const allTutorialPosts = await getCollection("tutorial");
 
 			<a href="/" class="btn btn-ghost h-fit w-fit flex-col">
 				<Logo class="fill-current" />
-				<p class="text-lg">the online space</p>
+				<p class="text-lg">{t("sidebar.description")}</p>
 			</a>
 
 			<ul class="menu menu-horizontal justify-center">

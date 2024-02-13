@@ -1,7 +1,7 @@
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
 import preact from "@astrojs/preact";
+import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
