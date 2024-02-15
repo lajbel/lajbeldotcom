@@ -1,13 +1,14 @@
 ---
+import { importantLinks, socials } from "@/config";
+import type { PropsWithT } from "@/types";
+import ThemeController from "@components/buttons/ThemeController";
+import SidebarCard from "@components/cards/SidebarCard.astro";
+import Logo from "@components/images/Logo.astro";
 import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
-import { importantLinks, socials } from "../../config";
-import type { PropsWithT } from "../../types";
-import ThemeController from "../buttons/ThemeController";
-import SidebarCard from "../cards/SidebarCard.astro";
-import Logo from "../images/Logo.astro";
 
 const allTutorialPosts = await getCollection("tutorial");
+const allBlogPosts = await getCollection("blog");
 type Props = PropsWithT<{}>;
 const { t } = Astro.props;
 ---
@@ -71,9 +72,20 @@ const { t } = Astro.props;
 				</ul>
 			</nav>
 
-			<p class="text-xl uppercase my-4 font-bold">Latest Tutorials</p>
+			<p class="text-xl uppercase my-4 font-bold">Latest Posts</p>
 
-			<ul class="justify-center">
+			<ul class="flex flex-col gap-2">
+				{
+					allBlogPosts.map((post) => (
+						<li>
+							<SidebarCard
+								title={post.data.title}
+								image={post.data.image}
+								link={`/blog/${post.slug}`}
+							/>
+						</li>
+					))
+				}
 				{
 					allTutorialPosts.map((post) => (
 						<li>

@@ -1,10 +1,12 @@
 @font-face {
 	font-family: "ljicons";
-	src: url("../fonts/ljicons.eot?b7ioom");
-	src: url("../fonts/ljicons.eot?b7ioom#iefix") format("embedded-opentype"),
-		url("../fonts/ljicons.ttf?b7ioom") format("truetype"),
-		url("../fonts/ljicons.woff?b7ioom") format("woff"),
-		url("../fonts/ljicons.svg?b7ioom#ljicons") format("svg");
+	src: url("../assets/fonts/ljicons.eot?b7ioom");
+	src:
+		url("../assets/fonts/ljicons.eot?b7ioom#iefix")
+			format("embedded-opentype"),
+		url("../assets/fonts/ljicons.ttf?b7ioom") format("truetype"),
+		url("../assets/fonts/ljicons.woff?b7ioom") format("woff"),
+		url("../assets/fonts/ljicons.svg?b7ioom#ljicons") format("svg");
 	font-weight: normal;
 	font-style: normal;
 	font-display: block;

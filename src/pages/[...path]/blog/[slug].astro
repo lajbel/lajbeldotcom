@@ -1,28 +1,26 @@
 ---
+import Post from "@/layouts/Post.astro";
+import { getStaticPathsByLocales } from "@/util/path";
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
-import Post from "../../../layouts/Post.astro";
-import { getStaticPathsByLocales } from "../../../util/path";
 
 export async function getStaticPaths() {
-	const tutorialCollection = await getCollection("blog");
+	const blogCollection = await getCollection("blog");
 	const localePaths = getStaticPathsByLocales();
 
 	return localePaths.flatMap((localePath) => {
-		return tutorialCollection.flatMap(
-			(post: CollectionEntry<"blog">) => {
-				return {
-					params: {
-						slug: post.slug,
-						...localePath.params,
-					},
-					props: {
-						post,
-						...localePath.props,
-					},
-				};
-			},
-		);
+		return blogCollection.flatMap((post: CollectionEntry<"blog">) => {
+			return {
+				params: {
+					slug: post.slug,
+					...localePath.params,
+				},
+				props: {
+					post,
+					...localePath.props,
+				},
+			};
+		});
 	});
 }
 

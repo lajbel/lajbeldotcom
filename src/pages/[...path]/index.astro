@@ -1,11 +1,11 @@
 ---
+import birdyImage from "@/assets/images/birdy.png";
+import LinkButton from "@/components/buttons/LinkButton.astro";
+import Hero from "@/components/layout/Hero.astro";
+import Base from "@/layouts/Base.astro";
+import { getStaticPathsByLocales } from "@/util/path";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
-import LinkButton from "../../components/buttons/LinkButton.astro";
-import Hero from "../../components/layout/Hero.astro";
-import birdyImage from "../../images/birdy.png";
-import Base from "../../layouts/Base.astro";
-import { getStaticPathsByLocales } from "../../util/path";
 
 export function getStaticPaths() {
 	return getStaticPathsByLocales();

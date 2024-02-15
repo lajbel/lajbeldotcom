@@ -1,8 +1,8 @@
 ---
-import type { Project } from "../../types";
-import { Image } from "astro:assets";
+import type { Project } from "@/types";
+import LinkButton from "@components/buttons/LinkButton.astro";
 import { Icon } from "astro-icon/components";
-import LinkButton from "../buttons/LinkButton.astro";
+import { Image } from "astro:assets";
 
 type Props = Project;
 const { title, description, tags, image, kind, link } = Astro.props;

@@ -21,6 +21,11 @@ export const socials = [
 		icon: "github",
 		link: "https://github.com/lajbel",
 	},
+	{
+		name: "Ko-fi",
+		icon: "kofi",
+		link: "https://ko-fi.com/lajbel",
+	}
 ];
 
 export const importantLinks = [
