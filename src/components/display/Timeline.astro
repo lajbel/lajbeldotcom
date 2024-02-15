@@ -1,0 +1,8 @@
+---
+type Props = astroHTML.JSX.HTMLAttributes;
+const { class: className } = Astro.props;
+---
+
+<ul class:list={["timeline", [className]]}>
+	<slot />
+</ul>

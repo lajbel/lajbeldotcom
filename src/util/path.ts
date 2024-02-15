@@ -1,4 +1,4 @@
-import { localedT, localesNames } from "./i18n";
+import { localedT, localesNames } from "../i18n";
 
 export function getStaticPathsByLocales(locales = localesNames) {
     const defaultLocale = locales[0];

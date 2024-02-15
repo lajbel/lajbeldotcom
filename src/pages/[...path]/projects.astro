@@ -2,7 +2,7 @@
 import ProjectCard from "../../components/cards/ProjectCard.astro";
 import { projects } from "../../config";
 import Base from "../../layouts/Base.astro";
-import { getStaticPathsByLocales } from "../../util";
+import { getStaticPathsByLocales } from "../../util/path";
 
 export function getStaticPaths() {
 	return getStaticPathsByLocales();
@@ -20,7 +20,7 @@ const { t, lang } = Astro.props;
 			"A collection of my projects, from web development to game development.",
 	}}
 >
-	<div class="min-h-screen p-2 lg:p-4">
+	<div class="min-h-screen pt-8 px-2 lg:px-4">
 		<h1 class="text-5xl font-bold">{t("projects.title")}</h1>
 
 		<div class="w-full grid grid-cols-autofit gap-4 mt-8">

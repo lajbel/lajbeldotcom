@@ -4,8 +4,8 @@ import { Image } from "astro:assets";
 import LinkButton from "../../components/buttons/LinkButton.astro";
 import Hero from "../../components/layout/Hero.astro";
 import birdyImage from "../../images/birdy.png";
-import Layout from "../../layouts/Base.astro";
-import { getStaticPathsByLocales } from "../../util";
+import Base from "../../layouts/Base.astro";
+import { getStaticPathsByLocales } from "../../util/path";
 
 export function getStaticPaths() {
 	return getStaticPathsByLocales();
@@ -14,7 +14,7 @@ export function getStaticPaths() {
 const { t, lang } = Astro.props;
 ---
 
-<Layout
+<Base
 	{t}
 	{lang}
 	meta={{
@@ -23,7 +23,7 @@ const { t, lang } = Astro.props;
 			"I'm Daniel, a Full Stack Web Developer, My first contact with technology was with Project 64. My first and favorite programming language is JavaScript",
 	}}
 >
-	<Hero class="flex-col-reverse lg:flex-row gap-16">
+	<Hero class="flex-col-reverse gap-16 mt-6 lg:flex-row lg:mt-0">
 		<section class="text-left text-balance max-w-lg">
 			<h1 class="text-5xl font-bold">Daniel Báez</h1>
 			<h2 class="text-3xl font-semibold text-primary">
@@ -43,11 +43,11 @@ const { t, lang } = Astro.props;
 					href="https://fiverr.com/lajbel"
 					target="_blank"
 				>
-					<Icon name="jam:fiverr" /> Fiverr
+					<Icon name="jam:fiverr" size={24} />
 				</LinkButton>
 
 				<LinkButton class="btn-secondary btn-lg" href="/projects">
-					<Icon name="jam:grid-f" /> Browse Projects
+					<Icon name="jam:grid-f" size={24} /> Browse Projects
 				</LinkButton>
 			</nav>
 		</section>
@@ -60,4 +60,4 @@ const { t, lang } = Astro.props;
 			/>
 		</figure>
 	</Hero>
-</Layout>
+</Base>
