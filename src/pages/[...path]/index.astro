@@ -1,6 +1,7 @@
 ---
 import birdyImage from "@/assets/images/birdy.png";
 import LinkButton from "@/components/buttons/LinkButton.astro";
+import Timeline from "@/components/display/Timeline.astro";
 import Hero from "@/components/layout/Hero.astro";
 import Base from "@/layouts/Base.astro";
 import { getStaticPathsByLocales } from "@/util/path";
@@ -60,4 +61,7 @@ const { t, lang } = Astro.props;
 			/>
 		</figure>
 	</Hero>
+	<section class="min-h-screen">
+		<Timeline />
+	</section>
 </Base>
