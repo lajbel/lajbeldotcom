@@ -31,7 +31,11 @@ export default {
 			},
 		},
 	},
-	plugins: [require("daisyui"), require("@tailwindcss/typography")],
+	plugins: [
+		/** @type { import("daisyui").Config } */
+		require("daisyui"),
+		require("@tailwindcss/typography")
+	],
 	daisyui: {
 		logs: false,
 		themes: [
