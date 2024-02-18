@@ -1,8 +1,8 @@
-import eggouBanner from "./images/banners/eggou.png";
-import kaboomjsBanner from "./images/banners/kaboomjs.png";
-import mandarinaBanner from "./images/banners/mandarina.png";
-import markbotBanner from "./images/banners/markbot.png";
-import newgroundsjsBanner from "./images/banners/newgroundsjs.png";
+import eggouBanner from "./assets/images/banners/eggou.png";
+import kaboomjsBanner from "./assets/images/banners/kaboomjs.png";
+import mandarinaBanner from "./assets/images/banners/mandarina.png";
+import markbotBanner from "./assets/images/banners/markbot.png";
+import newgroundsjsBanner from "./assets/images/banners/newgroundsjs.png";
 import type { Project } from "./types";
 
 export const socials = [

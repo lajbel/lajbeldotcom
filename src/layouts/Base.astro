@@ -18,18 +18,30 @@ type Props = PropsWithT<{
 }>;
 
 const { meta, lang = "en", t } = Astro.props;
+const { url } = Astro;
 ---
 
 <!doctype html>
 <html lang={lang} data-theme>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={meta.description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="sitemap" href="/sitemap-index.xml" />
 		<title>{meta.title}</title>
+		<meta name="description" content={meta.description} />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content={meta.title} />
+		<meta name="twitter:description" content={meta.description} />
+		<meta name="twitter:creator" content="@lajbel" />
+		<meta
+			name="twitter:image"
+			content="https://cdn.glitch.global/85c25e59-236a-4ea3-a0be-f1c093fa4365/7668a3cc-69a8-485b-af74-2e370cd47664.image.png?v=1708260471070"
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/favico.svgn" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<link rel="alternate" hreflang="x-default" href={url.href} />
+		<link rel="alternate" hreflang="en" href={url.href} />
+		<link rel="canonical" href={url.href} />
 		<ViewTransitions />
 	</head>
 	<body>
