@@ -44,10 +44,11 @@ export const projects = [
 		title: "Mandarina",
 		description: `A JavaScript Visual novel engine, made with Kaboom.js. 
         Optimized for beginners, easy to use and highly customizable.`,
-		link: "https://www.lajbel.com/mandarina",
+		link: "https://lajbel.github.io/mandarina",
+		repo: "https://github.com/lajbel/mandarina",
 		image: mandarinaBanner,
 		kind: "Library",
-		tags: ["Kaboom.js", "Visual Novel", "Game Engine"],
+		tags: ["TypeScript", "Node.js"],
 		featured: true,
 	},
 	{
@@ -57,9 +58,10 @@ export const projects = [
         new demos, plugins, and documentation. Also I've worked in Replit for
         the development of the version 3000.`,
 		link: "https://kaboomjs.com",
+		repo: "https://github.com/replit/kaboom",
 		image: kaboomjsBanner,
 		kind: "Library",
-		tags: ["Kaboom.js", "Game Engine", "React", "TypeScript"],
+		tags: ["TypeScript", "Next.js", "Node.js"],
 		featured: true,
 	},
 	{
@@ -67,26 +69,28 @@ export const projects = [
 		description: `A bullet hell game made in Kaboom.js. It's a
         project I made for a game jam.`,
 		link: "https://lajbel.itch.io/eggou",
+		repo: "https://github.com/lajbel/eggou",
 		image: eggouBanner,
 		kind: "Game",
-		tags: ["Kaboom.js", "Game Jam", "Bullet Hell"],
+		tags: ["JavaScript", "Kaboom.js"],
 	},
 	{
 		title: "Newgrounds.js",
-		description: `A library for interact with the Newgrounds API, made 
-        in TypeScript.`,
-		link: "https://www.lajbel.com/newgrounds.js",
+		description: `API Wrapper for Newgrounds, made with TypeScript.`,
+		link: "https://lajbel.github.io/newgrounds.js",
+		repo: "https://github.com/lajbel/eggou",
 		image: newgroundsjsBanner,
 		kind: "Library",
-		tags: ["API", "TypeScript"],
+		tags: ["API Usage", "TypeScript"],
 	},
 	{
 		title: "MarkBot",
 		description: `A Chatbot application for Discord, made for bring help
         and support with Kaboom.js.`,
 		link: "https://github.com/lajbel/markbot",
+		repo: "https://github.com/lajbel/markbot",
 		image: markbotBanner,
 		kind: "Chat Bot",
-		tags: ["Discord", "Chat Bot", "Kaboom.js"],
+		tags: ["TypeScript", "Deno", "API Usage"],
 	},
 ] satisfies Project[];

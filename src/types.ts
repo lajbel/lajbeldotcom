@@ -1,15 +1,16 @@
 import type { Locale, localedT } from "./i18n";
 
 export type ProjectKind = "Game" | "Library" | "Tool" | "Website" | "Chat Bot";
-export type ProjectStack = "Node.js" | "Deno" | "Kaboom.js" | "Unity" | "JavaScript" | "TypeScript" | "Next.js" | "Express.js"
+export type ProjectStack = "Node.js" | "Deno" | "Kaboom.js" | "Unity" | "JavaScript" | "TypeScript" | "Next.js" | "Express.js" | "API Usage"
 
 export type Project = {
 	title: string;
 	description: string;
 	link: string;
+	repo: string;
 	image: ImageMetadata;
 	kind: ProjectKind;
-	tags: string[];
+	tags: ProjectStack[];
 	featured?: boolean;
 };
 
