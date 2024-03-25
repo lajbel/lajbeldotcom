@@ -5,23 +5,23 @@ import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-	const blogCollection = await getCollection("blog");
-	const localePaths = getStaticPathsByLocales();
+    const blogCollection = await getCollection("blog");
+    const localePaths = getStaticPathsByLocales();
 
-	return localePaths.flatMap((localePath) => {
-		return blogCollection.flatMap((post: CollectionEntry<"blog">) => {
-			return {
-				params: {
-					slug: post.slug,
-					...localePath.params,
-				},
-				props: {
-					post,
-					...localePath.props,
-				},
-			};
-		});
-	});
+    return localePaths.flatMap((localePath) => {
+        return blogCollection.flatMap((post: CollectionEntry<"blog">) => {
+            return {
+                params: {
+                    slug: post.slug,
+                    ...localePath.params,
+                },
+                props: {
+                    post,
+                    ...localePath.props,
+                },
+            };
+        });
+    });
 }
 
 const { post, lang, t } = Astro.props;
@@ -29,5 +29,5 @@ const { Content } = await post.render();
 ---
 
 <Post {post} {lang} {t}>
-	<Content />
+    <Content />
 </Post>

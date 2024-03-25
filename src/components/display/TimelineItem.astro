@@ -1,31 +1,31 @@
 ---
 import { Icon } from "astro-icon/components";
 type Props = {
-	time: string;
-	title: string;
-	subtitle: string;
-	start?: boolean;
-	end?: boolean;
+    time: string;
+    title: string;
+    subtitle: string;
+    start?: boolean;
+    end?: boolean;
 };
 const { time, title, subtitle, end = true, start = true } = Astro.props;
 ---
 
 <li>
-	{end && <hr />}
-	<div class="timeline-middle">
-		<Icon name="jam:clock-f" />
-	</div>
-	<div class="timeline-end mb-10">
-		<time class="font-mono italic">{time}</time>
-		<h2 class="text-lg font-black">{title}</h2>
-		<div class="text-lg text-primary">{subtitle}</div>
-		<slot />
-	</div>
-	{start && <hr />}
+    {end && <hr />}
+    <div class="timeline-middle">
+        <Icon name="jam:clock-f" />
+    </div>
+    <div class="timeline-end mb-10">
+        <time class="font-mono italic">{time}</time>
+        <h2 class="text-lg font-black">{title}</h2>
+        <div class="text-lg text-primary">{subtitle}</div>
+        <slot />
+    </div>
+    {start && <hr />}
 </li>
 
 <style>
-	:global(p) {
-		@apply mb-2;
-	}
+:global(p) {
+    @apply mb-2;
+}
 </style>

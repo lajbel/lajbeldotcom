@@ -7,6 +7,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://lajbel.com",
-  integrations: [tailwind(), preact(), icon(), sitemap()]
+    site: "https://lajbel.com",
+    integrations: [tailwind(), preact(), icon(), sitemap()],
 });

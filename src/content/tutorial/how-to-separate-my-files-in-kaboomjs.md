@@ -17,10 +17,10 @@ First, let's put ourselves in the situation of a newly started project:
 // main.js
 // Initialize our Kaboom instance
 const k = kaboom({
-	width: 320,
-	height: 240,
-	scale: 2,
-	background: [0, 0, 0],
+    width: 320,
+    height: 240,
+    scale: 2,
+    background: [0, 0, 0],
 });
 
 // Load assets
@@ -31,11 +31,11 @@ k.loadSound("shoot", "sounds/shoot.wav");
 
 // Our scenes
 k.scene("main", () => {
-	// main scene code
+    // main scene code
 });
 
 k.scene("gameover", () => {
-	// gameover scene code
+    // gameover scene code
 });
 
 // Initial scene
@@ -73,11 +73,11 @@ import { k } from "./main";
 
 // It is important to export our function
 export const loadAssets = () => {
-	k.loadSprite("player", "sprites/player.png");
-	k.loadSprite("enemy", "sprites/enemy.png");
-	k.loadSprite("bullet", "sprites/bullet.png");
-	k.loadSprite("gun", "sprites/gun.png");
-	k.loadSound("shoot", "sounds/shoot.wav");
+    k.loadSprite("player", "sprites/player.png");
+    k.loadSprite("enemy", "sprites/enemy.png");
+    k.loadSprite("bullet", "sprites/bullet.png");
+    k.loadSprite("gun", "sprites/gun.png");
+    k.loadSound("shoot", "sounds/shoot.wav");
 };
 ```
 
@@ -89,19 +89,19 @@ import kaboom from "kaboom.js";
 import { loadAssets } from "./loader.js";
 
 export const k = kaboom({
-	width: 320,
-	height: 240,
-	scale: 2,
-	background: [0, 0, 0],
+    width: 320,
+    height: 240,
+    scale: 2,
+    background: [0, 0, 0],
 });
 
 loadAssets();
 
 k.scene("main", () => {
-	/*...*/
+    /*...*/
 });
 k.scene("gameover", () => {
-	/*...*/
+    /*...*/
 });
 
 k.go("main");
@@ -123,11 +123,11 @@ import { k } from "../main";
 
 // Export a function, which will simply create the scene
 export const loadMainScene = () =>
-	k.scene("main", () => {
-		const bean = k.add([k.pos(20, 20), k.sprite("bean")]);
+    k.scene("main", () => {
+        const bean = k.add([k.pos(20, 20), k.sprite("bean")]);
 
-		const gun = bean.add([k.pos(0, 0), k.sprite("gun")]);
-	});
+        const gun = bean.add([k.pos(0, 0), k.sprite("gun")]);
+    });
 ```
 
 And we can replicate this for multiple scenes. Now, we simply load them in our
@@ -137,14 +137,14 @@ main file.
 // main.js
 import kaboom from "kaboom.js";
 import { loadAssets } from "./loader.js";
-import { loadMainScene } from "./scenes/main.js";
 import { loadGameOverScene } from "./scenes/gameover.js";
+import { loadMainScene } from "./scenes/main.js";
 
 export const k = kaboom({
-	width: 320,
-	height: 240,
-	scale: 2,
-	background: [0, 0, 0],
+    width: 320,
+    height: 240,
+    scale: 2,
+    background: [0, 0, 0],
 });
 
 loadAssets();

@@ -31,9 +31,9 @@ I coded up the design using the framework [Lume](https://lume.land) to generate 
 
 It was missing things, a section to see all the projects, I didn't really like my profile section, and I felt it was too basic. Also, there had been problems with scalability and code, so I decided to completely change the design.
 
--   The orange was very ugly, and it was difficult to match.
--   I didn't like the sidebar, it wasn't very functional.
--   There was no dark mode
+- The orange was very ugly, and it was difficult to match.
+- I didn't like the sidebar, it wasn't very functional.
+- There was no dark mode
 
 So, first I decided to anchor myself to a design system, and well, I went for [TailwindCSS](https://tailwindcss.com) along with the [DaisyUI](https://daisyui.com) component library. I also decided to read the book by the creators of Tailwind, [Refactoring UI](https://refactoringui.com). This gave me a lot of information on how to make good designs, and since the frameworks themselves are prefabricated so that you have to be stupid to make bad designs with them, I ended up with this:
 

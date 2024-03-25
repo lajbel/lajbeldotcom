@@ -5,25 +5,25 @@ import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-	const tutorialCollection = await getCollection("tutorial");
-	const localePaths = getStaticPathsByLocales();
+    const tutorialCollection = await getCollection("tutorial");
+    const localePaths = getStaticPathsByLocales();
 
-	return localePaths.flatMap((localePath) => {
-		return tutorialCollection.flatMap(
-			(tutorial: CollectionEntry<"tutorial">) => {
-				return {
-					params: {
-						slug: tutorial.slug,
-						...localePath.params,
-					},
-					props: {
-						post: tutorial,
-						...localePath.props,
-					},
-				};
-			},
-		);
-	});
+    return localePaths.flatMap((localePath) => {
+        return tutorialCollection.flatMap(
+            (tutorial: CollectionEntry<"tutorial">) => {
+                return {
+                    params: {
+                        slug: tutorial.slug,
+                        ...localePath.params,
+                    },
+                    props: {
+                        post: tutorial,
+                        ...localePath.props,
+                    },
+                };
+            },
+        );
+    });
 }
 
 const { post, lang, t } = Astro.props;
@@ -31,5 +31,5 @@ const { Content } = await post.render();
 ---
 
 <Post {post} {lang} {t}>
-	<Content />
+    <Content />
 </Post>

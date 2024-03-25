@@ -11,7 +11,7 @@ export function getStaticPathsByLocales(locales = localesNames) {
             props: {
                 t: localedT(locale),
                 lang: locale,
-            }
+            },
         };
     });
 }

@@ -14,96 +14,99 @@ const { t } = Astro.props;
 ---
 
 <div class="drawer lg:drawer-open h-full z-20">
-	<input id="mydraw" type="checkbox" class="drawer-toggle" />
-	<label for="mydraw" class="btn btn-ghost lg:hidden fixed z-10">
-		<i class="ljicon-bars text-2xl text-primary"></i>
-	</label>
+    <input id="mydraw" type="checkbox" class="drawer-toggle" />
+    <label for="mydraw" class="btn btn-ghost lg:hidden fixed z-10">
+        <i class="ljicon-bars text-2xl text-primary"></i>
+    </label>
 
-	<div class="drawer-content w-full">
-		<slot />
-	</div>
+    <div class="drawer-content w-full">
+        <slot />
+    </div>
 
-	<div class="drawer-side h-dvh">
-		<label for="mydraw" aria-label="close sidebar" class="drawer-overlay"
-		></label>
+    <div class="drawer-side h-dvh">
+        <label
+            for="mydraw"
+            aria-label="close sidebar"
+            class="drawer-overlay"
+        ></label>
 
-		<div
-			class="p-3 w-72 min-h-full bg-primary text-center text-white"
-			data-theme="light"
-		>
-			<div class="absolute" transition:persist>
-				<ThemeController client:visible />
-			</div>
+        <div
+            class="p-3 w-72 min-h-full bg-primary text-center text-white"
+            data-theme="light"
+        >
+            <div class="absolute" transition:persist>
+                <ThemeController client:visible />
+            </div>
 
-			<a href="/" class="btn btn-ghost h-fit w-fit flex-col">
-				<Logo class="fill-current" />
-				<span class="text-lg">{t("sidebar.description")}</span>
-			</a>
+            <a href="/" class="btn btn-ghost h-fit w-fit flex-col">
+                <Logo class="fill-current" />
+                <span class="text-lg">{t("sidebar.description")}</span>
+            </a>
 
-			<ul class="menu menu-horizontal justify-center">
-				{
-					socials.map((social) => (
-						<li class="text-white text-2xl">
-							<a
-								href={social.link}
-								target="_blank"
-								aria-label={"Daniel Baez's " + social.name}
-							>
-								<Icon name={`simple-icons:${social.icon}`} />
-							</a>
-						</li>
-					))
-				}
-			</ul>
-			<nav>
-				<ul class="menu">
-					{
-						importantLinks.map((link) => (
-							<li class="text-lg">
-								<a
-									class="justify-center uppercase"
-									href={link.link}
-								>
-									{link.title}
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</nav>
+            <ul class="menu menu-horizontal justify-center">
+                {
+                    socials.map((social) => (
+                        <li class="text-white text-2xl">
+                            <a
+                                href={social.link}
+                                target="_blank"
+                                aria-label={"Daniel Baez's " + social.name}
+                            >
+                                <Icon name={`simple-icons:${social.icon}`} />
+                            </a>
+                        </li>
+                    ))
+                }
+            </ul>
+            <nav>
+                <ul class="menu">
+                    {
+                        importantLinks.map((link) => (
+                            <li class="text-lg">
+                                <a
+                                    class="justify-center uppercase"
+                                    href={link.link}
+                                >
+                                    {link.title}
+                                </a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </nav>
 
-			<p class="text-xl uppercase my-4 font-bold">Latest Posts</p>
+            <p class="text-xl uppercase my-4 font-bold">Latest Posts</p>
 
-			<ul class="flex flex-col gap-2">
-				{
-					allBlogPosts.map((post) => (
-						<li>
-							<SidebarCard
-								title={post.data.title}
-								image={post.data.image}
-								link={`/blog/${post.slug}`}
-							/>
-						</li>
-					))
-				}
-				{
-					allTutorialPosts.map((post) => (
-						<li>
-							<SidebarCard
-								title={post.data.title}
-								image={post.data.image}
-								link={`/tutorial/${post.slug}`}
-							/>
-						</li>
-					))
-				}
-			</ul>
-		</div>
-	</div>
+            <ul class="flex flex-col gap-2">
+                {
+                    allBlogPosts.map((post) => (
+                        <li>
+                            <SidebarCard
+                                title={post.data.title}
+                                image={post.data.image}
+                                link={`/blog/${post.slug}`}
+                            />
+                        </li>
+                    ))
+                }
+                {
+                    allTutorialPosts.map((post) => (
+                        <li>
+                            <SidebarCard
+                                title={post.data.title}
+                                image={post.data.image}
+                                link={`/tutorial/${post.slug}`}
+                            />
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </div>
 </div>
 
 <style>
-	#mydraw:checked ~ label {
-		display: none;
-	}
+#mydraw:checked ~ label {
+    display: none;
+}
 </style>

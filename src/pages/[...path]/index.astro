@@ -10,111 +10,111 @@ import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
 export function getStaticPaths() {
-	return getStaticPathsByLocales();
+    return getStaticPathsByLocales();
 }
 
 const { t, lang } = Astro.props;
 ---
 
 <Base
-	{t}
-	{lang}
-	meta={{
-		title: "Daniel Báez Ibarrola - Full Stack Web Development",
-		description:
-			"I'm Daniel, a Full Stack Web Developer, studied at the Technology University of Buenos Aires. I've worked in different projects, from chat bot implementations for services to game engines, being maintener of Kaboom.js. Hire me on Fiverr or browse my projects.",
-	}}
+    {t}
+    {lang}
+    meta={{
+        title: "Daniel Báez Ibarrola - Full Stack Web Development",
+        description:
+            "I'm Daniel, a Full Stack Web Developer, studied at the Technology University of Buenos Aires. I've worked in different projects, from chat bot implementations for services to game engines, being maintener of Kaboom.js. Hire me on Fiverr or browse my projects.",
+    }}
 >
-	<Hero class="flex-col-reverse gap-16 mt-6 lg:flex-row lg:mt-0">
-		<section class="text-left text-balance max-w-lg">
-			<h1 class="text-5xl font-bold">Daniel Báez</h1>
-			<p class="text-3xl font-semibold text-primary mb-4">
-				{t("home.role")}
-			</p>
-			<p class="text-lg mb-3 lg:max-w-[35ch]">
-				I studied Fullstack web development at the Technology University
-				of Buenos Aires.
-			</p>
-			<p class="text-lg mb-3 lg:max-w-[35ch]">
-				I've worked in different projects, from chat bot implementations
-				for services to game engines, being maintener of Kaboom.js.
-			</p>
-			<nav class="flex flex-wrap gap-2">
-				<LinkButton
-					class="btn-primary btn-lg"
-					href="https://fiverr.com/lajbel"
-					target="_blank"
-				>
-					<span class="sr-only">Hire me on Fiverr</span>
-					<Icon name="jam:fiverr" size={24} />
-				</LinkButton>
+    <Hero class="flex-col-reverse gap-16 mt-6 lg:flex-row lg:mt-0">
+        <section class="text-left text-balance max-w-lg">
+            <h1 class="text-5xl font-bold">Daniel Báez</h1>
+            <p class="text-3xl font-semibold text-primary mb-4">
+                {t("home.role")}
+            </p>
+            <p class="text-lg mb-3 lg:max-w-[35ch]">
+                I studied Fullstack web development at the Technology University
+                of Buenos Aires.
+            </p>
+            <p class="text-lg mb-3 lg:max-w-[35ch]">
+                I've worked in different projects, from chat bot implementations
+                for services to game engines, being maintener of Kaboom.js.
+            </p>
+            <nav class="flex flex-wrap gap-2">
+                <LinkButton
+                    class="btn-primary btn-lg"
+                    href="https://fiverr.com/lajbel"
+                    target="_blank"
+                >
+                    <span class="sr-only">Hire me on Fiverr</span>
+                    <Icon name="jam:fiverr" size={24} />
+                </LinkButton>
 
-				<LinkButton class="btn-secondary btn-lg" href="/projects">
-					<Icon name="jam:grid-f" size={24} /> Browse Projects
-				</LinkButton>
-			</nav>
-		</section>
+                <LinkButton class="btn-secondary btn-lg" href="/projects">
+                    <Icon name="jam:grid-f" size={24} /> Browse Projects
+                </LinkButton>
+            </nav>
+        </section>
 
-		<figure>
-			<Image
-				src={birdyImage}
-				alt="Daniel Báez's potrait"
-				class="max-w-xs rounded-lg shadow-2xl lg:max-w-sm"
-			/>
-		</figure>
-	</Hero>
-	<div class="flex justify-center p-4">
-		<section class="max-w-4xl">
-			<h1 class="text-4xl font-bold">Work Experience</h1>
+        <figure>
+            <Image
+                src={birdyImage}
+                alt="Daniel Báez's potrait"
+                class="max-w-xs rounded-lg shadow-2xl lg:max-w-sm"
+            />
+        </figure>
+    </Hero>
+    <div class="flex justify-center p-4">
+        <section class="max-w-4xl">
+            <h1 class="text-4xl font-bold">Work Experience</h1>
 
-			<div>
-				<Timeline
-					class="timeline-snap-icon timeline-compact timeline-vertical"
-				>
-					<TimelineItem
-						title="Matrix"
-						subtitle="Software Developer, Fullstack Developer"
-						time="2021"
-						end={false}
-					>
-						<p>
-							In Matrix, I worked on the development of various
-							tools for the company, a Discord's chatbot for the
-							company's service platform, and a internal reminder
-							application.
-						</p>
-					</TimelineItem>
-					<TimelineItem
-						title="Replit"
-						subtitle="Software Developer, Event Managment, Game Engine development"
-						time="March 2022 to December 2022"
-					>
-						<p>
-							In Replit, I worked on the development of a game
-							engine called Kaboom.js, using JavaScript, where I
-							was the maintainer of the project. I added features,
-							fixed bugs, and improved the documentation website,
-							using Next.js.
-						</p>
-						<p>
-							I also participed in the Replit Reps program, where
-							I organized different Game Jams and Hackathons.
-						</p>
-					</TimelineItem>
-					<TimelineItem
-						title="ConLuc. Corp"
-						subtitle="Software Developer, UI/UX"
-						time="Sep 2023 to Dec 2023"
-						start={false}
-					>
-						<p>
-							In ConLuc. Corp, I worked on the development and
-							refactoring of the UI/UX of a soccer online game,
-							using Unity3D.
-						</p>
-					</TimelineItem>
-				</Timeline>
-			</div>
-		</section>
-	</div>
+            <div>
+                <Timeline
+                    class="timeline-snap-icon timeline-compact timeline-vertical"
+                >
+                    <TimelineItem
+                        title="Matrix"
+                        subtitle="Software Developer, Fullstack Developer"
+                        time="2021"
+                        end={false}
+                    >
+                        <p>
+                            In Matrix, I worked on the development of various
+                            tools for the company, a Discord's chatbot for the
+                            company's service platform, and a internal reminder
+                            application.
+                        </p>
+                    </TimelineItem>
+                    <TimelineItem
+                        title="Replit"
+                        subtitle="Software Developer, Event Managment, Game Engine development"
+                        time="March 2022 to December 2022"
+                    >
+                        <p>
+                            In Replit, I worked on the development of a game
+                            engine called Kaboom.js, using JavaScript, where I
+                            was the maintainer of the project. I added features,
+                            fixed bugs, and improved the documentation website,
+                            using Next.js.
+                        </p>
+                        <p>
+                            I also participed in the Replit Reps program, where
+                            I organized different Game Jams and Hackathons.
+                        </p>
+                    </TimelineItem>
+                    <TimelineItem
+                        title="ConLuc. Corp"
+                        subtitle="Software Developer, UI/UX"
+                        time="Sep 2023 to Dec 2023"
+                        start={false}
+                    >
+                        <p>
+                            In ConLuc. Corp, I worked on the development and
+                            refactoring of the UI/UX of a soccer online game,
+                            using Unity3D.
+                        </p>
+                    </TimelineItem>
+                </Timeline>
+            </div>
+        </section>
+    </div>
 </Base>

@@ -5,50 +5,51 @@ import Base from "@/layouts/Base.astro";
 import { getStaticPathsByLocales } from "@/util/path";
 
 export function getStaticPaths() {
-	return getStaticPathsByLocales();
+    return getStaticPathsByLocales();
 }
 
 const { t, lang } = Astro.props;
 ---
 
 <Base
-	{t}
-	{lang}
-	meta={{
-		title: "Daniel Báez Projects - Visual Novel engines, Kaboom.js, Discord bots, and more!",
-		description:
-			"A collection of my projects, from web development to game development.",
-	}}
+    {t}
+    {lang}
+    meta={{
+        title:
+            "Daniel Báez Projects - Visual Novel engines, Kaboom.js, Discord bots, and more!",
+        description:
+            "A collection of my projects, from web development to game development.",
+    }}
 >
-	<div class="min-h-screen pt-8 px-2 lg:px-4">
-		<h1 class="text-5xl font-bold">{t("projects.title")}</h1>
+    <div class="min-h-screen pt-8 px-2 lg:px-4">
+        <h1 class="text-5xl font-bold">{t("projects.title")}</h1>
 
-		<div class="w-full grid grid-cols-autofit gap-4 mt-8">
-			{
-				projects
-					.filter((p) => p.featured)
-					.map((project) => <ProjectCard {...project} />)
-			}
-		</div>
+        <div class="w-full grid grid-cols-autofit gap-4 mt-8">
+            {
+                projects
+                .filter((p) => p.featured)
+                .map((project) => <ProjectCard {...project} />)
+            }
+        </div>
 
-		<div class="w-full grid grid-cols-autofill gap-4 mt-8">
-			{
-				projects
-					.filter((p) => !p.featured)
-					.map((project) => <ProjectCard {...project} />)
-			}
-		</div>
-	</div>
+        <div class="w-full grid grid-cols-autofill gap-4 mt-8">
+            {
+                projects
+                .filter((p) => !p.featured)
+                .map((project) => <ProjectCard {...project} />)
+            }
+        </div>
+    </div>
 </Base>
 
 <style>
-	.grid-cols-autofill {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-	}
+.grid-cols-autofill {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
 
-	.grid-cols-autofit {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	}
+.grid-cols-autofit {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 </style>

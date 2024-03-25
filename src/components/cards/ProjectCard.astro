@@ -11,33 +11,33 @@ const { title, description, tags, image, kind, link, repo } = Astro.props;
 ---
 
 <article class="card bg-base-100 shadow-lg">
-	<figure class="bg-base-300">
-		<Image class="object-cover" src={image} alt={title} />
-	</figure>
+    <figure class="bg-base-300">
+        <Image class="object-cover" src={image} alt={title} />
+    </figure>
 
-	<div class="card-body">
-		<h2 class="card-title text-2xl">
-			{title}
-			<div class="badge badge-accent">{kind}</div>
-		</h2>
-		<p class="text-left text-lg">{description}</p>
-		<div class="flex">
-			<div class="card-actions flex-1">
-				{
-					tags.map((tag) => (
-						<span class="badge badge-primary">{tag}</span>
-					))
-				}
-			</div>
+    <div class="card-body">
+        <h2 class="card-title text-2xl">
+            {title}
+            <div class="badge badge-accent">{kind}</div>
+        </h2>
+        <p class="text-left text-lg">{description}</p>
+        <div class="flex">
+            <div class="card-actions flex-1">
+                {
+                    tags.map((tag) => (
+                        <span class="badge badge-primary">{tag}</span>
+                    ))
+                }
+            </div>
 
-			<div class="card-actions justify-end">
-				<LinkButton class="btn-primary" href={link} target="_blank">
-					<Icon name="fa:external-link" size={24} />
-				</LinkButton>
-				<LinkButton class="btn-secondary" href={repo} target="_blank">
-					<Icon name="fa:github" size={24} />
-				</LinkButton>
-			</div>
-		</div>
-	</div>
+            <div class="card-actions justify-end">
+                <LinkButton class="btn-primary" href={link} target="_blank">
+                    <Icon name="fa:external-link" size={24} />
+                </LinkButton>
+                <LinkButton class="btn-secondary" href={repo} target="_blank">
+                    <Icon name="fa:github" size={24} />
+                </LinkButton>
+            </div>
+        </div>
+    </div>
 </article>
