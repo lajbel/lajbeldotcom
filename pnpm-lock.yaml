@@ -17,6 +17,9 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.1.0
     version: 5.1.0(astro@4.3.1)(tailwindcss@3.4.1)
+  '@iconify-json/devicon':
+    specifier: ^1.1.36
+    version: 1.1.36
   '@iconify-json/fa':
     specifier: ^1.1.8
     version: 1.1.8
@@ -725,6 +728,12 @@ packages:
     os: [win32]
     requiresBuild: true
     optional: true
+
+  /@iconify-json/devicon@1.1.36:
+    resolution: {integrity: sha512-gtHyK5atlNwFDLJ+eKXiEV5cCOwdRBCoKaN2HgOoPbMEM8ove/mAgQ8KA1/AEWPgY4Zl8mZwMwmpalZvVKImfQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
 
   /@iconify-json/fa@1.1.8:
     resolution: {integrity: sha512-he23ZsuDxA6Hx7rnrEpSJnmu7t7RtG/SbrENZhMSPiZ4bNRGHjyPZimtOy10k2/nfwNsW57ECDsO5eK0BkcoMg==}

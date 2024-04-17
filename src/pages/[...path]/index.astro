@@ -26,18 +26,16 @@ const { t, lang } = Astro.props;
     }}
 >
     <Hero class="flex-col-reverse gap-16 mt-6 lg:flex-row lg:mt-0">
-        <section class="text-left text-balance max-w-lg">
+        <section class="text-left text-balance max-w-md min-w-40">
             <h1 class="text-5xl font-bold">Daniel Báez</h1>
-            <p class="text-3xl font-semibold text-primary mb-4">
+            <p class="text-3xl font-semibold text-primary mb-4 max-w-[21ch]">
                 {t("home.role")}
             </p>
             <p class="text-lg mb-3 lg:max-w-[35ch]">
-                I studied Fullstack web development at the Technology University
-                of Buenos Aires.
+                {t("home.istudied")}
             </p>
             <p class="text-lg mb-3 lg:max-w-[35ch]">
-                I've worked in different projects, from chat bot implementations
-                for services to game engines, being maintener of Kaboom.js.
+                {t("home.iworked")}
             </p>
             <nav class="flex flex-wrap gap-2">
                 <LinkButton

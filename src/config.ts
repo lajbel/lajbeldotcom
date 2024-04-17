@@ -5,6 +5,15 @@ import markbotBanner from "./assets/images/banners/markbot.png";
 import newgroundsjsBanner from "./assets/images/banners/newgroundsjs.png";
 import type { Project } from "./types";
 
+export const iconNames = {
+    "github": "GitHub",
+    "typescript": "TypeScript",
+    "javascript": "JavaScript",
+    "nodejs": "Node.js",
+    "nextjs": "Next.js",
+    "deno": "Deno",
+};
+
 export const socials = [
     {
         name: "Twitter",
@@ -48,7 +57,7 @@ export const projects = [
         repo: "https://github.com/lajbel/mandarina",
         image: mandarinaBanner,
         kind: "Library",
-        tags: ["TypeScript", "Node.js"],
+        tags: ["typescript", "nodejs"],
         featured: true,
     },
     {
@@ -61,7 +70,7 @@ export const projects = [
         repo: "https://github.com/replit/kaboom",
         image: kaboomjsBanner,
         kind: "Library",
-        tags: ["TypeScript", "Next.js", "Node.js"],
+        tags: ["typescript", "nextjs", "nodejs"],
         featured: true,
     },
     {
@@ -72,7 +81,7 @@ export const projects = [
         repo: "https://github.com/lajbel/eggou",
         image: eggouBanner,
         kind: "Game",
-        tags: ["JavaScript", "Kaboom.js"],
+        tags: ["javascript"],
     },
     {
         title: "Newgrounds.js",
@@ -81,7 +90,7 @@ export const projects = [
         repo: "https://github.com/lajbel/eggou",
         image: newgroundsjsBanner,
         kind: "Library",
-        tags: ["API Usage", "TypeScript"],
+        tags: ["typescript"],
     },
     {
         title: "MarkBot",
@@ -91,6 +100,6 @@ export const projects = [
         repo: "https://github.com/lajbel/markbot",
         image: markbotBanner,
         kind: "Chat Bot",
-        tags: ["TypeScript", "Deno", "API Usage"],
+        tags: ["typescript"],
     },
 ] satisfies Project[];

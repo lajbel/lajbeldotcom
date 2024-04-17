@@ -20,7 +20,10 @@ export type TranslationString =
 export const englishLocales = {
     "home": {
         "role": "Full Stack Web Developer",
-        "description": "Bla bla bla",
+        "istudied":
+            "I studied Fullstack web development at the Technology University of Buenos Aires.",
+        "iworked":
+            "I've worked in different projects, from chat bot implementations for services to game engines, being maintener of Kaboom.js.",
     },
     "sidebar": {
         "description": "the online space",
@@ -33,10 +36,13 @@ export const englishLocales = {
 export const spanishLocales = {
     "home": {
         "role": "Desarrollador Web Full Stack",
-        "description": "Bla bla bla",
+        "istudied":
+            "Estudié desarrollo web Fullstack en la Universidad Tecnológica de Buenos Aires.",
+        "iworked":
+            "He trabajado en diferentes proyectos, desde implementaciones de chat bot para servicios hasta motores de juegos, siendo mantenedor de Kaboom.js.",
     },
     "sidebar": {
-        "description": "el espacio online",
+        "description": "the online space",
     },
     "projects": {
         "title": "Proyectos",

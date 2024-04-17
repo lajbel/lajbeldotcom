@@ -1,4 +1,5 @@
 ---
+import { iconNames } from "@/config";
 import type { Project } from "@/types";
 import LinkButton from "@components/buttons/LinkButton.astro";
 import { Icon } from "astro-icon/components";
@@ -6,8 +7,6 @@ import { Image } from "astro:assets";
 
 type Props = Project;
 const { title, description, tags, image, kind, link, repo } = Astro.props;
-
-// FIXME: Button with icons and button with text are not aligned
 ---
 
 <article class="card bg-base-100 shadow-lg">
@@ -15,21 +14,8 @@ const { title, description, tags, image, kind, link, repo } = Astro.props;
         <Image class="object-cover" src={image} alt={title} />
     </figure>
 
-    <div class="card-body">
-        <h2 class="card-title text-2xl">
-            {title}
-            <div class="badge badge-accent">{kind}</div>
-        </h2>
-        <p class="text-left text-lg">{description}</p>
+    <div class="card-body flex-col-reverse">
         <div class="flex">
-            <div class="card-actions flex-1">
-                {
-                    tags.map((tag) => (
-                        <span class="badge badge-primary">{tag}</span>
-                    ))
-                }
-            </div>
-
             <div class="card-actions justify-end">
                 <LinkButton class="btn-primary" href={link} target="_blank">
                     <Icon name="fa:external-link" size={24} />
@@ -37,6 +23,29 @@ const { title, description, tags, image, kind, link, repo } = Astro.props;
                 <LinkButton class="btn-secondary" href={repo} target="_blank">
                     <Icon name="fa:github" size={24} />
                 </LinkButton>
+            </div>
+        </div>
+        <div class="flex-1">
+            <h2 class="card-title text-2xl">
+                {title}
+            </h2>
+            <p class="text-left text-lg">{description}</p>
+        </div>
+        <div class="card-actions justify-between items-center">
+            <div class="flex flex-row gap-2">
+                {
+                    tags.map((tag) => (
+                        <span class="badge badge-primary gap-2">
+                            <Icon name={`devicon:${tag}`} />
+                            {iconNames[tag as keyof typeof iconNames]}
+                        </span>
+                    ))
+                }
+            </div>
+            <div>
+                <div class="badge badge-lg badge-primary rounded-xl px-6">
+                    {kind}
+                </div>
             </div>
         </div>
     </div>
