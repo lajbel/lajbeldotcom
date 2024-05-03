@@ -8,6 +8,8 @@
     "indentWidth": 2
   },
   "markdown": {
+    "lineWidth": 80,
+    "textWrap": "always"
   },
   "excludes": [
     "**/node_modules",

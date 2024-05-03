@@ -15,7 +15,7 @@ First, let's put ourselves in the situation of a newly started project:
 
 ```js
 // main.js
-// Initialize our Kaboom instance
+// Initialize our engine instance
 const k = kaboom({
     width: 320,
     height: 240,
@@ -26,12 +26,13 @@ const k = kaboom({
 // Load assets
 k.loadSprite("player", "sprites/player.png");
 k.loadSprite("enemy", "sprites/enemy.png");
+k.loadSprite("bullet", "sprites/bullet.png");
+k.loadSprite("gun", "sprites/gun.png");
 k.loadSound("shoot", "sounds/shoot.wav");
-// ...
 
 // Our scenes
-k.scene("main", () => {
-    // main scene code
+k.scene("play", () => {
+    // play scene code
 });
 
 k.scene("gameover", () => {
@@ -44,11 +45,11 @@ k.go("main");
 
 You can already imagine how much code these files can end up having.
 
-
 ## Separating our engine
-Before we start separating your files, you should separate the engine from the rest of the code.
-This way, you can import it into other files and use it without having to worry about the initialization
-of it.
+
+Before we start separating your files, you should separate the engine from the
+rest of the code. This way, you can import it into other files and use it
+without having to worry about the initialization of it.
 
 ```js
 // engine.js
@@ -63,15 +64,17 @@ export const k = kaboom({
 });
 ```
 
+This separates `engine.js` from `main.js`.
+
 ## Separating our Asset Loading
 
-Now, the easiest way to start separating our game is by separating the file imports;
-it will take a lot of lines off our shoulders. We will create a file where we
-will have the asset loading, for example, `loader.js`
+Now, the easiest way to start separating our game is by separating the file
+imports; it will take a lot of lines off our shoulders. We will create a file
+where we will have the asset loading, for example, `loader.js`
 
 ```js
 // loader.js
-import { k } from "./main";
+import { k } from "./engine.js";
 
 k.loadSprite("player", "sprites/player.png");
 k.loadSprite("enemy", "sprites/enemy.png");
@@ -87,14 +90,16 @@ Now, we import it into our `main.js` file
 import { k } from "./engine.js";
 import "./loader.js"; // This will run the content of the file, importing all assets
 
-k.scene("main", () => {
-    // main scene code
+// rest of scenes code
+k.scene("play", () => {
+    // play scene code
 });
 ```
 
 This way, we are already loading our assets from a different file. The import
-statement will run the code inside the file, so we don't need to call any function,
-only be sure of import `engine.js` before all, because it initializes the engine.
+statement will run the code inside the file, so we don't need to call any
+function, only be sure of import `engine.js` before all, because it initializes
+the engine.
 
 ## Separating our Scenes
 
@@ -107,7 +112,7 @@ with the main scene.
 import { k } from "../engine.js";
 
 // Create the scene
-k.scene("main", () => {
+k.scene("play", () => {
     const bean = k.add([k.pos(20, 20), k.sprite("bean")]);
 
     const gun = bean.add([k.pos(0, 0), k.sprite("gun")]);
@@ -124,11 +129,13 @@ import "./loader.js";
 import "./scenes/play.js";
 import "./scenes/gameover.js";
 
-k.go("main");
+k.go("play");
 ```
 
 As before, the import statement will run the code inside the file, so the scenes
 are created and ready to be used.
+
+## Finishing
 
 This way, we have modularized our different scenes; our code starts to be more
 organized.
