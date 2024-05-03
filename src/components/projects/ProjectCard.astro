@@ -17,11 +17,19 @@ const { title, description, tags, image, kind, link, repo } = Astro.props;
     <div class="card-body flex-col-reverse">
         <div class="flex">
             <div class="card-actions justify-end">
-                <LinkButton class="btn-primary" href={link} target="_blank">
-                    <Icon name="fa:external-link" size={24} />
+                <LinkButton
+                    class="btn-secondary btn-sm px-14"
+                    href={link}
+                    target="_blank"
+                >
+                    <Icon name="fa:external-link" size={16} />
                 </LinkButton>
-                <LinkButton class="btn-secondary" href={repo} target="_blank">
-                    <Icon name="fa:github" size={24} />
+                <LinkButton
+                    class="btn-secondary btn-sm px-14"
+                    href={repo}
+                    target="_blank"
+                >
+                    <Icon name="fa:github" size={16} />
                 </LinkButton>
             </div>
         </div>
