@@ -1,8 +1,9 @@
 import eggouBanner from "./assets/images/banners/eggou.png";
 import kaboomjsBanner from "./assets/images/banners/kaboomjs.png";
+import kiboomBanner from "./assets/images/banners/kiboom.png";
 import mandarinaBanner from "./assets/images/banners/mandarina.png";
 import markbotBanner from "./assets/images/banners/markbot.png";
-import newgroundsjsBanner from "./assets/images/banners/newgroundsjs.png";
+import newgroundsjsBanner from "./assets/images/banners/newgrounds.png";
 import type { Project } from "./types";
 
 export const iconNames = {
@@ -56,46 +57,56 @@ export const projects = [
         link: "https://lajbel.github.io/mandarina",
         repo: "https://github.com/lajbel/mandarina",
         image: mandarinaBanner,
-        kind: "Library",
+        kind: "Developer Tool",
         tags: ["typescript", "nodejs"],
-        featured: true,
+        featured: false,
     },
     {
         title: "Kaboom.js",
-        description: `A games library that I contribute to. 
-        I heard about it in 2021, and I started contributing with the website,
-        new demos, plugins, and documentation. Also I've worked in Replit for
-        the development of the version 3000.`,
+        description: `The easiest way to make games using JavaScript. Kaboom is
+        a game library, I contributed to the project with the website and the
+        core engine, also being community manager.`,
         link: "https://kaboomjs.com",
         repo: "https://github.com/replit/kaboom",
         image: kaboomjsBanner,
-        kind: "Library",
+        kind: "Developer Tool",
         tags: ["typescript", "nextjs", "nodejs"],
+        featured: true,
+    },
+    {
+        title: "kiboom",
+        description: `A set of tools for develop videogames easy, fast and 
+        with better developer experience.`,
+        link: "https://kiboom.lajbel.com",
+        repo: "https://github.com/labjel/kiboom",
+        image: kiboomBanner,
+        kind: "Developer Tool",
+        tags: ["typescript", "nodejs"],
         featured: true,
     },
     {
         title: "Eggou",
         description: `A bullet hell game made in Kaboom.js. It's a
         project I made for a game jam.`,
-        link: "https://lajbel.itch.io/eggou",
+        link: "https://www.newgrounds.com/portal/view/806710",
         repo: "https://github.com/lajbel/eggou",
         image: eggouBanner,
-        kind: "Game",
+        kind: "Videogame",
         tags: ["javascript"],
     },
     {
         title: "Newgrounds.js",
         description: `API Wrapper for Newgrounds, made with TypeScript.`,
-        link: "https://lajbel.github.io/newgrounds.js",
-        repo: "https://github.com/lajbel/eggou",
+        link: "https://newgrounds.lajbel.com",
+        repo: "https://github.com/lajbel/newgrounds-js",
         image: newgroundsjsBanner,
-        kind: "Library",
+        kind: "Developer Tool",
         tags: ["typescript"],
     },
     {
         title: "MarkBot",
-        description: `A Chatbot application for Discord, made for bring help
-        and support with Kaboom.js.`,
+        description: `A ChatBot application for Discord, moderate, bring help
+        and support in Official Kaboom.js Discord Server`,
         link: "https://github.com/lajbel/markbot",
         repo: "https://github.com/lajbel/markbot",
         image: markbotBanner,

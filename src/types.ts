@@ -1,7 +1,12 @@
 import type { iconNames } from "./config";
 import type { Locale, localedT } from "./i18n";
 
-export type ProjectKind = "Game" | "Library" | "Tool" | "Website" | "Chat Bot";
+export type ProjectKind =
+    | "Videogame"
+    | "Library"
+    | "Developer Tool"
+    | "Website"
+    | "Chat Bot";
 export type ProjectStack = keyof typeof iconNames;
 
 export type Project = {
