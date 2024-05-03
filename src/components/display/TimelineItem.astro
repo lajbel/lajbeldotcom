@@ -17,7 +17,7 @@ const { time, title, subtitle, end = true, start = true } = Astro.props;
     </div>
     <div class="timeline-end mb-10">
         <time class="font-mono italic">{time}</time>
-        <h2 class="text-lg font-black">{title}</h2>
+        <h2 class="text-lg font-medium">{title}</h2>
         <div class="text-lg text-primary">{subtitle}</div>
         <slot />
     </div>
