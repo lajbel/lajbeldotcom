@@ -1,5 +1,6 @@
 import eggouBanner from "./assets/images/banners/eggou.png";
 import kaboomjsBanner from "./assets/images/banners/kaboomjs.png";
+import kaplayBanner from "./assets/images/banners/kaplay.png";
 import kiboomBanner from "./assets/images/banners/kiboom.png";
 import mandarinaBanner from "./assets/images/banners/mandarina.png";
 import markbotBanner from "./assets/images/banners/markbot.png";
@@ -62,10 +63,24 @@ export const projects = [
         featured: false,
     },
     {
+        title: "KAPLAY",
+        description:
+            `KAPLAY is the open source successor of Kaboom.js. I work as
+        the main manager of the project, developing the core engine, the website,
+        the editor and the community.`,
+        link: "https://kaplayjs.com",
+        repo: "https://github.com/marklovers/kaplay",
+        image: kaplayBanner,
+        kind: "Developer Tool",
+        tags: ["typescript", "nodejs"],
+        featured: true,
+    },
+    {
         title: "Kaboom.js",
         description: `The easiest way to make games using JavaScript. Kaboom is
         a game library, I contributed to the project with the website and the
-        core engine, also being community manager.`,
+        core engine, also being community manager. Sadly, the project was
+        discontinued.`,
         link: "https://kaboomjs.com",
         repo: "https://github.com/replit/kaboom",
         image: kaboomjsBanner,
@@ -82,7 +97,7 @@ export const projects = [
         image: kiboomBanner,
         kind: "Developer Tool",
         tags: ["typescript", "nodejs"],
-        featured: true,
+        featured: false,
     },
     {
         title: "Eggou",

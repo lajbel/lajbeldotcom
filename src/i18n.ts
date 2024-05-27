@@ -23,7 +23,7 @@ export const englishLocales = {
         "istudied":
             "I studied Fullstack web development at the Technology University of Buenos Aires.",
         "iworked":
-            "I've worked in different projects, from chat bot implementations for services to game engines, being maintener of Kaboom.js.",
+            "I've worked in different projects, from chat bot implementations for services to game engines, being maintener of KAPLAY.",
     },
     "sidebar": {
         "description": "the online space",
@@ -39,7 +39,7 @@ export const spanishLocales = {
         "istudied":
             "Estudié desarrollo web Fullstack en la Universidad Tecnológica de Buenos Aires.",
         "iworked":
-            "He trabajado en diferentes proyectos, desde implementaciones de chat bot para servicios hasta motores de juegos, siendo mantenedor de Kaboom.js.",
+            "He trabajado en diferentes proyectos, desde implementaciones de chat bot para servicios hasta motores de juegos, siendo encargado de KAPLAY.",
     },
     "sidebar": {
         "description": "the online space",
