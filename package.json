@@ -8,7 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "dprint": "dprint"
+    "dprint": "dprint",
+    "cf:deploy": "wrangler pages deploy dist"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
