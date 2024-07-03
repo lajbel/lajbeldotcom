@@ -29,7 +29,7 @@ const { data, body } = post;
         <div
             class="flex flex-col gap-2 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-full h-full justify-end max-w-[80ch] py-4 text-white px-2"
         >
-            <h1 class="text-2xl font-bold">{data.title}</h1>
+            <h1 class="text-3xl font-bold">{data.title}</h1>
             <ul class="flex gap-1 flex-wrap">
                 {
                     data.tags.map((tag) => (
@@ -37,12 +37,14 @@ const { data, body } = post;
                     ))
                 }
             </ul>
-            <p class="text-sm">
+            <p>
                 {data.date.toString().slice(0, 10)}, Daniel Báez
             </p>
         </div>
     </header>
-    <main class="prose m-auto px-2 pb-2 max-w-[80ch]">
+    <main
+        class="prose prose-lg prose-a:text-primary m-auto px-2 pb-2 max-w-[80ch]"
+    >
         <slot />
     </main>
 </Base>

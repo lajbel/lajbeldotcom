@@ -75,11 +75,13 @@ const { t } = Astro.props;
                 </ul>
             </nav>
 
-            <p class="text-xl uppercase my-4 font-bold">Latest Posts</p>
+            <p class="text-xl uppercase my-4 font-bold">Latest Blogs</p>
 
             <ul class="flex flex-col gap-2">
                 {
-                    allBlogPosts.map((post) => (
+                    allBlogPosts.sort((a, b) =>
+                        new Date(a.data.date).valueOf() - new Date(b.data.date).valueOf()
+                    ).reverse().map((post) => (
                         <li>
                             <SidebarCard
                                 title={post.data.title}
@@ -89,6 +91,11 @@ const { t } = Astro.props;
                         </li>
                     ))
                 }
+            </ul>
+
+            <h2 class="text-xl font-semibold uppercase my-5">Tutorials</h2>
+
+            <ul class="flex flex-col gap-2">
                 {
                     allTutorialPosts.map((post) => (
                         <li>
