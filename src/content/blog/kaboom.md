@@ -1,7 +1,7 @@
 ---
-title: Kaboom.js, the game library that I loved
-image: /kaplaylogo.png
-tags: [web, "game dev", personal]
+title: "Kaboom.js, the game library that I loved"
+image: "/kaplaylogo.png"
+tags: ["web", "game dev", "personal"]
 date: 2024-07-03
 ---
 
@@ -30,7 +30,10 @@ avoid the trash destroying them.
 
 If someone asks me how Kaboom felt, I would send them this video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xF3--Ec_E-0?si=7z431BYHNgt6rcUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/xF3--Ec_E-0?si=7z431BYHNgt6rcUg"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="aspect-video w-full"></iframe>
 
 By the way, I learned how to play this song in Ukelele.
 [Here's the tabs](https://gist.github.com/lajbel/8c7d667b3d36c689087c9272f6bc87a3).
