@@ -19,11 +19,11 @@ export type TranslationString =
 
 export const englishLocales = {
     "home": {
-        "role": "Full Stack Web Developer",
+        "role": "Front-end Web Developer",
         "istudied":
-            "I studied Fullstack web development at the Technology University of Buenos Aires.",
+            "I studied Web Development at the Technology University of Buenos Aires.",
         "iworked":
-            "I've worked in different projects, from chat bot implementations for services to game engines, being maintener of KAPLAY.",
+            "I've worked in different projects, from chat bot implementations for services to game engines, being main maintener of KAPLAY.",
     },
     "sidebar": {
         "description": "the online space",

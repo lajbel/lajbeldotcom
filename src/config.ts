@@ -18,11 +18,6 @@ export const iconNames = {
 
 export const socials = [
     {
-        name: "Twitter",
-        icon: "x",
-        link: "https://x.com/lajbel",
-    },
-    {
         name: "LinkedIn",
         icon: "linkedin",
         link: "https://linkedin.com/in/lajbel",
