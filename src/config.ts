@@ -18,6 +18,11 @@ export const iconNames = {
 
 export const socials = [
     {
+        name: "Itch.io",
+        icon: "itchdotio",
+        link: "https://lajbel.itch.io",
+    },
+    {
         name: "LinkedIn",
         icon: "linkedin",
         link: "https://linkedin.com/in/lajbel",
