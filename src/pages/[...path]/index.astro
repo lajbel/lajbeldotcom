@@ -1,11 +1,8 @@
 ---
 import birdyImage from "@/assets/images/birdy.png";
 import Hero from "@/components/common/Hero.astro";
-import LinkButton from "@/components/common/LinkButton.astro";
-import ExperienceSection from "@/components/sections/ExperienceSection.astro";
 import Base from "@/layouts/Base.astro";
 import { getStaticPathsByLocales } from "@/util/path";
-import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
 export function getStaticPaths() {
@@ -19,37 +16,75 @@ const { t, lang } = Astro.props;
     {t}
     {lang}
     meta={{
-        title: "Daniel Báez Ibarrola - Full Stack Web Development",
+        title: "Daniel Báez Ibarrola - Games, Game Engines and Websites",
         description:
-            "I'm Daniel, a Full Stack Web Developer, studied at the Technology University of Buenos Aires. I've worked in different projects, from chat bot implementations for services to game engines, being maintener of Kaboom.js. Hire me on Fiverr or browse my projects.",
+            "I lead and manage projects related to video games and web. I’ve worked with different teams, taking part in leadership, problem-solving and making sure things get done.",
     }}
 >
     <Hero class="flex-col-reverse gap-16 mt-6 lg:flex-row lg:mt-0">
         <section class="text-left text-balance max-w-md min-w-40">
             <h1 class="text-5xl font-bold">Daniel Báez</h1>
-            <p class="text-3xl font-semibold text-primary mb-4 max-w-[21ch]">
+            <p class="text-3xl font-semibold text-primary mb-4">
                 {t("home.role")}
             </p>
-            <p class="text-lg mb-3 lg:max-w-[35ch]">
+            <p class="text-lg mb-3">
                 {t("home.istudied")}
             </p>
-            <p class="text-lg mb-3 lg:max-w-[35ch]">
+            <p class="text-lg mb-3">
                 {t("home.iworked")}
             </p>
-            <nav class="flex flex-wrap gap-2">
-                <LinkButton
-                    class="btn-primary btn-lg"
-                    href="https://fiverr.com/lajbel"
+
+            <div class="space-y-4">
+                <a
+                    class="group relative block transition-transform transform hover:translate-x-5"
+                    href="https://kaplayjs.com"
                     target="_blank"
                 >
-                    <span class="sr-only">Hire me on Fiverr</span>
-                    <Icon name="jam:fiverr" size={24} />
-                </LinkButton>
+                    <article class="bg-base-200 lg:w-96">
+                        <div class="flex flex-row">
+                            <div class="p-4">
+                                <p class="text-primary">
+                                    🟊 Featured Project: <strong>KAPLAY</strong>
+                                </p>
+                                <p>
+                                    Fun and open source game library for HTML5
+                                    Games
+                                </p>
+                            </div>
 
-                <LinkButton class="btn-secondary btn-lg" href="/projects">
-                    <Icon name="jam:grid-f" size={24} /> Browse Projects
-                </LinkButton>
-            </nav>
+                            <img
+                                src="kaplayicon.webp"
+                                class="object-cover w-24"
+                            />
+                        </div>
+                    </article>
+                </a>
+
+                <a
+                    class="group relative block transition-transform transform hover:translate-x-5"
+                    href="https://lajbel.itch.io/juicy-beat"
+                    target="_blank"
+                >
+                    <article class="bg-base-200 lg:w-96">
+                        <div class="flex flex-row">
+                            <div class="p-4">
+                                <p class="text-primary">
+                                    🟊 New Game: <strong>Juicy Beat!</strong>
+                                </p>
+                                <p>
+                                    A new brand rhythm game with apples and good
+                                    music
+                                </p>
+                            </div>
+
+                            <img
+                                src="jbicon.png"
+                                class="object-cover w-24"
+                            />
+                        </div>
+                    </article>
+                </a>
+            </div>
         </section>
 
         <figure>
@@ -60,7 +95,4 @@ const { t, lang } = Astro.props;
             />
         </figure>
     </Hero>
-    <div class="flex justify-center p-4">
-        <ExperienceSection />
-    </div>
 </Base>

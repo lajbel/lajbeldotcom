@@ -19,11 +19,11 @@ export type TranslationString =
 
 export const englishLocales = {
     "home": {
-        "role": "Front-end Web Developer",
+        "role": "Games, game engines and web dev",
         "istudied":
-            "I studied Web Development at the Technology University of Buenos Aires.",
+            "I lead and manage projects related to video games and web.",
         "iworked":
-            "I've worked in different projects, from chat bot implementations for services to game engines, being main maintener of KAPLAY.",
+            "I’ve worked with different teams, taking part in leadership, problem-solving and making sure things get done.",
     },
     "sidebar": {
         "description": "the online space",
