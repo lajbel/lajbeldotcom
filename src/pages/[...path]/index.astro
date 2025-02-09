@@ -1,6 +1,7 @@
 ---
 import birdyImage from "@/assets/images/birdy.png";
 import Hero from "@/components/common/Hero.astro";
+import QuickAccess from "@/components/QuickAccess.astro";
 import Base from "@/layouts/Base.astro";
 import { getStaticPathsByLocales } from "@/util/path";
 import { Image } from "astro:assets";
@@ -35,55 +36,21 @@ const { t, lang } = Astro.props;
             </p>
 
             <div class="space-y-4">
-                <a
-                    class="group relative block transition-transform transform hover:translate-x-5"
-                    href="https://kaplayjs.com"
-                    target="_blank"
-                >
-                    <article class="bg-base-200 lg:w-96">
-                        <div class="flex flex-row">
-                            <div class="p-4">
-                                <p class="text-primary">
-                                    🟊 Featured Project: <strong>KAPLAY</strong>
-                                </p>
-                                <p>
-                                    Fun and open source game library for HTML5
-                                    Games
-                                </p>
-                            </div>
+                <QuickAccess
+                    name="KAPLAY"
+                    label="Featured Project"
+                    description="Fun and open source game library for HTML5 Games"
+                    url="https://kaplayjs.com"
+                    imageUrl="kaplayicon.webp"
+                />
 
-                            <img
-                                src="kaplayicon.webp"
-                                class="object-cover w-24"
-                            />
-                        </div>
-                    </article>
-                </a>
-
-                <a
-                    class="group relative block transition-transform transform hover:translate-x-5"
-                    href="https://lajbel.itch.io/juicy-beat"
-                    target="_blank"
-                >
-                    <article class="bg-base-200 lg:w-96">
-                        <div class="flex flex-row">
-                            <div class="p-4">
-                                <p class="text-primary">
-                                    🟊 New Game: <strong>Juicy Beat!</strong>
-                                </p>
-                                <p>
-                                    A new brand rhythm game with apples and good
-                                    music
-                                </p>
-                            </div>
-
-                            <img
-                                src="jbicon.png"
-                                class="object-cover w-24"
-                            />
-                        </div>
-                    </article>
-                </a>
+                <QuickAccess
+                    name="Juicy Beat!"
+                    label="New Game"
+                    description="A new brand rhythm game with apples and good music"
+                    url="https://lajbel.itch.io/juicy-beat"
+                    imageUrl="jbicon.png"
+                />
             </div>
         </section>
 

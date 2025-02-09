@@ -1,0 +1,35 @@
+---
+type Props = {
+    label: string;
+    name: string;
+    url: string;
+    imageUrl: string;
+    description: string;
+};
+
+const { label, name, imageUrl, description, url } = Astro.props;
+---
+
+<a
+    class="group relative block transition-transform transform lg:hover:translate-x-5"
+    href={url}
+    target="_blank"
+>
+    <article class="bg-base-200 rounded-box lg:w-96">
+        <div class="flex flex-row">
+            <div class="p-4">
+                <p class="text-primary">
+                    🟊 {label}: <strong>{name}</strong>
+                </p>
+                <p>
+                    {description}
+                </p>
+            </div>
+
+            <img
+                src={imageUrl}
+                class="object-cover w-24 rounded-r-box"
+            />
+        </div>
+    </article>
+</a>
