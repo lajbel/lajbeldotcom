@@ -1,6 +1,6 @@
 ---
 title: How to separate files in Kaboom.js
-image: https://cdn.glitch.global/85c25e59-236a-4ea3-a0be-f1c093fa4365/chill.png?v=1714743350675
+image: /blog-banners/kaboomtutorial.png
 tags: [kaboom.js, javascript, game development, tutorial, english, beginner]
 date: 2024-01-17
 ---

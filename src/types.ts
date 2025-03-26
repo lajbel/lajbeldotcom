@@ -1,4 +1,4 @@
-import type { iconNames } from "./config";
+import type { tagData } from "./config";
 import type { Locale, localedT } from "./i18n";
 
 export type ProjectKind =
@@ -7,7 +7,8 @@ export type ProjectKind =
     | "Developer Tool"
     | "Website"
     | "Chat Bot";
-export type ProjectStack = keyof typeof iconNames;
+
+export type ProjectTags = keyof typeof tagData;
 
 export type Project = {
     title: string;
@@ -16,7 +17,7 @@ export type Project = {
     repo: string;
     image: ImageMetadata;
     kind: ProjectKind;
-    tags: ProjectStack[];
+    tags: ProjectTags[];
     featured?: boolean;
 };
 

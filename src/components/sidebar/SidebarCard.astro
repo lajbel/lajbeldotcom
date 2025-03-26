@@ -10,14 +10,11 @@ const { title, image, link, target } = Astro.props;
 ---
 
 <a href={link} target={target}>
-    <article class="card card-compact bg-base-100 image-full h-24 up-on-hover">
-        <figure>
-            <img class="object-cover w-full h-full" src={image} alt={title} />
-        </figure>
+    <article class="card card-compact bg-[#6247aa] h-24 up-on-hover">
         <div class="card-body justify-center items-center">
-            <span class="card-title">
+            <h3 class="card-title">
                 {title}
-            </span>
+            </h3>
         </div>
     </article>
 </a>

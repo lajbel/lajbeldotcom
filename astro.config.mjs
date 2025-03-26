@@ -9,4 +9,10 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
     site: "https://lajbel.com",
     integrations: [tailwind(), preact(), icon(), sitemap()],
+    markdown: {
+        shikiConfig: {
+            wrap: true,
+            theme: "dark-plus"
+        },
+    }
 });

@@ -1,59 +1,64 @@
 ---
-import LinkButton from "@/components/common/LinkButton.astro";
-import { iconNames } from "@/config";
+import { tagData } from "@/config.ts";
 import type { Project } from "@/types";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
-type Props = Project;
-const { title, description, tags, image, kind, link, repo } = Astro.props;
+type Props = Project & { idx: number };
+const { title, description, image, link, tags, idx } = Astro.props;
+const reverse = idx % 2 == 0;
 ---
 
-<article class="card bg-base-100 shadow-lg">
-    <figure class="bg-base-300">
-        <Image class="object-cover" src={image} alt={title} />
+<article
+    class:list={[
+        "flex flex-col-reverse xl:flex-row xl:max-w-[1600px] justify-center gap-8 items-center",
+        {
+            "xl:flex-row-reverse": reverse,
+        },
+    ]}
+>
+    <figure class="xl:w-1/2">
+        <div
+            class="mockup-browser bg-base-300 border-2 border-neutral shadow-2xl xl:max-w-[580px] hover:shadow-2xl transition-shadow duration-500"
+        >
+            <div class="hidden xl:mockup-browser-toolbar">
+                <div class="input">
+                    <a
+                        target="_blank"
+                        href={link}
+                        class="px-2 rounded-sm hover:bg-[#b185db] bg-[#7251b5] text-white transition-colors"
+                    >{link}</a>
+                </div>
+            </div>
+            <a href={link} target="_blank">
+                <div
+                    class="bg-base-200 flex justify-center overflow-hidden group"
+                >
+                    <Image
+                        class="object-cover transform transition-transform duration-500 group-hover:scale-105"
+                        src={image}
+                        alt={title}
+                    />
+                </div>
+            </a>
+        </div>
     </figure>
 
-    <div class="card-body flex-col-reverse">
-        <div class="flex">
-            <div class="card-actions justify-end">
-                <LinkButton
-                    class="btn-secondary btn-sm px-14"
-                    href={link}
-                    target="_blank"
-                >
-                    <Icon name="fa:external-link" size={16} />
-                </LinkButton>
-                <LinkButton
-                    class="btn-secondary btn-sm px-14"
-                    href={repo}
-                    target="_blank"
-                >
-                    <Icon name="fa:github" size={16} />
-                </LinkButton>
-            </div>
-        </div>
+    <div class="xl:w-1/2 flex-col-reverse xl:max-w-[80ch]">
         <div class="flex-1">
-            <h2 class="card-title text-2xl">
+            <h2 class="card-title text-2xl text-primary my-2">
                 {title}
             </h2>
-            <p class="text-left text-lg">{description}</p>
-        </div>
-        <div class="card-actions justify-between items-center">
-            <div class="flex flex-row gap-2">
+            <p class="text-left pb-4 text-balance">{description}</p>
+            <div class="flex flex-row gap-2 flex-wrap">
                 {
                     tags.map((tag) => (
-                        <span class="badge badge-primary gap-2">
-                            <Icon name={`devicon:${tag}`} />
-                            {iconNames[tag as keyof typeof iconNames]}
+                        <span class="badge badge-neutral gap-2">
+                            <Icon name={tagData[tag].icon} />
+                            {tagData[tag].name}
                         </span>
                     ))
                 }
-            </div>
-            <div>
-                <div class="badge badge-lg badge-primary rounded-xl px-6">
-                    {kind}
-                </div>
             </div>
         </div>
     </div>

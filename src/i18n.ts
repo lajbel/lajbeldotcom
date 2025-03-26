@@ -21,7 +21,7 @@ export const englishLocales = {
     "home": {
         "role": "Games, game engines and web dev",
         "istudied":
-            "I lead and manage projects related to video games and web.",
+            "I create, lead and manage projects related to video games and web.",
         "iworked":
             "I’ve worked with different teams, taking part in leadership, problem-solving and making sure things get done.",
     },

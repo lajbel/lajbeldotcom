@@ -1,19 +1,59 @@
-import eggouBanner from "./assets/images/banners/eggou.png";
+import juicyBeatBanner from "./assets/images/banners/juicybeat.png";
 import kaboomjsBanner from "./assets/images/banners/kaboomjs.png";
 import kaplayBanner from "./assets/images/banners/kaplay.png";
-import kiboomBanner from "./assets/images/banners/kiboom.png";
-import mandarinaBanner from "./assets/images/banners/mandarina.png";
-import markbotBanner from "./assets/images/banners/markbot.png";
-import newgroundsjsBanner from "./assets/images/banners/newgrounds.png";
+import newgroundsJsBanner from "./assets/images/banners/newgrounds.png";
 import type { Project } from "./types";
 
-export const iconNames = {
-    "github": "GitHub",
-    "typescript": "TypeScript",
-    "javascript": "JavaScript",
-    "nodejs": "Node.js",
-    "nextjs": "Next.js",
-    "deno": "Deno",
+type TagData = {
+    icon: string;
+    name: string;
+};
+
+export const tagData: Record<string, TagData> = {
+    "github": {
+        icon: "devicon:github",
+        name: "GitHub",
+    },
+    "typescript": {
+        icon: "devicon:typescript",
+        name: "TypeScript",
+    },
+    "javascript": {
+        icon: "devicon:javascript",
+        name: "JavaScript",
+    },
+    "nodejs": {
+        icon: "devicon:nodejs",
+        name: "Node.js",
+    },
+    "nextjs": {
+        icon: "devicon:nextjs",
+        name: "Next.js",
+    },
+    "deno": {
+        icon: "devicon:deno",
+        name: "Deno",
+    },
+    "html5": {
+        icon: "devicon:html5",
+        name: "HTML5",
+    },
+    "astro": {
+        icon: "devicon:astro",
+        name: "Astro",
+    },
+    "game": {
+        icon: "jam:gamepad-retro-f",
+        name: "Game Dev",
+    },
+    "tool": {
+        icon: "jam:tools-f",
+        name: "Dev Tool",
+    },
+    "tailwindcss": {
+        icon: "devicon:tailwindcss",
+        name: "TailwindCSS",
+    },
 };
 
 export const socials = [
@@ -52,80 +92,74 @@ export const importantLinks = [
 
 export const projects = [
     {
-        title: "Mandarina",
-        description: `A JavaScript Visual novel engine, made with Kaboom.js. 
-        Optimized for beginners, easy to use and highly customizable.`,
-        link: "https://lajbel.github.io/mandarina",
-        repo: "https://github.com/lajbel/mandarina",
-        image: mandarinaBanner,
-        kind: "Developer Tool",
-        tags: ["typescript", "nodejs"],
-        featured: false,
-    },
-    {
-        title: "KAPLAY",
+        title: "KAPLAY - A JavaScript game library",
         description:
-            `KAPLAY is the open source successor of Kaboom.js. I work as
-        the main manager of the project, developing the core engine, the website,
-        the editor and the community.`,
+            `KAPLAY is an open-source JavaScript library for creating 2D games, which I founded. Our main product is KAPLAY.js, a fun game library. Alongside it, we’ve built KAPLAYGROUND, our playground, Crew, our assets store and others.`,
         link: "https://kaplayjs.com",
         repo: "https://github.com/marklovers/kaplay",
         image: kaplayBanner,
         kind: "Developer Tool",
-        tags: ["typescript", "nodejs"],
-        featured: true,
+        tags: ["game", "tool", "typescript", "astro", "tailwindcss"],
     },
     {
         title: "Kaboom.js",
-        description: `The easiest way to make games using JavaScript. Kaboom is
-        a game library, I contributed to the project with the website and the
-        core engine, also being community manager. Sadly, the project was
-        discontinued.`,
+        description:
+            `As the KAPLAY's predecessor, Kaboom.js was a 2D JavaScript game library where I worked as community manager and mantainer. I had also organised several game jams and events. It was a great experience :D`,
         link: "https://kaboomjs.com",
         repo: "https://github.com/replit/kaboom",
         image: kaboomjsBanner,
         kind: "Developer Tool",
-        tags: ["typescript", "nextjs", "nodejs"],
-        featured: true,
+        tags: ["game", "tool", "typescript", "nextjs", "nodejs"],
     },
     {
-        title: "kiboom",
-        description: `A set of tools for develop videogames easy, fast and 
-        with better developer experience.`,
-        link: "https://kiboom.lajbel.com",
-        repo: "https://github.com/labjel/kiboom",
-        image: kiboomBanner,
-        kind: "Developer Tool",
-        tags: ["typescript", "nodejs"],
-        featured: false,
-    },
-    {
-        title: "Eggou",
-        description: `A bullet hell game made in Kaboom.js. It's a
-        project I made for a game jam.`,
-        link: "https://www.newgrounds.com/portal/view/806710",
-        repo: "https://github.com/lajbel/eggou",
-        image: eggouBanner,
+        title: "Juicy Beat",
+        description:
+            `My most recent videogame. Juicy Beat it's a rhythm game about cutting apples. It introduces new brand songs, cute characters and a different but fun gameplay!`,
+        link: "https://lajbel.itch.io/juicy-beat",
+        repo: "https://github.com/lajbel/juicy-beat",
+        image: juicyBeatBanner,
         kind: "Videogame",
-        tags: ["javascript"],
+        tags: ["game", "typescript", "nodejs"],
     },
     {
         title: "Newgrounds.js",
-        description: `API Wrapper for Newgrounds, made with TypeScript.`,
+        description:
+            `Newgrounds.js makes it easy to integrate web games with Newgrounds.com, supporting features like achievements, scoreboards, and cloud saves—all with full TypeScript support.`,
         link: "https://newgrounds.lajbel.com",
         repo: "https://github.com/lajbel/newgrounds-js",
-        image: newgroundsjsBanner,
+        image: newgroundsJsBanner,
         kind: "Developer Tool",
-        tags: ["typescript"],
+        tags: ["tool", "game", "typescript"],
     },
-    {
-        title: "MarkBot",
-        description: `A ChatBot application for Discord, moderate, bring help
-        and support in Official Kaboom.js Discord Server`,
-        link: "https://github.com/lajbel/markbot",
-        repo: "https://github.com/lajbel/markbot",
-        image: markbotBanner,
-        kind: "Chat Bot",
-        tags: ["typescript"],
-    },
+    // {
+    //     title: "kiboom",
+    //     description: `A set of tools for develop videogames easy, fast and
+    //     with better developer experience.`,
+    //     link: "https://kiboom.lajbel.com",
+    //     repo: "https://github.com/labjel/kiboom",
+    //     image: kiboomBanner,
+    //     kind: "Developer Tool",
+    //     tags: ["typescript", "nodejs"],
+    //     featured: false,
+    // },
+    // {
+    //     title: "Eggou",
+    //     description: `A bullet hell game made in Kaboom.js. It's a
+    //     project I made for a game jam.`,
+    //     link: "https://www.newgrounds.com/portal/view/806710",
+    //     repo: "https://github.com/lajbel/eggou",
+    //     image: eggouBanner,
+    //     kind: "Videogame",
+    //     tags: ["javascript"],
+    // },
+    // {
+    //     title: "MarkBot",
+    //     description: `A ChatBot application for Discord, moderate, bring help
+    //     and support in Official Kaboom.js Discord Server`,
+    //     link: "https://github.com/lajbel/markbot",
+    //     repo: "https://github.com/lajbel/markbot",
+    //     image: markbotBanner,
+    //     kind: "Chat Bot",
+    //     tags: ["typescript"],
+    // },
 ] satisfies Project[];

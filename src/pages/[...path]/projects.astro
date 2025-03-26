@@ -21,35 +21,36 @@ const { t, lang } = Astro.props;
             "A collection of my projects, from web development to game development.",
     }}
 >
-    <div class="min-h-screen pt-8 px-2 lg:px-4">
-        <h1 class="text-5xl font-bold">{t("projects.title")}</h1>
+    <div class="min-h-screen p-4 flex flex-col">
+        <h1 class="text-5xl font-bold text-center my-4">
+            {t("projects.title")}
+        </h1>
+        <p class="text-center">
+            I love mixing game development with web development, so my projects
+            are a mix of both
+        </p>
 
-        <div class="w-full grid grid-cols-autofit gap-4 mt-8">
+        <div
+            class="w-full flex flex-col justify-center items-center gap-8 my-8"
+        >
             {
                 projects
-                .filter((p) => p.featured)
-                .map((project) => <ProjectCard {...project} />)
+                .map((project, i) => (
+                    <ProjectCard {...{ ...project, ...{ idx: i } }} />
+                ))
             }
         </div>
 
-        <div class="w-full grid grid-cols-autofill gap-4 mt-8">
-            {
-                projects
-                .filter((p) => !p.featured)
-                .map((project) => <ProjectCard {...project} />)
-            }
-        </div>
+        <p class="text-center my-4">
+            <span></span>For more projects, you can check my <a
+                class="link link-hover link-primary"
+                href="https://github.com/lajbel"
+                target="_blank"
+            >GitHub</a>.</span> For more games take a look on <a
+                class="link link-hover link-primary"
+                href="https://lajbel.itch.io"
+                target="_blank"
+            >Itch.io</a>.
+        </p>
     </div>
 </Base>
-
-<style>
-.grid-cols-autofill {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-}
-
-.grid-cols-autofit {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-</style>

@@ -1,6 +1,6 @@
 ---
 title: The evolution of my website
-image: https://cdn.glitch.global/85c25e59-236a-4ea3-a0be-f1c093fa4365/Slide%2016_9%20-%201.png?v=1707847123938
+image: /blog-banners/websiteblog.png
 tags: [web, javascript, "personal"]
 date: 2024-02-13
 ---

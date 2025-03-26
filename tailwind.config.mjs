@@ -41,7 +41,7 @@ export default {
         themes: [
             {
                 light: {
-                    primary: "#a21caf",
+                    primary: "#7251b5",
                     secondary: "#be185d",
                     accent: "#37cdbe",
                     neutral: "#3b424e",
@@ -50,6 +50,7 @@ export default {
                 },
                 dark: {
                     ...require("daisyui/src/theming/themes")["dracula"],
+                    primary: "#b185db",
                     ...allThemes,
                 },
             },

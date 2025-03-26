@@ -1,6 +1,6 @@
 ---
 title: "Kaboom.js, the game library that I loved"
-image: "/kaplaylogo.png"
+image: /blog-banners/kaboomblog.png
 tags: ["web", "game dev", "personal"]
 date: 2024-07-03
 ---
