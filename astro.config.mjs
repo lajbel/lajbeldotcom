@@ -12,7 +12,7 @@ export default defineConfig({
     markdown: {
         shikiConfig: {
             wrap: true,
-            theme: "dark-plus"
+            theme: "dark-plus",
         },
-    }
+    },
 });

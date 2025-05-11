@@ -1,19 +1,16 @@
 ---
 import Base from "@/layouts/Base.astro";
-import type { PropsWithT } from "@/types";
 import type { CollectionEntry } from "astro:content";
 
-type Props = PropsWithT<{
+interface Props {
     post: CollectionEntry<"tutorial"> | CollectionEntry<"blog">;
-}>;
+}
 
-const { post, t, lang } = Astro.props;
+const { post } = Astro.props;
 const { data, body } = post;
 ---
 
 <Base
-    {lang}
-    {t}
     meta={{
         title: data.title,
         description: body,

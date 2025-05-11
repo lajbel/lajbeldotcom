@@ -3,19 +3,10 @@ import birdyImage from "@/assets/images/birdy.png";
 import Hero from "@/components/common/Hero.astro";
 import QuickAccess from "@/components/QuickAccess.astro";
 import Base from "@/layouts/Base.astro";
-import { getStaticPathsByLocales } from "@/util/path";
 import { Image } from "astro:assets";
-
-export function getStaticPaths() {
-    return getStaticPathsByLocales();
-}
-
-const { t, lang } = Astro.props;
 ---
 
 <Base
-    {t}
-    {lang}
     meta={{
         title: "lajbel.com | Daniel Báez - Games, Game Engines and Websites",
         description:
@@ -26,13 +17,15 @@ const { t, lang } = Astro.props;
         <section class="text-left text-balance max-w-md min-w-40">
             <h1 class="text-5xl font-bold">Daniel Báez</h1>
             <p class="text-3xl font-semibold text-primary mb-4">
-                {t("home.role")}
+                Games, game engines and web dev
             </p>
             <p class="text-lg mb-3">
-                {t("home.istudied")}
+                I create, lead and manage projects related to video games and
+                web.
             </p>
             <p class="text-lg mb-3">
-                {t("home.iworked")}
+                I’ve worked with different teams, taking part in leadership,
+                problem-solving and making sure things get done.
             </p>
 
             <div class="space-y-4">

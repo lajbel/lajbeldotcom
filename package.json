@@ -21,7 +21,7 @@
     "@iconify-json/jam": "^1.1.8",
     "@iconify-json/simple-icons": "^1.1.91",
     "@tailwindcss/typography": "^0.5.10",
-    "astro": "^4.7.1",
+    "astro": "^5.7.12",
     "astro-icon": "^1.1.0",
     "preact": "^10.19.3",
     "prettier-plugin-astro": "^0.13.0",

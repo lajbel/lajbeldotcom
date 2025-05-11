@@ -1,5 +1,4 @@
 import type { tagData } from "./config";
-import type { Locale, localedT } from "./i18n";
 
 export type ProjectKind =
     | "Videogame"
@@ -20,11 +19,3 @@ export type Project = {
     tags: ProjectTags[];
     featured?: boolean;
 };
-
-// Utility types
-export type PropsWithT<T> = {
-    t: ReturnType<typeof localedT>;
-    lang: Locale;
-} & T;
-
-export type ValueOf<T> = T[keyof T];

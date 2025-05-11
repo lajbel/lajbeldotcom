@@ -1,28 +1,25 @@
 ---
 import Footer from "@/components/common/Footer.astro";
 import Sidebar from "@/components/sidebar/Sidebar.astro";
-import { localesMap } from "@/i18n";
-import type { PropsWithT } from "@/types";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import "@/styles/fonts.css";
 import "@/styles/icons.css";
 import "@/styles/utilities.css";
 import "@/styles/base.css";
 
-type Props = PropsWithT<{
-    lang: keyof typeof localesMap;
+interface Props {
     meta: {
         title: string;
         description: string;
     };
-}>;
+}
 
-const { meta, lang = "en", t } = Astro.props;
+const { meta } = Astro.props;
 const { url } = Astro;
 ---
 
 <!DOCTYPE html>
-<html lang={lang} data-theme>
+<html lang="en" data-theme>
     <head>
         <meta charset="UTF-8" />
         <title>{meta.title}</title>
@@ -42,10 +39,10 @@ const { url } = Astro;
         <link rel="alternate" hreflang="x-default" href={url.href} />
         <link rel="alternate" hreflang="en" href={url.href} />
         <link rel="canonical" href={url.href} />
-        <ViewTransitions />
+        <ClientRouter />
     </head>
     <body>
-        <Sidebar {t} {lang}>
+        <Sidebar>
             <div class="ljcontent pb-8">
                 <slot />
             </div>

@@ -2,15 +2,12 @@
 import SidebarCard from "@/components/sidebar/SidebarCard.astro";
 import ThemeController from "@/components/themes/ThemeController";
 import { importantLinks, socials } from "@/config";
-import type { PropsWithT } from "@/types";
 import Logo from "@components/images/Logo.astro";
 import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
 
 const allTutorialPosts = await getCollection("tutorial");
 const allBlogPosts = await getCollection("blog");
-type Props = PropsWithT<{}>;
-const { t } = Astro.props;
 ---
 
 <div class="drawer lg:drawer-open h-full z-20">
@@ -40,7 +37,7 @@ const { t } = Astro.props;
 
             <a href="/" class="btn btn-ghost h-fit w-fit flex-col">
                 <Logo class="fill-current" />
-                <span class="text-lg">{t("sidebar.description")}</span>
+                <span class="text-lg">the online space</span>
             </a>
 
             <ul class="menu menu-horizontal justify-center">

@@ -2,18 +2,9 @@
 import ProjectCard from "@/components/projects/ProjectCard.astro";
 import { projects } from "@/config";
 import Base from "@/layouts/Base.astro";
-import { getStaticPathsByLocales } from "@/util/path";
-
-export function getStaticPaths() {
-    return getStaticPathsByLocales();
-}
-
-const { t, lang } = Astro.props;
 ---
 
 <Base
-    {t}
-    {lang}
     meta={{
         title:
             "lajbel.com | Projects, game development meets web development",
@@ -23,7 +14,7 @@ const { t, lang } = Astro.props;
 >
     <div class="min-h-screen p-4 flex flex-col">
         <h1 class="text-5xl font-bold text-center my-4">
-            {t("projects.title")}
+            Projects
         </h1>
         <p class="text-center">
             I love mixing game development with web development, so my projects
